@@ -1,0 +1,5365 @@
+[  359.949825] IPv6: ADDRCONF(NETDEV_UP): ib0: link is not ready
+[  381.660047] IPv6: ADDRCONF(NETDEV_CHANGE): ib0: link becomes ready
+[  404.796182] Point 1 successful
+
+[  473.090574] Entering krping_setup_qp
+
+[  473.090584] Entered krping_setup_qp
+
+[  473.090949] created pd ffff8807f4cf2180
+[  473.091399] created cq ffff8800358efa00
+[  473.091408] Inside create qp
+[  473.091411] Initialised variables for create qp
+[  473.092309] Create qp successfully
+[  473.092318] created qp ffff8807d1f77000
+[  473.092321] Point 2 successful
+
+[  473.092493] Point 3 successful
+
+[  473.092502] Point 4 successful
+
+[  473.092506] Point 5 successful
+
+[  473.092511] Point 6 successful
+
+[  473.094494] Entering krping_cq_event_handler
+
+[  473.094507] recv completion: 117440512
+
+[  473.094513] Entering server_recv 
+
+[  473.094521] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.094525] Exiting server_recv 
+
+[  473.094556] Exiting krping_cq_event_handler
+
+[  473.094563] server received sink adv
+[  473.094572] server posted rdma read req 
+[  473.094575] Entering krping_cq_event_handler
+
+[  473.094581] rdma write completion: rdma-ping-0: ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqr
+
+[  473.094587] Exiting krping_cq_event_handler
+
+[  473.094618] server received read complete
+[  473.094623] server posted go ahead
+[  473.094627] Entering krping_cq_event_handler
+
+[  473.094632] send completion: 0
+
+[  473.094635] Exiting krping_cq_event_handler
+
+[  473.094720] Entering krping_cq_event_handler
+
+[  473.094724] recv completion: 117440512
+
+[  473.094727] Entering server_recv 
+
+[  473.094730] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.094733] Exiting server_recv 
+
+[  473.094737] Exiting krping_cq_event_handler
+
+[  473.094771] server received sink adv
+[  473.094782] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.094790] Entering krping_cq_event_handler
+
+[  473.094795] rdma write completion
+
+[  473.094800] Exiting krping_cq_event_handler
+
+[  473.094811] server rdma write complete 
+[  473.094815] server posted go ahead
+[  473.094819] Entering krping_cq_event_handler
+
+[  473.094823] send completion: 0
+
+[  473.094826] Exiting krping_cq_event_handler
+
+[  473.094913] Entering krping_cq_event_handler
+
+[  473.094917] recv completion: 117440512
+
+[  473.094920] Entering server_recv 
+
+[  473.094923] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.094925] Exiting server_recv 
+
+[  473.094930] Exiting krping_cq_event_handler
+
+[  473.094964] server received sink adv
+[  473.094972] server posted rdma read req 
+[  473.094975] Entering krping_cq_event_handler
+
+[  473.094981] rdma write completion: rdma-ping-1: BCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrs
+
+[  473.094986] Exiting krping_cq_event_handler
+
+[  473.094998] server received read complete
+[  473.095002] server posted go ahead
+[  473.095012] Entering krping_cq_event_handler
+
+[  473.095016] send completion: 0
+
+[  473.095019] Exiting krping_cq_event_handler
+
+[  473.095103] Entering krping_cq_event_handler
+
+[  473.095107] recv completion: 117440512
+
+[  473.095110] Entering server_recv 
+
+[  473.095114] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.095116] Exiting server_recv 
+
+[  473.095121] Exiting krping_cq_event_handler
+
+[  473.095155] server received sink adv
+[  473.095164] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.095174] Entering krping_cq_event_handler
+
+[  473.095178] rdma write completion
+
+[  473.095183] Exiting krping_cq_event_handler
+
+[  473.095194] server rdma write complete 
+[  473.095198] server posted go ahead
+[  473.095202] Entering krping_cq_event_handler
+
+[  473.095206] send completion: 0
+
+[  473.095209] Exiting krping_cq_event_handler
+
+[  473.095240] Entering krping_cq_event_handler
+
+[  473.095244] recv completion: 117440512
+
+[  473.095247] Entering server_recv 
+
+[  473.095250] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.095252] Exiting server_recv 
+
+[  473.095257] Exiting krping_cq_event_handler
+
+[  473.095292] server received sink adv
+[  473.095300] server posted rdma read req 
+[  473.095304] Entering krping_cq_event_handler
+
+[  473.095309] rdma write completion: rdma-ping-2: CDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrst
+
+[  473.095315] Exiting krping_cq_event_handler
+
+[  473.095326] server received read complete
+[  473.095332] server posted go ahead
+[  473.095335] Entering krping_cq_event_handler
+
+[  473.095339] send completion: 0
+
+[  473.095342] Exiting krping_cq_event_handler
+
+[  473.095369] Entering krping_cq_event_handler
+
+[  473.095373] recv completion: 117440512
+
+[  473.095375] Entering server_recv 
+
+[  473.095379] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.095381] Exiting server_recv 
+
+[  473.095385] Exiting krping_cq_event_handler
+
+[  473.095419] server received sink adv
+[  473.095427] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.095436] Entering krping_cq_event_handler
+
+[  473.095441] rdma write completion
+
+[  473.095446] Exiting krping_cq_event_handler
+
+[  473.095456] server rdma write complete 
+[  473.095459] server posted go ahead
+[  473.095463] Entering krping_cq_event_handler
+
+[  473.095468] send completion: 0
+
+[  473.095470] Exiting krping_cq_event_handler
+
+[  473.095500] Entering krping_cq_event_handler
+
+[  473.095504] recv completion: 117440512
+
+[  473.095506] Entering server_recv 
+
+[  473.095510] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.095512] Exiting server_recv 
+
+[  473.095516] Exiting krping_cq_event_handler
+
+[  473.095551] server received sink adv
+[  473.095560] server posted rdma read req 
+[  473.095563] Entering krping_cq_event_handler
+
+[  473.095568] rdma write completion: rdma-ping-3: DEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstu
+
+[  473.095574] Exiting krping_cq_event_handler
+
+[  473.095585] server received read complete
+[  473.095592] server posted go ahead
+[  473.095600] Entering krping_cq_event_handler
+
+[  473.095605] send completion: 0
+
+[  473.095608] Exiting krping_cq_event_handler
+
+[  473.095656] Entering krping_cq_event_handler
+
+[  473.095660] recv completion: 117440512
+
+[  473.095662] Entering server_recv 
+
+[  473.095666] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.095668] Exiting server_recv 
+
+[  473.095672] Exiting krping_cq_event_handler
+
+[  473.095707] server received sink adv
+[  473.095716] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.095724] Entering krping_cq_event_handler
+
+[  473.095728] rdma write completion
+
+[  473.095734] Exiting krping_cq_event_handler
+
+[  473.095740] server rdma write complete 
+[  473.095744] server posted go ahead
+[  473.095754] Entering krping_cq_event_handler
+
+[  473.095758] send completion: 0
+
+[  473.095761] Exiting krping_cq_event_handler
+
+[  473.095812] Entering krping_cq_event_handler
+
+[  473.095816] recv completion: 117440512
+
+[  473.095819] Entering server_recv 
+
+[  473.095822] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.095824] Exiting server_recv 
+
+[  473.095829] Exiting krping_cq_event_handler
+
+[  473.095846] server received sink adv
+[  473.095850] server posted rdma read req 
+[  473.095854] Entering krping_cq_event_handler
+
+[  473.095859] rdma write completion: rdma-ping-4: EFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuv
+
+[  473.095864] Exiting krping_cq_event_handler
+
+[  473.095889] server received read complete
+[  473.095894] server posted go ahead
+[  473.095898] Entering krping_cq_event_handler
+
+[  473.095902] send completion: 0
+
+[  473.095905] Exiting krping_cq_event_handler
+
+[  473.095989] Entering krping_cq_event_handler
+
+[  473.095993] recv completion: 117440512
+
+[  473.095996] Entering server_recv 
+
+[  473.095999] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.096001] Exiting server_recv 
+
+[  473.096006] Exiting krping_cq_event_handler
+
+[  473.096021] server received sink adv
+[  473.096026] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.096032] Entering krping_cq_event_handler
+
+[  473.096037] rdma write completion
+
+[  473.096042] Exiting krping_cq_event_handler
+
+[  473.096066] server rdma write complete 
+[  473.096070] server posted go ahead
+[  473.096081] Entering krping_cq_event_handler
+
+[  473.096086] send completion: 0
+
+[  473.096089] Exiting krping_cq_event_handler
+
+[  473.096177] Entering krping_cq_event_handler
+
+[  473.096181] recv completion: 117440512
+
+[  473.096183] Entering server_recv 
+
+[  473.096187] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.096189] Exiting server_recv 
+
+[  473.096194] Exiting krping_cq_event_handler
+
+[  473.096210] server received sink adv
+[  473.096214] server posted rdma read req 
+[  473.096218] Entering krping_cq_event_handler
+
+[  473.096223] rdma write completion: rdma-ping-5: FGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvw
+
+[  473.096228] Exiting krping_cq_event_handler
+
+[  473.096252] server received read complete
+[  473.096257] server posted go ahead
+[  473.096267] Entering krping_cq_event_handler
+
+[  473.096271] send completion: 0
+
+[  473.096274] Exiting krping_cq_event_handler
+
+[  473.096324] Entering krping_cq_event_handler
+
+[  473.096328] recv completion: 117440512
+
+[  473.096331] Entering server_recv 
+
+[  473.096334] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.096336] Exiting server_recv 
+
+[  473.096341] Exiting krping_cq_event_handler
+
+[  473.096356] server received sink adv
+[  473.096362] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.096369] Entering krping_cq_event_handler
+
+[  473.096373] rdma write completion
+
+[  473.096379] Exiting krping_cq_event_handler
+
+[  473.096382] server rdma write complete 
+[  473.096385] server posted go ahead
+[  473.096395] Entering krping_cq_event_handler
+
+[  473.096400] send completion: 0
+
+[  473.096402] Exiting krping_cq_event_handler
+
+[  473.096453] Entering krping_cq_event_handler
+
+[  473.096457] recv completion: 117440512
+
+[  473.096460] Entering server_recv 
+
+[  473.096463] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.096465] Exiting server_recv 
+
+[  473.096471] Exiting krping_cq_event_handler
+
+[  473.096475] server received sink adv
+[  473.096478] server posted rdma read req 
+[  473.096481] Entering krping_cq_event_handler
+
+[  473.096486] rdma write completion: rdma-ping-6: GHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwx
+
+[  473.096491] Exiting krping_cq_event_handler
+
+[  473.096495] server received read complete
+[  473.096498] server posted go ahead
+[  473.096502] Entering krping_cq_event_handler
+
+[  473.096506] send completion: 0
+
+[  473.096509] Exiting krping_cq_event_handler
+
+[  473.096557] Entering krping_cq_event_handler
+
+[  473.096561] recv completion: 117440512
+
+[  473.096564] Entering server_recv 
+
+[  473.096567] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.096569] Exiting server_recv 
+
+[  473.096575] Exiting krping_cq_event_handler
+
+[  473.096578] server received sink adv
+[  473.096582] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.096588] Entering krping_cq_event_handler
+
+[  473.096592] rdma write completion
+
+[  473.096597] Exiting krping_cq_event_handler
+
+[  473.096601] server rdma write complete 
+[  473.096604] server posted go ahead
+[  473.096608] Entering krping_cq_event_handler
+
+[  473.096612] send completion: 0
+
+[  473.096615] Exiting krping_cq_event_handler
+
+[  473.096644] Entering krping_cq_event_handler
+
+[  473.096648] recv completion: 117440512
+
+[  473.096651] Entering server_recv 
+
+[  473.096654] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.096656] Exiting server_recv 
+
+[  473.096662] Exiting krping_cq_event_handler
+
+[  473.096666] server received sink adv
+[  473.096671] server posted rdma read req 
+[  473.096674] Entering krping_cq_event_handler
+
+[  473.096679] rdma write completion: rdma-ping-7: HIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxy
+
+[  473.096685] Exiting krping_cq_event_handler
+
+[  473.096688] server received read complete
+[  473.096691] server posted go ahead
+[  473.096695] Entering krping_cq_event_handler
+
+[  473.096700] send completion: 0
+
+[  473.096703] Exiting krping_cq_event_handler
+
+[  473.096729] Entering krping_cq_event_handler
+
+[  473.096733] recv completion: 117440512
+
+[  473.096736] Entering server_recv 
+
+[  473.096739] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.096741] Exiting server_recv 
+
+[  473.096746] Exiting krping_cq_event_handler
+
+[  473.096750] server received sink adv
+[  473.096754] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.096760] Entering krping_cq_event_handler
+
+[  473.096764] rdma write completion
+
+[  473.096769] Exiting krping_cq_event_handler
+
+[  473.096773] server rdma write complete 
+[  473.096776] server posted go ahead
+[  473.096780] Entering krping_cq_event_handler
+
+[  473.096784] send completion: 0
+
+[  473.096787] Exiting krping_cq_event_handler
+
+[  473.096816] Entering krping_cq_event_handler
+
+[  473.096820] recv completion: 117440512
+
+[  473.096823] Entering server_recv 
+
+[  473.096826] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.096828] Exiting server_recv 
+
+[  473.096833] Exiting krping_cq_event_handler
+
+[  473.096837] server received sink adv
+[  473.096840] server posted rdma read req 
+[  473.096844] Entering krping_cq_event_handler
+
+[  473.096849] rdma write completion: rdma-ping-8: IJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz
+
+[  473.096854] Exiting krping_cq_event_handler
+
+[  473.096858] server received read complete
+[  473.096861] server posted go ahead
+[  473.096866] Entering krping_cq_event_handler
+
+[  473.096870] send completion: 0
+
+[  473.096873] Exiting krping_cq_event_handler
+
+[  473.096993] Entering krping_cq_event_handler
+
+[  473.096997] recv completion: 117440512
+
+[  473.097000] Entering server_recv 
+
+[  473.097003] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.097005] Exiting server_recv 
+
+[  473.097011] Exiting krping_cq_event_handler
+
+[  473.097014] server received sink adv
+[  473.097018] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.097024] Entering krping_cq_event_handler
+
+[  473.097028] rdma write completion
+
+[  473.097033] Exiting krping_cq_event_handler
+
+[  473.097037] server rdma write complete 
+[  473.097040] server posted go ahead
+[  473.097044] Entering krping_cq_event_handler
+
+[  473.097048] send completion: 0
+
+[  473.097051] Exiting krping_cq_event_handler
+
+[  473.097098] Entering krping_cq_event_handler
+
+[  473.097102] recv completion: 117440512
+
+[  473.097105] Entering server_recv 
+
+[  473.097108] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.097110] Exiting server_recv 
+
+[  473.097116] Exiting krping_cq_event_handler
+
+[  473.097119] server received sink adv
+[  473.097123] server posted rdma read req 
+[  473.097126] Entering krping_cq_event_handler
+
+[  473.097131] rdma write completion: rdma-ping-9: JKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzA
+
+[  473.097136] Exiting krping_cq_event_handler
+
+[  473.097140] server received read complete
+[  473.097143] server posted go ahead
+[  473.097147] Entering krping_cq_event_handler
+
+[  473.097151] send completion: 0
+
+[  473.097154] Exiting krping_cq_event_handler
+
+[  473.097181] Entering krping_cq_event_handler
+
+[  473.097185] recv completion: 117440512
+
+[  473.097188] Entering server_recv 
+
+[  473.097191] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.097193] Exiting server_recv 
+
+[  473.097199] Exiting krping_cq_event_handler
+
+[  473.097203] server received sink adv
+[  473.097206] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.097212] Entering krping_cq_event_handler
+
+[  473.097216] rdma write completion
+
+[  473.097222] Exiting krping_cq_event_handler
+
+[  473.097225] server rdma write complete 
+[  473.097228] server posted go ahead
+[  473.097232] Entering krping_cq_event_handler
+
+[  473.097236] send completion: 0
+
+[  473.097239] Exiting krping_cq_event_handler
+
+[  473.097312] Entering krping_cq_event_handler
+
+[  473.097316] recv completion: 117440512
+
+[  473.097319] Entering server_recv 
+
+[  473.097322] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.097324] Exiting server_recv 
+
+[  473.097330] Exiting krping_cq_event_handler
+
+[  473.097334] server received sink adv
+[  473.097337] server posted rdma read req 
+[  473.097340] Entering krping_cq_event_handler
+
+[  473.097345] rdma write completion: rdma-ping-10: KLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzA
+
+[  473.097350] Exiting krping_cq_event_handler
+
+[  473.097354] server received read complete
+[  473.097357] server posted go ahead
+[  473.097361] Entering krping_cq_event_handler
+
+[  473.097365] send completion: 0
+
+[  473.097368] Exiting krping_cq_event_handler
+
+[  473.097435] Entering krping_cq_event_handler
+
+[  473.097439] recv completion: 117440512
+
+[  473.097442] Entering server_recv 
+
+[  473.097445] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.097447] Exiting server_recv 
+
+[  473.097453] Exiting krping_cq_event_handler
+
+[  473.097456] server received sink adv
+[  473.097460] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.097466] Entering krping_cq_event_handler
+
+[  473.097470] rdma write completion
+
+[  473.097475] Exiting krping_cq_event_handler
+
+[  473.097479] server rdma write complete 
+[  473.097482] server posted go ahead
+[  473.097486] Entering krping_cq_event_handler
+
+[  473.097490] send completion: 0
+
+[  473.097493] Exiting krping_cq_event_handler
+
+[  473.097550] Entering krping_cq_event_handler
+
+[  473.097554] recv completion: 117440512
+
+[  473.097557] Entering server_recv 
+
+[  473.097561] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.097563] Exiting server_recv 
+
+[  473.097568] Exiting krping_cq_event_handler
+
+[  473.097572] server received sink adv
+[  473.097575] server posted rdma read req 
+[  473.097578] Entering krping_cq_event_handler
+
+[  473.097583] rdma write completion: rdma-ping-11: LMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzAB
+
+[  473.097589] Exiting krping_cq_event_handler
+
+[  473.097612] server received read complete
+[  473.097617] server posted go ahead
+[  473.097621] Entering krping_cq_event_handler
+
+[  473.097625] send completion: 0
+
+[  473.097628] Exiting krping_cq_event_handler
+
+[  473.097676] Entering krping_cq_event_handler
+
+[  473.097680] recv completion: 117440512
+
+[  473.097683] Entering server_recv 
+
+[  473.097687] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.097689] Exiting server_recv 
+
+[  473.097694] Exiting krping_cq_event_handler
+
+[  473.097698] server received sink adv
+[  473.097701] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.097707] Entering krping_cq_event_handler
+
+[  473.097711] rdma write completion
+
+[  473.097716] Exiting krping_cq_event_handler
+
+[  473.097720] server rdma write complete 
+[  473.097724] server posted go ahead
+[  473.097729] Entering krping_cq_event_handler
+
+[  473.097733] send completion: 0
+
+[  473.097736] Exiting krping_cq_event_handler
+
+[  473.097934] Entering krping_cq_event_handler
+
+[  473.097938] recv completion: 117440512
+
+[  473.097941] Entering server_recv 
+
+[  473.097945] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.097947] Exiting server_recv 
+
+[  473.097952] Exiting krping_cq_event_handler
+
+[  473.097956] server received sink adv
+[  473.097959] server posted rdma read req 
+[  473.097964] Entering krping_cq_event_handler
+
+[  473.097969] rdma write completion: rdma-ping-12: MNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABC
+
+[  473.097974] Exiting krping_cq_event_handler
+
+[  473.097978] server received read complete
+[  473.097980] server posted go ahead
+[  473.097984] Entering krping_cq_event_handler
+
+[  473.097989] send completion: 0
+
+[  473.097991] Exiting krping_cq_event_handler
+
+[  473.098052] Entering krping_cq_event_handler
+
+[  473.098057] recv completion: 117440512
+
+[  473.098068] Entering server_recv 
+
+[  473.098087] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.098099] Exiting server_recv 
+
+[  473.098114] Exiting krping_cq_event_handler
+
+[  473.098126] server received sink adv
+[  473.098135] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.098152] Entering krping_cq_event_handler
+
+[  473.098166] rdma write completion
+
+[  473.098183] Exiting krping_cq_event_handler
+
+[  473.098187] server rdma write complete 
+[  473.098193] server posted go ahead
+[  473.098215] Entering krping_cq_event_handler
+
+[  473.098230] send completion: 0
+
+[  473.098240] Exiting krping_cq_event_handler
+
+[  473.098258] Entering krping_cq_event_handler
+
+[  473.098273] recv completion: 117440512
+
+[  473.098285] Entering server_recv 
+
+[  473.098299] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.098309] Exiting server_recv 
+
+[  473.098328] Exiting krping_cq_event_handler
+
+[  473.098334] server received sink adv
+[  473.098340] server posted rdma read req 
+[  473.098361] Entering krping_cq_event_handler
+
+[  473.098375] rdma write completion: rdma-ping-13: NOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCD
+
+[  473.098395] Exiting krping_cq_event_handler
+
+[  473.098401] server received read complete
+[  473.098408] server posted go ahead
+[  473.098428] Entering krping_cq_event_handler
+
+[  473.098442] send completion: 0
+
+[  473.098454] Exiting krping_cq_event_handler
+
+[  473.098468] Entering krping_cq_event_handler
+
+[  473.098481] recv completion: 117440512
+
+[  473.098494] Entering server_recv 
+
+[  473.098508] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.098519] Exiting server_recv 
+
+[  473.098535] Exiting krping_cq_event_handler
+
+[  473.098547] server received sink adv
+[  473.098555] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.098569] Entering krping_cq_event_handler
+
+[  473.098583] rdma write completion
+
+[  473.098594] Exiting krping_cq_event_handler
+
+[  473.098604] server rdma write complete 
+[  473.098609] server posted go ahead
+[  473.098617] Entering krping_cq_event_handler
+
+[  473.098621] send completion: 0
+
+[  473.098624] Exiting krping_cq_event_handler
+
+[  473.098679] Entering krping_cq_event_handler
+
+[  473.098684] recv completion: 117440512
+
+[  473.098686] Entering server_recv 
+
+[  473.098690] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.098692] Exiting server_recv 
+
+[  473.098698] Exiting krping_cq_event_handler
+
+[  473.098703] server received sink adv
+[  473.098708] server posted rdma read req 
+[  473.098712] Entering krping_cq_event_handler
+
+[  473.098718] rdma write completion: rdma-ping-14: OPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDE
+
+[  473.098723] Exiting krping_cq_event_handler
+
+[  473.098729] server received read complete
+[  473.098734] server posted go ahead
+[  473.098740] Entering krping_cq_event_handler
+
+[  473.098744] send completion: 0
+
+[  473.098747] Exiting krping_cq_event_handler
+
+[  473.098797] Entering krping_cq_event_handler
+
+[  473.098802] recv completion: 117440512
+
+[  473.098805] Entering server_recv 
+
+[  473.098808] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.098810] Exiting server_recv 
+
+[  473.098816] Exiting krping_cq_event_handler
+
+[  473.098821] server received sink adv
+[  473.098828] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.098836] Entering krping_cq_event_handler
+
+[  473.098841] rdma write completion
+
+[  473.098846] Exiting krping_cq_event_handler
+
+[  473.098851] server rdma write complete 
+[  473.098856] server posted go ahead
+[  473.098859] Entering krping_cq_event_handler
+
+[  473.098863] send completion: 0
+
+[  473.098866] Exiting krping_cq_event_handler
+
+[  473.098918] Entering krping_cq_event_handler
+
+[  473.098922] recv completion: 117440512
+
+[  473.098925] Entering server_recv 
+
+[  473.098929] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.098931] Exiting server_recv 
+
+[  473.098937] Exiting krping_cq_event_handler
+
+[  473.098942] server received sink adv
+[  473.098947] server posted rdma read req 
+[  473.098950] Entering krping_cq_event_handler
+
+[  473.098956] rdma write completion: rdma-ping-15: PQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEF
+
+[  473.098961] Exiting krping_cq_event_handler
+
+[  473.098967] server received read complete
+[  473.098971] server posted go ahead
+[  473.098977] Entering krping_cq_event_handler
+
+[  473.098981] send completion: 0
+
+[  473.098984] Exiting krping_cq_event_handler
+
+[  473.099030] Entering krping_cq_event_handler
+
+[  473.099034] recv completion: 117440512
+
+[  473.099037] Entering server_recv 
+
+[  473.099040] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.099042] Exiting server_recv 
+
+[  473.099049] Exiting krping_cq_event_handler
+
+[  473.099054] server received sink adv
+[  473.099060] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.099070] Entering krping_cq_event_handler
+
+[  473.099074] rdma write completion
+
+[  473.099079] Exiting krping_cq_event_handler
+
+[  473.099084] server rdma write complete 
+[  473.099089] server posted go ahead
+[  473.099092] Entering krping_cq_event_handler
+
+[  473.099097] send completion: 0
+
+[  473.099100] Exiting krping_cq_event_handler
+
+[  473.099153] Entering krping_cq_event_handler
+
+[  473.099157] recv completion: 117440512
+
+[  473.099160] Entering server_recv 
+
+[  473.099163] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.099165] Exiting server_recv 
+
+[  473.099171] Exiting krping_cq_event_handler
+
+[  473.099176] server received sink adv
+[  473.099181] server posted rdma read req 
+[  473.099185] Entering krping_cq_event_handler
+
+[  473.099190] rdma write completion: rdma-ping-16: QRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFG
+
+[  473.099196] Exiting krping_cq_event_handler
+
+[  473.099201] server received read complete
+[  473.099205] server posted go ahead
+[  473.099209] Entering krping_cq_event_handler
+
+[  473.099213] send completion: 0
+
+[  473.099216] Exiting krping_cq_event_handler
+
+[  473.099345] Entering krping_cq_event_handler
+
+[  473.099349] recv completion: 117440512
+
+[  473.099351] Entering server_recv 
+
+[  473.099355] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.099357] Exiting server_recv 
+
+[  473.099363] Exiting krping_cq_event_handler
+
+[  473.099367] server received sink adv
+[  473.099370] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.099377] Entering krping_cq_event_handler
+
+[  473.099381] rdma write completion
+
+[  473.099387] Exiting krping_cq_event_handler
+
+[  473.099392] server rdma write complete 
+[  473.099396] server posted go ahead
+[  473.099400] Entering krping_cq_event_handler
+
+[  473.099404] send completion: 0
+
+[  473.099407] Exiting krping_cq_event_handler
+
+[  473.099565] Entering krping_cq_event_handler
+
+[  473.099578] recv completion: 117440512
+
+[  473.099590] Entering server_recv 
+
+[  473.099605] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.099615] Exiting server_recv 
+
+[  473.099631] Exiting krping_cq_event_handler
+
+[  473.099637] server received sink adv
+[  473.099646] server posted rdma read req 
+[  473.099667] Entering krping_cq_event_handler
+
+[  473.099680] rdma write completion: rdma-ping-17: RSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGH
+
+[  473.099697] Exiting krping_cq_event_handler
+
+[  473.099703] server received read complete
+[  473.099711] server posted go ahead
+[  473.099733] Entering krping_cq_event_handler
+
+[  473.099743] send completion: 0
+
+[  473.099756] Exiting krping_cq_event_handler
+
+[  473.099769] Entering krping_cq_event_handler
+
+[  473.099784] recv completion: 117440512
+
+[  473.099795] Entering server_recv 
+
+[  473.099809] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.099818] Exiting server_recv 
+
+[  473.099837] Exiting krping_cq_event_handler
+
+[  473.099844] server received sink adv
+[  473.099852] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.099872] Entering krping_cq_event_handler
+
+[  473.099885] rdma write completion
+
+[  473.099905] Exiting krping_cq_event_handler
+
+[  473.099906] server rdma write complete 
+[  473.099913] server posted go ahead
+[  473.099936] Entering krping_cq_event_handler
+
+[  473.099949] send completion: 0
+
+[  473.099964] Exiting krping_cq_event_handler
+
+[  473.099973] Entering krping_cq_event_handler
+
+[  473.099977] recv completion: 117440512
+
+[  473.099980] Entering server_recv 
+
+[  473.099983] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.099985] Exiting server_recv 
+
+[  473.099991] Exiting krping_cq_event_handler
+
+[  473.099997] server received sink adv
+[  473.100002] server posted rdma read req 
+[  473.100006] Entering krping_cq_event_handler
+
+[  473.100012] rdma write completion: rdma-ping-18: STUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHI
+
+[  473.100017] Exiting krping_cq_event_handler
+
+[  473.100024] server received read complete
+[  473.100030] server posted go ahead
+[  473.100033] Entering krping_cq_event_handler
+
+[  473.100038] send completion: 0
+
+[  473.100041] Exiting krping_cq_event_handler
+
+[  473.100223] Entering krping_cq_event_handler
+
+[  473.100227] recv completion: 117440512
+
+[  473.100230] Entering server_recv 
+
+[  473.100233] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.100235] Exiting server_recv 
+
+[  473.100242] Exiting krping_cq_event_handler
+
+[  473.100247] server received sink adv
+[  473.100254] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.100263] Entering krping_cq_event_handler
+
+[  473.100268] rdma write completion
+
+[  473.100273] Exiting krping_cq_event_handler
+
+[  473.100278] server rdma write complete 
+[  473.100282] server posted go ahead
+[  473.100286] Entering krping_cq_event_handler
+
+[  473.100290] send completion: 0
+
+[  473.100293] Exiting krping_cq_event_handler
+
+[  473.100398] Entering krping_cq_event_handler
+
+[  473.100402] recv completion: 117440512
+
+[  473.100405] Entering server_recv 
+
+[  473.100409] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.100410] Exiting server_recv 
+
+[  473.100416] Exiting krping_cq_event_handler
+
+[  473.100422] server received sink adv
+[  473.100427] server posted rdma read req 
+[  473.100430] Entering krping_cq_event_handler
+
+[  473.100435] rdma write completion: rdma-ping-19: TUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJ
+
+[  473.100441] Exiting krping_cq_event_handler
+
+[  473.100446] server received read complete
+[  473.100452] server posted go ahead
+[  473.100456] Entering krping_cq_event_handler
+
+[  473.100460] send completion: 0
+
+[  473.100463] Exiting krping_cq_event_handler
+
+[  473.100511] Entering krping_cq_event_handler
+
+[  473.100515] recv completion: 117440512
+
+[  473.100518] Entering server_recv 
+
+[  473.100521] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.100523] Exiting server_recv 
+
+[  473.100529] Exiting krping_cq_event_handler
+
+[  473.100536] server received sink adv
+[  473.100541] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.100549] Entering krping_cq_event_handler
+
+[  473.100553] rdma write completion
+
+[  473.100559] Exiting krping_cq_event_handler
+
+[  473.100564] server rdma write complete 
+[  473.100568] server posted go ahead
+[  473.100572] Entering krping_cq_event_handler
+
+[  473.100576] send completion: 0
+
+[  473.100579] Exiting krping_cq_event_handler
+
+[  473.100633] Entering krping_cq_event_handler
+
+[  473.100636] recv completion: 117440512
+
+[  473.100639] Entering server_recv 
+
+[  473.100643] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.100645] Exiting server_recv 
+
+[  473.100651] Exiting krping_cq_event_handler
+
+[  473.100657] server received sink adv
+[  473.100663] server posted rdma read req 
+[  473.100666] Entering krping_cq_event_handler
+
+[  473.100672] rdma write completion: rdma-ping-20: UVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJK
+
+[  473.100677] Exiting krping_cq_event_handler
+
+[  473.100683] server received read complete
+[  473.100687] server posted go ahead
+[  473.100691] Entering krping_cq_event_handler
+
+[  473.100695] send completion: 0
+
+[  473.100698] Exiting krping_cq_event_handler
+
+[  473.100746] Entering krping_cq_event_handler
+
+[  473.100750] recv completion: 117440512
+
+[  473.100753] Entering server_recv 
+
+[  473.100756] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.100758] Exiting server_recv 
+
+[  473.100764] Exiting krping_cq_event_handler
+
+[  473.100769] server received sink adv
+[  473.100775] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.100783] Entering krping_cq_event_handler
+
+[  473.100787] rdma write completion
+
+[  473.100792] Exiting krping_cq_event_handler
+
+[  473.100799] server rdma write complete 
+[  473.100803] server posted go ahead
+[  473.100807] Entering krping_cq_event_handler
+
+[  473.100811] send completion: 0
+
+[  473.100814] Exiting krping_cq_event_handler
+
+[  473.100880] Entering krping_cq_event_handler
+
+[  473.100893] recv completion: 117440512
+
+[  473.100906] Entering server_recv 
+
+[  473.100917] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.100928] Exiting server_recv 
+
+[  473.100947] Exiting krping_cq_event_handler
+
+[  473.100951] server received sink adv
+[  473.100957] server posted rdma read req 
+[  473.100977] Entering krping_cq_event_handler
+
+[  473.100993] rdma write completion: rdma-ping-21: VWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKL
+
+[  473.101011] Exiting krping_cq_event_handler
+
+[  473.101013] server received read complete
+[  473.101017] server posted go ahead
+[  473.101039] Entering krping_cq_event_handler
+
+[  473.101055] send completion: 0
+
+[  473.101066] recv completion: 117440512
+
+[  473.101079] Entering server_recv 
+
+[  473.101094] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.101104] Exiting server_recv 
+
+[  473.101122] Exiting krping_cq_event_handler
+
+[  473.101128] server received sink adv
+[  473.101138] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.101158] Entering krping_cq_event_handler
+
+[  473.101171] rdma write completion
+
+[  473.101188] Exiting krping_cq_event_handler
+
+[  473.101195] server rdma write complete 
+[  473.101203] server posted go ahead
+[  473.101216] Entering krping_cq_event_handler
+
+[  473.101229] send completion: 0
+
+[  473.101244] recv completion: 117440512
+
+[  473.101259] Entering server_recv 
+
+[  473.101269] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.101281] Exiting server_recv 
+
+[  473.101298] Exiting krping_cq_event_handler
+
+[  473.101305] server received sink adv
+[  473.101313] server posted rdma read req 
+[  473.101324] Entering krping_cq_event_handler
+
+[  473.101328] rdma write completion: rdma-ping-22: WXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLM
+
+[  473.101334] Exiting krping_cq_event_handler
+
+[  473.101337] Entering krping_cq_event_handler
+
+[  473.101341] Exiting krping_cq_event_handler
+
+[  473.101342] server received read complete
+[  473.101345] server posted go ahead
+[  473.101349] Entering krping_cq_event_handler
+
+[  473.101353] send completion: 0
+
+[  473.101356] Exiting krping_cq_event_handler
+
+[  473.101361] Entering krping_cq_event_handler
+
+[  473.101364] recv completion: 117440512
+
+[  473.101367] Entering server_recv 
+
+[  473.101370] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.101372] Exiting server_recv 
+
+[  473.101378] Exiting krping_cq_event_handler
+
+[  473.101383] server received sink adv
+[  473.101389] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.101397] Entering krping_cq_event_handler
+
+[  473.101401] rdma write completion
+
+[  473.101406] Exiting krping_cq_event_handler
+
+[  473.101412] server rdma write complete 
+[  473.101418] server posted go ahead
+[  473.101421] Entering krping_cq_event_handler
+
+[  473.101426] send completion: 0
+
+[  473.101429] Exiting krping_cq_event_handler
+
+[  473.101436] Entering krping_cq_event_handler
+
+[  473.101439] recv completion: 117440512
+
+[  473.101442] Entering server_recv 
+
+[  473.101445] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.101448] Exiting server_recv 
+
+[  473.101453] Exiting krping_cq_event_handler
+
+[  473.101459] server received sink adv
+[  473.101463] server posted rdma read req 
+[  473.101467] Entering krping_cq_event_handler
+
+[  473.101473] rdma write completion: rdma-ping-23: XYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMN
+
+[  473.101478] Exiting krping_cq_event_handler
+
+[  473.101484] server received read complete
+[  473.101488] server posted go ahead
+[  473.101493] Entering krping_cq_event_handler
+
+[  473.101497] send completion: 0
+
+[  473.101500] Exiting krping_cq_event_handler
+
+[  473.101505] Entering krping_cq_event_handler
+
+[  473.101508] recv completion: 117440512
+
+[  473.101511] Entering server_recv 
+
+[  473.101514] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.101516] Exiting server_recv 
+
+[  473.101522] Exiting krping_cq_event_handler
+
+[  473.101527] server received sink adv
+[  473.101535] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.101543] Entering krping_cq_event_handler
+
+[  473.101547] rdma write completion
+
+[  473.101553] Exiting krping_cq_event_handler
+
+[  473.101558] server rdma write complete 
+[  473.101562] server posted go ahead
+[  473.101566] Entering krping_cq_event_handler
+
+[  473.101570] send completion: 0
+
+[  473.101573] Exiting krping_cq_event_handler
+
+[  473.101580] Entering krping_cq_event_handler
+
+[  473.101583] recv completion: 117440512
+
+[  473.101586] Entering server_recv 
+
+[  473.101589] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.101591] Exiting server_recv 
+
+[  473.101597] Exiting krping_cq_event_handler
+
+[  473.101602] server received sink adv
+[  473.101605] server posted rdma read req 
+[  473.101608] Entering krping_cq_event_handler
+
+[  473.101613] rdma write completion: rdma-ping-24: YZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNO
+
+[  473.101619] Exiting krping_cq_event_handler
+
+[  473.101624] server received read complete
+[  473.101631] server posted go ahead
+[  473.101634] Entering krping_cq_event_handler
+
+[  473.101638] send completion: 0
+
+[  473.101641] Exiting krping_cq_event_handler
+
+[  473.101647] Entering krping_cq_event_handler
+
+[  473.101650] recv completion: 117440512
+
+[  473.101653] Entering server_recv 
+
+[  473.101656] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.101658] Exiting server_recv 
+
+[  473.101664] Exiting krping_cq_event_handler
+
+[  473.101669] server received sink adv
+[  473.101675] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.101682] Entering krping_cq_event_handler
+
+[  473.101687] rdma write completion
+
+[  473.101692] Exiting krping_cq_event_handler
+
+[  473.101697] server rdma write complete 
+[  473.101703] server posted go ahead
+[  473.101708] Entering krping_cq_event_handler
+
+[  473.101713] send completion: 0
+
+[  473.101718] Exiting krping_cq_event_handler
+
+[  473.101723] Entering krping_cq_event_handler
+
+[  473.101728] recv completion: 117440512
+
+[  473.101733] Entering server_recv 
+
+[  473.101738] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.101741] Exiting server_recv 
+
+[  473.101746] Exiting krping_cq_event_handler
+
+[  473.101751] server received sink adv
+[  473.101755] server posted rdma read req 
+[  473.101759] Entering krping_cq_event_handler
+
+[  473.101764] rdma write completion: rdma-ping-25: Z[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP
+
+[  473.101770] Exiting krping_cq_event_handler
+
+[  473.101775] server received read complete
+[  473.101780] server posted go ahead
+[  473.101783] Entering krping_cq_event_handler
+
+[  473.101788] send completion: 0
+
+[  473.101791] Exiting krping_cq_event_handler
+
+[  473.101796] Entering krping_cq_event_handler
+
+[  473.101800] recv completion: 117440512
+
+[  473.101803] Entering server_recv 
+
+[  473.101806] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.101808] Exiting server_recv 
+
+[  473.101814] Exiting krping_cq_event_handler
+
+[  473.101819] server received sink adv
+[  473.101826] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.101835] Entering krping_cq_event_handler
+
+[  473.101839] rdma write completion
+
+[  473.101845] Exiting krping_cq_event_handler
+
+[  473.101850] server rdma write complete 
+[  473.101854] server posted go ahead
+[  473.101858] Entering krping_cq_event_handler
+
+[  473.101862] send completion: 0
+
+[  473.101865] Exiting krping_cq_event_handler
+
+[  473.101872] Entering krping_cq_event_handler
+
+[  473.101875] recv completion: 117440512
+
+[  473.101878] Entering server_recv 
+
+[  473.101881] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.101883] Exiting server_recv 
+
+[  473.101889] Exiting krping_cq_event_handler
+
+[  473.101894] server received sink adv
+[  473.101899] server posted rdma read req 
+[  473.101903] Entering krping_cq_event_handler
+
+[  473.101909] rdma write completion: rdma-ping-26: [\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQ
+
+[  473.101914] Exiting krping_cq_event_handler
+
+[  473.101921] server received read complete
+[  473.101927] server posted go ahead
+[  473.101930] Entering krping_cq_event_handler
+
+[  473.101934] send completion: 0
+
+[  473.101937] Exiting krping_cq_event_handler
+
+[  473.101943] Entering krping_cq_event_handler
+
+[  473.101947] recv completion: 117440512
+
+[  473.101949] Entering server_recv 
+
+[  473.101953] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.101955] Exiting server_recv 
+
+[  473.101960] Exiting krping_cq_event_handler
+
+[  473.101965] server received sink adv
+[  473.101971] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.101979] Entering krping_cq_event_handler
+
+[  473.101983] rdma write completion
+
+[  473.101988] Exiting krping_cq_event_handler
+
+[  473.101993] server rdma write complete 
+[  473.101996] server posted go ahead
+[  473.102000] Entering krping_cq_event_handler
+
+[  473.102004] send completion: 0
+
+[  473.102007] Exiting krping_cq_event_handler
+
+[  473.102013] Entering krping_cq_event_handler
+
+[  473.102017] recv completion: 117440512
+
+[  473.102020] Entering server_recv 
+
+[  473.102023] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.102025] Exiting server_recv 
+
+[  473.102031] Exiting krping_cq_event_handler
+
+[  473.102058] server received sink adv
+[  473.102077] server posted rdma read req 
+[  473.102081] Entering krping_cq_event_handler
+
+[  473.102086] rdma write completion: rdma-ping-27: \]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR
+
+[  473.102091] Exiting krping_cq_event_handler
+
+[  473.102096] server received read complete
+[  473.102100] server posted go ahead
+[  473.102104] Entering krping_cq_event_handler
+
+[  473.102108] send completion: 0
+
+[  473.102110] Exiting krping_cq_event_handler
+
+[  473.102116] Entering krping_cq_event_handler
+
+[  473.102120] recv completion: 117440512
+
+[  473.102122] Entering server_recv 
+
+[  473.102125] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.102127] Exiting server_recv 
+
+[  473.102132] Exiting krping_cq_event_handler
+
+[  473.102137] server received sink adv
+[  473.102142] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.102148] Entering krping_cq_event_handler
+
+[  473.102152] rdma write completion
+
+[  473.102157] Exiting krping_cq_event_handler
+
+[  473.102161] server rdma write complete 
+[  473.102167] server posted go ahead
+[  473.102171] Entering krping_cq_event_handler
+
+[  473.102174] send completion: 0
+
+[  473.102177] Exiting krping_cq_event_handler
+
+[  473.102184] Entering krping_cq_event_handler
+
+[  473.102188] recv completion: 117440512
+
+[  473.102190] Entering server_recv 
+
+[  473.102193] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.102195] Exiting server_recv 
+
+[  473.102200] Exiting krping_cq_event_handler
+
+[  473.102204] server received sink adv
+[  473.102209] server posted rdma read req 
+[  473.102212] Entering krping_cq_event_handler
+
+[  473.102217] rdma write completion: rdma-ping-28: ]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRS
+
+[  473.102222] Exiting krping_cq_event_handler
+
+[  473.102227] server received read complete
+[  473.102231] server posted go ahead
+[  473.102234] Entering krping_cq_event_handler
+
+[  473.102238] send completion: 0
+
+[  473.102240] Exiting krping_cq_event_handler
+
+[  473.102247] Entering krping_cq_event_handler
+
+[  473.102250] recv completion: 117440512
+
+[  473.102252] Entering server_recv 
+
+[  473.102255] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.102257] Exiting server_recv 
+
+[  473.102262] Exiting krping_cq_event_handler
+
+[  473.102267] server received sink adv
+[  473.102272] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.102279] Entering krping_cq_event_handler
+
+[  473.102282] rdma write completion
+
+[  473.102287] Exiting krping_cq_event_handler
+
+[  473.102291] server rdma write complete 
+[  473.102295] server posted go ahead
+[  473.102299] Entering krping_cq_event_handler
+
+[  473.102302] send completion: 0
+
+[  473.102305] Exiting krping_cq_event_handler
+
+[  473.102313] Entering krping_cq_event_handler
+
+[  473.102316] recv completion: 117440512
+
+[  473.102318] Entering server_recv 
+
+[  473.102321] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.102323] Exiting server_recv 
+
+[  473.102328] Exiting krping_cq_event_handler
+
+[  473.102333] server received sink adv
+[  473.102338] server posted rdma read req 
+[  473.102341] Entering krping_cq_event_handler
+
+[  473.102346] rdma write completion: rdma-ping-29: ^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRST
+
+[  473.102351] Exiting krping_cq_event_handler
+
+[  473.102366] server received read complete
+[  473.102389] server posted go ahead
+[  473.102390] Entering krping_cq_event_handler
+
+[  473.102394] send completion: 0
+
+[  473.102399] Exiting krping_cq_event_handler
+
+[  473.102407] Entering krping_cq_event_handler
+
+[  473.102416] recv completion: 117440512
+
+[  473.102425] Entering server_recv 
+
+[  473.102434] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.102443] Exiting server_recv 
+
+[  473.102452] Exiting krping_cq_event_handler
+
+[  473.102484] server received sink adv
+[  473.102508] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.102536] Entering krping_cq_event_handler
+
+[  473.102546] rdma write completion
+
+[  473.102561] Exiting krping_cq_event_handler
+
+[  473.102565] server rdma write complete 
+[  473.102572] server posted go ahead
+[  473.102591] Entering krping_cq_event_handler
+
+[  473.102603] send completion: 0
+
+[  473.102616] recv completion: 117440512
+
+[  473.102625] Entering server_recv 
+
+[  473.102639] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.102648] Exiting server_recv 
+
+[  473.102664] Exiting krping_cq_event_handler
+
+[  473.102665] server received sink adv
+[  473.102671] server posted rdma read req 
+[  473.102692] Entering krping_cq_event_handler
+
+[  473.102705] rdma write completion: rdma-ping-30: _`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTU
+
+[  473.102722] Exiting krping_cq_event_handler
+
+[  473.102723] server received read complete
+[  473.102729] server posted go ahead
+[  473.102750] Entering krping_cq_event_handler
+
+[  473.102762] send completion: 0
+
+[  473.102774] recv completion: 117440512
+
+[  473.102784] Entering server_recv 
+
+[  473.102797] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.102807] Exiting server_recv 
+
+[  473.102819] Exiting krping_cq_event_handler
+
+[  473.102823] server received sink adv
+[  473.102832] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.102849] Entering krping_cq_event_handler
+
+[  473.102862] rdma write completion
+
+[  473.102875] Exiting krping_cq_event_handler
+
+[  473.102878] Entering krping_cq_event_handler
+
+[  473.102881] server rdma write complete 
+[  473.102883] server posted go ahead
+[  473.102886] send completion: 0
+
+[  473.102889] Exiting krping_cq_event_handler
+
+[  473.102892] Entering krping_cq_event_handler
+
+[  473.102894] Exiting krping_cq_event_handler
+
+[  473.102900] Entering krping_cq_event_handler
+
+[  473.102903] recv completion: 117440512
+
+[  473.102905] Entering server_recv 
+
+[  473.102908] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.102910] Exiting server_recv 
+
+[  473.102915] Exiting krping_cq_event_handler
+
+[  473.102920] server received sink adv
+[  473.102924] server posted rdma read req 
+[  473.102927] Entering krping_cq_event_handler
+
+[  473.102932] rdma write completion: rdma-ping-31: `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUV
+
+[  473.102937] Exiting krping_cq_event_handler
+
+[  473.102941] server received read complete
+[  473.102946] server posted go ahead
+[  473.102949] Entering krping_cq_event_handler
+
+[  473.102953] send completion: 0
+
+[  473.102955] Exiting krping_cq_event_handler
+
+[  473.102962] Entering krping_cq_event_handler
+
+[  473.102965] recv completion: 117440512
+
+[  473.102967] Entering server_recv 
+
+[  473.102970] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.102972] Exiting server_recv 
+
+[  473.102977] Exiting krping_cq_event_handler
+
+[  473.102982] server received sink adv
+[  473.102987] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.102996] Entering krping_cq_event_handler
+
+[  473.102999] rdma write completion
+
+[  473.103004] Exiting krping_cq_event_handler
+
+[  473.103009] server rdma write complete 
+[  473.103013] server posted go ahead
+[  473.103016] Entering krping_cq_event_handler
+
+[  473.103020] send completion: 0
+
+[  473.103023] Exiting krping_cq_event_handler
+
+[  473.103030] Entering krping_cq_event_handler
+
+[  473.103033] recv completion: 117440512
+
+[  473.103036] Entering server_recv 
+
+[  473.103039] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.103041] Exiting server_recv 
+
+[  473.103046] Exiting krping_cq_event_handler
+
+[  473.103050] server received sink adv
+[  473.103055] server posted rdma read req 
+[  473.103058] Entering krping_cq_event_handler
+
+[  473.103063] rdma write completion: rdma-ping-32: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVW
+
+[  473.103068] Exiting krping_cq_event_handler
+
+[  473.103073] server received read complete
+[  473.103079] server posted go ahead
+[  473.103082] Entering krping_cq_event_handler
+
+[  473.103086] send completion: 0
+
+[  473.103089] Exiting krping_cq_event_handler
+
+[  473.103095] Entering krping_cq_event_handler
+
+[  473.103098] recv completion: 117440512
+
+[  473.103101] Entering server_recv 
+
+[  473.103104] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.103106] Exiting server_recv 
+
+[  473.103111] Exiting krping_cq_event_handler
+
+[  473.103115] server received sink adv
+[  473.103121] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.103127] Entering krping_cq_event_handler
+
+[  473.103131] rdma write completion
+
+[  473.103136] Exiting krping_cq_event_handler
+
+[  473.103140] server rdma write complete 
+[  473.103146] server posted go ahead
+[  473.103149] Entering krping_cq_event_handler
+
+[  473.103153] send completion: 0
+
+[  473.103156] Exiting krping_cq_event_handler
+
+[  473.103163] Entering krping_cq_event_handler
+
+[  473.103167] recv completion: 117440512
+
+[  473.103169] Entering server_recv 
+
+[  473.103172] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.103174] Exiting server_recv 
+
+[  473.103179] Exiting krping_cq_event_handler
+
+[  473.103183] server received sink adv
+[  473.103188] server posted rdma read req 
+[  473.103191] Entering krping_cq_event_handler
+
+[  473.103196] rdma write completion: rdma-ping-33: bcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
+
+[  473.103201] Exiting krping_cq_event_handler
+
+[  473.103206] server received read complete
+[  473.103211] server posted go ahead
+[  473.103216] Entering krping_cq_event_handler
+
+[  473.103220] send completion: 0
+
+[  473.103222] Exiting krping_cq_event_handler
+
+[  473.103226] Entering krping_cq_event_handler
+
+[  473.103230] recv completion: 117440512
+
+[  473.103232] Entering server_recv 
+
+[  473.103235] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.103237] Exiting server_recv 
+
+[  473.103242] Exiting krping_cq_event_handler
+
+[  473.103246] server received sink adv
+[  473.103251] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.103258] Entering krping_cq_event_handler
+
+[  473.103262] rdma write completion
+
+[  473.103267] Exiting krping_cq_event_handler
+
+[  473.103271] server rdma write complete 
+[  473.103273] server posted go ahead
+[  473.103277] Entering krping_cq_event_handler
+
+[  473.103281] send completion: 0
+
+[  473.103283] Exiting krping_cq_event_handler
+
+[  473.103291] Entering krping_cq_event_handler
+
+[  473.103294] recv completion: 117440512
+
+[  473.103297] Entering server_recv 
+
+[  473.103300] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.103301] Exiting server_recv 
+
+[  473.103306] Exiting krping_cq_event_handler
+
+[  473.103311] server received sink adv
+[  473.103317] server posted rdma read req 
+[  473.103320] Entering krping_cq_event_handler
+
+[  473.103326] rdma write completion: rdma-ping-34: cdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY
+
+[  473.103330] Exiting krping_cq_event_handler
+
+[  473.103335] server received read complete
+[  473.103339] server posted go ahead
+[  473.103342] Entering krping_cq_event_handler
+
+[  473.103346] send completion: 0
+
+[  473.103349] Exiting krping_cq_event_handler
+
+[  473.103355] Entering krping_cq_event_handler
+
+[  473.103358] recv completion: 117440512
+
+[  473.103361] Entering server_recv 
+
+[  473.103364] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.103366] Exiting server_recv 
+
+[  473.103371] Exiting krping_cq_event_handler
+
+[  473.103375] server received sink adv
+[  473.103380] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.103387] Entering krping_cq_event_handler
+
+[  473.103391] rdma write completion
+
+[  473.103396] Exiting krping_cq_event_handler
+
+[  473.103400] server rdma write complete 
+[  473.103403] server posted go ahead
+[  473.103407] Entering krping_cq_event_handler
+
+[  473.103411] send completion: 0
+
+[  473.103413] Exiting krping_cq_event_handler
+
+[  473.103420] Entering krping_cq_event_handler
+
+[  473.103424] recv completion: 117440512
+
+[  473.103426] Entering server_recv 
+
+[  473.103429] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.103431] Exiting server_recv 
+
+[  473.103436] Exiting krping_cq_event_handler
+
+[  473.103441] server received sink adv
+[  473.103445] server posted rdma read req 
+[  473.103448] Entering krping_cq_event_handler
+
+[  473.103454] rdma write completion: rdma-ping-35: defghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+[  473.103458] Exiting krping_cq_event_handler
+
+[  473.103463] server received read complete
+[  473.103467] server posted go ahead
+[  473.103470] Entering krping_cq_event_handler
+
+[  473.103475] send completion: 0
+
+[  473.103480] Exiting krping_cq_event_handler
+
+[  473.103485] Entering krping_cq_event_handler
+
+[  473.103490] recv completion: 117440512
+
+[  473.103494] Entering server_recv 
+
+[  473.103499] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.103503] Exiting server_recv 
+
+[  473.103507] Exiting krping_cq_event_handler
+
+[  473.103514] server received sink adv
+[  473.103519] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.103526] Entering krping_cq_event_handler
+
+[  473.103530] rdma write completion
+
+[  473.103535] Exiting krping_cq_event_handler
+
+[  473.103539] server rdma write complete 
+[  473.103541] server posted go ahead
+[  473.103545] Entering krping_cq_event_handler
+
+[  473.103549] send completion: 0
+
+[  473.103551] Exiting krping_cq_event_handler
+
+[  473.103559] Entering krping_cq_event_handler
+
+[  473.103562] recv completion: 117440512
+
+[  473.103564] Entering server_recv 
+
+[  473.103567] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.103569] Exiting server_recv 
+
+[  473.103574] Exiting krping_cq_event_handler
+
+[  473.103579] server received sink adv
+[  473.103585] server posted rdma read req 
+[  473.103588] Entering krping_cq_event_handler
+
+[  473.103593] rdma write completion: rdma-ping-36: efghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[
+
+[  473.103598] Exiting krping_cq_event_handler
+
+[  473.103603] server received read complete
+[  473.103607] server posted go ahead
+[  473.103610] Entering krping_cq_event_handler
+
+[  473.103614] send completion: 0
+
+[  473.103617] Exiting krping_cq_event_handler
+
+[  473.103623] Entering krping_cq_event_handler
+
+[  473.103626] recv completion: 117440512
+
+[  473.103629] Entering server_recv 
+
+[  473.103632] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.103633] Exiting server_recv 
+
+[  473.103639] Exiting krping_cq_event_handler
+
+[  473.103643] server received sink adv
+[  473.103648] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.103657] Entering krping_cq_event_handler
+
+[  473.103660] rdma write completion
+
+[  473.103665] Exiting krping_cq_event_handler
+
+[  473.103670] server rdma write complete 
+[  473.103673] server posted go ahead
+[  473.103676] Entering krping_cq_event_handler
+
+[  473.103680] send completion: 0
+
+[  473.103683] Exiting krping_cq_event_handler
+
+[  473.103690] Entering krping_cq_event_handler
+
+[  473.103693] recv completion: 117440512
+
+[  473.103696] Entering server_recv 
+
+[  473.103699] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.103701] Exiting server_recv 
+
+[  473.103706] Exiting krping_cq_event_handler
+
+[  473.103710] server received sink adv
+[  473.103714] server posted rdma read req 
+[  473.103718] Entering krping_cq_event_handler
+
+[  473.103723] rdma write completion: rdma-ping-37: fghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\
+
+[  473.103727] Exiting krping_cq_event_handler
+
+[  473.103733] server received read complete
+[  473.103739] server posted go ahead
+[  473.103742] Entering krping_cq_event_handler
+
+[  473.103746] send completion: 0
+
+[  473.103749] Exiting krping_cq_event_handler
+
+[  473.103755] Entering krping_cq_event_handler
+
+[  473.103758] recv completion: 117440512
+
+[  473.103769] Entering server_recv 
+
+[  473.103782] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.103793] Exiting server_recv 
+
+[  473.103808] Exiting krping_cq_event_handler
+
+[  473.103814] server received sink adv
+[  473.103822] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.103839] Entering krping_cq_event_handler
+
+[  473.103848] rdma write completion
+
+[  473.103864] Exiting krping_cq_event_handler
+
+[  473.103865] server rdma write complete 
+[  473.103871] server posted go ahead
+[  473.103891] Entering krping_cq_event_handler
+
+[  473.103901] send completion: 0
+
+[  473.103912] recv completion: 117440512
+
+[  473.103922] Entering server_recv 
+
+[  473.103933] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.103941] Exiting server_recv 
+
+[  473.103955] Exiting krping_cq_event_handler
+
+[  473.103961] server received sink adv
+[  473.103968] server posted rdma read req 
+[  473.103986] Entering krping_cq_event_handler
+
+[  473.103998] rdma write completion: rdma-ping-38: ghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]
+
+[  473.104012] Exiting krping_cq_event_handler
+
+[  473.104018] server received read complete
+[  473.104025] server posted go ahead
+[  473.104043] Entering krping_cq_event_handler
+
+[  473.104054] send completion: 0
+
+[  473.104067] recv completion: 117440512
+
+[  473.104077] Entering server_recv 
+
+[  473.104091] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.104100] Exiting server_recv 
+
+[  473.104112] Exiting krping_cq_event_handler
+
+[  473.104118] server received sink adv
+[  473.104124] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.104139] Entering krping_cq_event_handler
+
+[  473.104152] rdma write completion
+
+[  473.104167] Exiting krping_cq_event_handler
+
+[  473.104172] server rdma write complete 
+[  473.104180] server posted go ahead
+[  473.104197] Entering krping_cq_event_handler
+
+[  473.104210] send completion: 0
+
+[  473.104218] recv completion: 117440512
+
+[  473.104221] Entering server_recv 
+
+[  473.104224] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.104225] Exiting server_recv 
+
+[  473.104231] Exiting krping_cq_event_handler
+
+[  473.104233] Entering krping_cq_event_handler
+
+[  473.104236] server received sink adv
+[  473.104239] server posted rdma read req 
+[  473.104243] rdma write completion: rdma-ping-39: hijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^
+
+[  473.104248] Exiting krping_cq_event_handler
+
+[  473.104253] Entering krping_cq_event_handler
+
+[  473.104257] Exiting krping_cq_event_handler
+
+[  473.104262] server received read complete
+[  473.104267] server posted go ahead
+[  473.104270] Entering krping_cq_event_handler
+
+[  473.104274] send completion: 0
+
+[  473.104277] Exiting krping_cq_event_handler
+
+[  473.104282] Entering krping_cq_event_handler
+
+[  473.104285] recv completion: 117440512
+
+[  473.104288] Entering server_recv 
+
+[  473.104291] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.104293] Exiting server_recv 
+
+[  473.104298] Exiting krping_cq_event_handler
+
+[  473.104302] server received sink adv
+[  473.104308] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.104317] Entering krping_cq_event_handler
+
+[  473.104320] rdma write completion
+
+[  473.104325] Exiting krping_cq_event_handler
+
+[  473.104330] server rdma write complete 
+[  473.104334] server posted go ahead
+[  473.104337] Entering krping_cq_event_handler
+
+[  473.104341] send completion: 0
+
+[  473.104343] Exiting krping_cq_event_handler
+
+[  473.104351] Entering krping_cq_event_handler
+
+[  473.104354] recv completion: 117440512
+
+[  473.104356] Entering server_recv 
+
+[  473.104359] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.104361] Exiting server_recv 
+
+[  473.104366] Exiting krping_cq_event_handler
+
+[  473.104371] server received sink adv
+[  473.104375] server posted rdma read req 
+[  473.104379] Entering krping_cq_event_handler
+
+[  473.104384] rdma write completion: rdma-ping-40: ijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_
+
+[  473.104389] Exiting krping_cq_event_handler
+
+[  473.104394] server received read complete
+[  473.104399] server posted go ahead
+[  473.104403] Entering krping_cq_event_handler
+
+[  473.104407] send completion: 0
+
+[  473.104409] Exiting krping_cq_event_handler
+
+[  473.104415] Entering krping_cq_event_handler
+
+[  473.104419] recv completion: 117440512
+
+[  473.104421] Entering server_recv 
+
+[  473.104424] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.104426] Exiting server_recv 
+
+[  473.104431] Exiting krping_cq_event_handler
+
+[  473.104435] server received sink adv
+[  473.104441] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.104448] Entering krping_cq_event_handler
+
+[  473.104451] rdma write completion
+
+[  473.104456] Exiting krping_cq_event_handler
+
+[  473.104461] server rdma write complete 
+[  473.104465] server posted go ahead
+[  473.104469] Entering krping_cq_event_handler
+
+[  473.104473] send completion: 0
+
+[  473.104475] Exiting krping_cq_event_handler
+
+[  473.104482] Entering krping_cq_event_handler
+
+[  473.104486] recv completion: 117440512
+
+[  473.104488] Entering server_recv 
+
+[  473.104491] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.104493] Exiting server_recv 
+
+[  473.104498] Exiting krping_cq_event_handler
+
+[  473.104503] server received sink adv
+[  473.104508] server posted rdma read req 
+[  473.104511] Entering krping_cq_event_handler
+
+[  473.104515] rdma write completion: rdma-ping-41: jklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`
+
+[  473.104521] Exiting krping_cq_event_handler
+
+[  473.104525] server received read complete
+[  473.104529] server posted go ahead
+[  473.104533] Entering krping_cq_event_handler
+
+[  473.104536] send completion: 0
+
+[  473.104539] Exiting krping_cq_event_handler
+
+[  473.104546] Entering krping_cq_event_handler
+
+[  473.104549] recv completion: 117440512
+
+[  473.104551] Entering server_recv 
+
+[  473.104554] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.104556] Exiting server_recv 
+
+[  473.104561] Exiting krping_cq_event_handler
+
+[  473.104565] server received sink adv
+[  473.104571] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.104579] Entering krping_cq_event_handler
+
+[  473.104583] rdma write completion
+
+[  473.104588] Exiting krping_cq_event_handler
+
+[  473.104593] server rdma write complete 
+[  473.104597] server posted go ahead
+[  473.104600] Entering krping_cq_event_handler
+
+[  473.104604] send completion: 0
+
+[  473.104606] Exiting krping_cq_event_handler
+
+[  473.104614] Entering krping_cq_event_handler
+
+[  473.104617] recv completion: 117440512
+
+[  473.104619] Entering server_recv 
+
+[  473.104622] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.104624] Exiting server_recv 
+
+[  473.104629] Exiting krping_cq_event_handler
+
+[  473.104634] server received sink adv
+[  473.104638] server posted rdma read req 
+[  473.104642] Entering krping_cq_event_handler
+
+[  473.104647] rdma write completion: rdma-ping-42: klmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`a
+
+[  473.104652] Exiting krping_cq_event_handler
+
+[  473.104657] server received read complete
+[  473.104663] server posted go ahead
+[  473.104666] Entering krping_cq_event_handler
+
+[  473.104670] send completion: 0
+
+[  473.104672] Exiting krping_cq_event_handler
+
+[  473.104679] Entering krping_cq_event_handler
+
+[  473.104682] recv completion: 117440512
+
+[  473.104684] Entering server_recv 
+
+[  473.104687] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.104689] Exiting server_recv 
+
+[  473.104694] Exiting krping_cq_event_handler
+
+[  473.104699] server received sink adv
+[  473.104704] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.104710] Entering krping_cq_event_handler
+
+[  473.104714] rdma write completion
+
+[  473.104719] Exiting krping_cq_event_handler
+
+[  473.104724] server rdma write complete 
+[  473.104729] server posted go ahead
+[  473.104733] Entering krping_cq_event_handler
+
+[  473.104738] send completion: 0
+
+[  473.104742] Exiting krping_cq_event_handler
+
+[  473.104747] Entering krping_cq_event_handler
+
+[  473.104751] recv completion: 117440512
+
+[  473.104756] Entering server_recv 
+
+[  473.104761] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.104764] Exiting server_recv 
+
+[  473.104769] Exiting krping_cq_event_handler
+
+[  473.104774] server received sink adv
+[  473.104778] server posted rdma read req 
+[  473.104781] Entering krping_cq_event_handler
+
+[  473.104786] rdma write completion: rdma-ping-43: lmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`ab
+
+[  473.104791] Exiting krping_cq_event_handler
+
+[  473.104796] server received read complete
+[  473.104800] server posted go ahead
+[  473.104803] Entering krping_cq_event_handler
+
+[  473.104807] send completion: 0
+
+[  473.104810] Exiting krping_cq_event_handler
+
+[  473.104816] Entering krping_cq_event_handler
+
+[  473.104820] recv completion: 117440512
+
+[  473.104822] Entering server_recv 
+
+[  473.104825] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.104827] Exiting server_recv 
+
+[  473.104832] Exiting krping_cq_event_handler
+
+[  473.104836] server received sink adv
+[  473.104840] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.104847] Entering krping_cq_event_handler
+
+[  473.104850] rdma write completion
+
+[  473.104856] Exiting krping_cq_event_handler
+
+[  473.104860] server rdma write complete 
+[  473.104864] server posted go ahead
+[  473.104867] Entering krping_cq_event_handler
+
+[  473.104871] send completion: 0
+
+[  473.104874] Exiting krping_cq_event_handler
+
+[  473.104903] Entering krping_cq_event_handler
+
+[  473.104906] recv completion: 117440512
+
+[  473.104909] Entering server_recv 
+
+[  473.104912] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.104914] Exiting server_recv 
+
+[  473.104919] Exiting krping_cq_event_handler
+
+[  473.104923] server received sink adv
+[  473.104928] server posted rdma read req 
+[  473.104933] Entering krping_cq_event_handler
+
+[  473.104937] rdma write completion: rdma-ping-44: mnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abc
+
+[  473.104942] Exiting krping_cq_event_handler
+
+[  473.104947] server received read complete
+[  473.104951] server posted go ahead
+[  473.104954] Entering krping_cq_event_handler
+
+[  473.104958] send completion: 0
+
+[  473.104960] Exiting krping_cq_event_handler
+
+[  473.104987] Entering krping_cq_event_handler
+
+[  473.104991] recv completion: 117440512
+
+[  473.104993] Entering server_recv 
+
+[  473.104996] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.104998] Exiting server_recv 
+
+[  473.105003] Exiting krping_cq_event_handler
+
+[  473.105008] server received sink adv
+[  473.105013] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.105020] Entering krping_cq_event_handler
+
+[  473.105023] rdma write completion
+
+[  473.105028] Exiting krping_cq_event_handler
+
+[  473.105033] server rdma write complete 
+[  473.105037] server posted go ahead
+[  473.105042] Entering krping_cq_event_handler
+
+[  473.105047] send completion: 0
+
+[  473.105051] Exiting krping_cq_event_handler
+
+[  473.105086] Entering krping_cq_event_handler
+
+[  473.105090] recv completion: 117440512
+
+[  473.105093] Entering server_recv 
+
+[  473.105096] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.105097] Exiting server_recv 
+
+[  473.105103] Exiting krping_cq_event_handler
+
+[  473.105107] server received sink adv
+[  473.105111] server posted rdma read req 
+[  473.105114] Entering krping_cq_event_handler
+
+[  473.105118] rdma write completion: rdma-ping-45: nopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcd
+
+[  473.105131] Exiting krping_cq_event_handler
+
+[  473.105137] server received read complete
+[  473.105145] server posted go ahead
+[  473.105159] Entering krping_cq_event_handler
+
+[  473.105172] send completion: 0
+
+[  473.105184] recv completion: 117440512
+
+[  473.105194] Entering server_recv 
+
+[  473.105206] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.105216] Exiting server_recv 
+
+[  473.105233] Exiting krping_cq_event_handler
+
+[  473.105236] server received sink adv
+[  473.105243] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.105261] Entering krping_cq_event_handler
+
+[  473.105272] rdma write completion
+
+[  473.105285] Exiting krping_cq_event_handler
+
+[  473.105293] server rdma write complete 
+[  473.105299] server posted go ahead
+[  473.105309] Entering krping_cq_event_handler
+
+[  473.105320] send completion: 0
+
+[  473.105333] Exiting krping_cq_event_handler
+
+[  473.105344] Entering krping_cq_event_handler
+
+[  473.105358] recv completion: 117440512
+
+[  473.105367] Entering server_recv 
+
+[  473.105378] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.105387] Exiting server_recv 
+
+[  473.105403] Exiting krping_cq_event_handler
+
+[  473.105409] server received sink adv
+[  473.105416] server posted rdma read req 
+[  473.105433] Entering krping_cq_event_handler
+
+[  473.105446] rdma write completion: rdma-ping-46: opqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcde
+
+[  473.105461] Exiting krping_cq_event_handler
+
+[  473.105467] server received read complete
+[  473.105474] server posted go ahead
+[  473.105488] Entering krping_cq_event_handler
+
+[  473.105502] send completion: 0
+
+[  473.105513] Exiting krping_cq_event_handler
+
+[  473.105526] Entering krping_cq_event_handler
+
+[  473.105537] recv completion: 117440512
+
+[  473.105548] Entering server_recv 
+
+[  473.105561] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.105569] Exiting server_recv 
+
+[  473.105575] Exiting krping_cq_event_handler
+
+[  473.105577] Entering krping_cq_event_handler
+
+[  473.105580] server received sink adv
+[  473.105584] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.105587] Exiting krping_cq_event_handler
+
+[  473.105589] Entering krping_cq_event_handler
+
+[  473.105592] rdma write completion
+
+[  473.105597] Exiting krping_cq_event_handler
+
+[  473.105602] server rdma write complete 
+[  473.105607] server posted go ahead
+[  473.105611] Entering krping_cq_event_handler
+
+[  473.105615] send completion: 0
+
+[  473.105620] Exiting krping_cq_event_handler
+
+[  473.105644] Entering krping_cq_event_handler
+
+[  473.105648] recv completion: 117440512
+
+[  473.105651] Entering server_recv 
+
+[  473.105654] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.105655] Exiting server_recv 
+
+[  473.105660] Exiting krping_cq_event_handler
+
+[  473.105665] server received sink adv
+[  473.105670] server posted rdma read req 
+[  473.105673] Entering krping_cq_event_handler
+
+[  473.105678] rdma write completion: rdma-ping-47: pqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdef
+
+[  473.105683] Exiting krping_cq_event_handler
+
+[  473.105688] server received read complete
+[  473.105692] server posted go ahead
+[  473.105695] Entering krping_cq_event_handler
+
+[  473.105699] send completion: 0
+
+[  473.105702] Exiting krping_cq_event_handler
+
+[  473.105746] Entering krping_cq_event_handler
+
+[  473.105750] recv completion: 117440512
+
+[  473.105752] Entering server_recv 
+
+[  473.105755] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.105757] Exiting server_recv 
+
+[  473.105762] Exiting krping_cq_event_handler
+
+[  473.105767] server received sink adv
+[  473.105772] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.105779] Entering krping_cq_event_handler
+
+[  473.105783] rdma write completion
+
+[  473.105788] Exiting krping_cq_event_handler
+
+[  473.105792] server rdma write complete 
+[  473.105797] server posted go ahead
+[  473.105801] Entering krping_cq_event_handler
+
+[  473.105806] send completion: 0
+
+[  473.105811] Exiting krping_cq_event_handler
+
+[  473.105836] Entering krping_cq_event_handler
+
+[  473.105840] recv completion: 117440512
+
+[  473.105843] Entering server_recv 
+
+[  473.105846] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.105847] Exiting server_recv 
+
+[  473.105853] Exiting krping_cq_event_handler
+
+[  473.105857] server received sink adv
+[  473.105862] server posted rdma read req 
+[  473.105865] Entering krping_cq_event_handler
+
+[  473.105870] rdma write completion: rdma-ping-48: qrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefg
+
+[  473.105874] Exiting krping_cq_event_handler
+
+[  473.105877] server received read complete
+[  473.105880] server posted go ahead
+[  473.105883] Entering krping_cq_event_handler
+
+[  473.105886] send completion: 0
+
+[  473.105889] Exiting krping_cq_event_handler
+
+[  473.105896] Entering krping_cq_event_handler
+
+[  473.105900] recv completion: 117440512
+
+[  473.105902] Entering server_recv 
+
+[  473.105905] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.105907] Exiting server_recv 
+
+[  473.105912] Exiting krping_cq_event_handler
+
+[  473.105916] server received sink adv
+[  473.105922] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.105930] Entering krping_cq_event_handler
+
+[  473.105934] rdma write completion
+
+[  473.105939] Exiting krping_cq_event_handler
+
+[  473.105943] server rdma write complete 
+[  473.105947] server posted go ahead
+[  473.105951] Entering krping_cq_event_handler
+
+[  473.105955] send completion: 0
+
+[  473.105957] Exiting krping_cq_event_handler
+
+[  473.105987] Entering krping_cq_event_handler
+
+[  473.105990] recv completion: 117440512
+
+[  473.105993] Entering server_recv 
+
+[  473.105996] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.105998] Exiting server_recv 
+
+[  473.106002] Exiting krping_cq_event_handler
+
+[  473.106007] server received sink adv
+[  473.106012] server posted rdma read req 
+[  473.106015] Entering krping_cq_event_handler
+
+[  473.106020] rdma write completion: rdma-ping-49: rstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefgh
+
+[  473.106025] Exiting krping_cq_event_handler
+
+[  473.106031] server received read complete
+[  473.106063] server posted go ahead
+[  473.106066] Entering krping_cq_event_handler
+
+[  473.106070] send completion: 0
+
+[  473.106073] Exiting krping_cq_event_handler
+
+[  473.106080] Entering krping_cq_event_handler
+
+[  473.106083] recv completion: 117440512
+
+[  473.106085] Entering server_recv 
+
+[  473.106088] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.106090] Exiting server_recv 
+
+[  473.106094] Exiting krping_cq_event_handler
+
+[  473.106098] server received sink adv
+[  473.106103] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.106109] Entering krping_cq_event_handler
+
+[  473.106113] rdma write completion
+
+[  473.106117] Exiting krping_cq_event_handler
+
+[  473.106121] server rdma write complete 
+[  473.106126] server posted go ahead
+[  473.106130] Entering krping_cq_event_handler
+
+[  473.106133] send completion: 0
+
+[  473.106136] Exiting krping_cq_event_handler
+
+[  473.106144] Entering krping_cq_event_handler
+
+[  473.106147] recv completion: 117440512
+
+[  473.106149] Entering server_recv 
+
+[  473.106152] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.106154] Exiting server_recv 
+
+[  473.106158] Exiting krping_cq_event_handler
+
+[  473.106163] server received sink adv
+[  473.106167] server posted rdma read req 
+[  473.106169] Entering krping_cq_event_handler
+
+[  473.106174] rdma write completion: rdma-ping-50: stuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghi
+
+[  473.106178] Exiting krping_cq_event_handler
+
+[  473.106183] server received read complete
+[  473.106187] server posted go ahead
+[  473.106191] Entering krping_cq_event_handler
+
+[  473.106195] send completion: 0
+
+[  473.106199] Exiting krping_cq_event_handler
+
+[  473.106222] Entering krping_cq_event_handler
+
+[  473.106225] recv completion: 117440512
+
+[  473.106228] Entering server_recv 
+
+[  473.106230] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.106232] Exiting server_recv 
+
+[  473.106237] Exiting krping_cq_event_handler
+
+[  473.106240] server received sink adv
+[  473.106243] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.106248] Entering krping_cq_event_handler
+
+[  473.106252] rdma write completion
+
+[  473.106256] Exiting krping_cq_event_handler
+
+[  473.106260] server rdma write complete 
+[  473.106264] server posted go ahead
+[  473.106267] Entering krping_cq_event_handler
+
+[  473.106270] send completion: 0
+
+[  473.106273] Exiting krping_cq_event_handler
+
+[  473.106281] Entering krping_cq_event_handler
+
+[  473.106284] recv completion: 117440512
+
+[  473.106287] Entering server_recv 
+
+[  473.106289] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.106291] Exiting server_recv 
+
+[  473.106295] Exiting krping_cq_event_handler
+
+[  473.106299] server received sink adv
+[  473.106305] server posted rdma read req 
+[  473.106307] Entering krping_cq_event_handler
+
+[  473.106312] rdma write completion: rdma-ping-51: tuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghij
+
+[  473.106316] Exiting krping_cq_event_handler
+
+[  473.106321] server received read complete
+[  473.106324] server posted go ahead
+[  473.106327] Entering krping_cq_event_handler
+
+[  473.106331] send completion: 0
+
+[  473.106333] Exiting krping_cq_event_handler
+
+[  473.106341] Entering krping_cq_event_handler
+
+[  473.106344] recv completion: 117440512
+
+[  473.106346] Entering server_recv 
+
+[  473.106349] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.106350] Exiting server_recv 
+
+[  473.106355] Exiting krping_cq_event_handler
+
+[  473.106359] server received sink adv
+[  473.106362] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.106367] Entering krping_cq_event_handler
+
+[  473.106371] rdma write completion
+
+[  473.106375] Exiting krping_cq_event_handler
+
+[  473.106379] server rdma write complete 
+[  473.106383] server posted go ahead
+[  473.106386] Entering krping_cq_event_handler
+
+[  473.106390] send completion: 0
+
+[  473.106392] Exiting krping_cq_event_handler
+
+[  473.106400] Entering krping_cq_event_handler
+
+[  473.106403] recv completion: 117440512
+
+[  473.106405] Entering server_recv 
+
+[  473.106408] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.106410] Exiting server_recv 
+
+[  473.106414] Exiting krping_cq_event_handler
+
+[  473.106418] server received sink adv
+[  473.106422] server posted rdma read req 
+[  473.106425] Entering krping_cq_event_handler
+
+[  473.106429] rdma write completion: rdma-ping-52: uvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijk
+
+[  473.106433] Exiting krping_cq_event_handler
+
+[  473.106437] server received read complete
+[  473.106455] server posted go ahead
+[  473.106458] Entering krping_cq_event_handler
+
+[  473.106462] send completion: 0
+
+[  473.106470] Exiting krping_cq_event_handler
+
+[  473.106489] Entering krping_cq_event_handler
+
+[  473.106507] recv completion: 117440512
+
+[  473.106516] Entering server_recv 
+
+[  473.106525] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.106534] Exiting server_recv 
+
+[  473.106547] Exiting krping_cq_event_handler
+
+[  473.106550] server received sink adv
+[  473.106558] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.106574] Entering krping_cq_event_handler
+
+[  473.106584] rdma write completion
+
+[  473.106597] Exiting krping_cq_event_handler
+
+[  473.106602] server rdma write complete 
+[  473.106607] server posted go ahead
+[  473.106620] Entering krping_cq_event_handler
+
+[  473.106632] send completion: 0
+
+[  473.106643] recv completion: 117440512
+
+[  473.106655] Entering server_recv 
+
+[  473.106664] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.106672] Exiting server_recv 
+
+[  473.106683] Exiting krping_cq_event_handler
+
+[  473.106689] server received sink adv
+[  473.106695] server posted rdma read req 
+[  473.106711] Entering krping_cq_event_handler
+
+[  473.106720] rdma write completion: rdma-ping-53: vwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijkl
+
+[  473.106733] Exiting krping_cq_event_handler
+
+[  473.106739] server received read complete
+[  473.106745] server posted go ahead
+[  473.106761] Entering krping_cq_event_handler
+
+[  473.106770] send completion: 0
+
+[  473.106781] recv completion: 117440512
+
+[  473.106789] Entering server_recv 
+
+[  473.106802] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.106811] Exiting server_recv 
+
+[  473.106825] Exiting krping_cq_event_handler
+
+[  473.106829] server received sink adv
+[  473.106836] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.106852] Entering krping_cq_event_handler
+
+[  473.106863] rdma write completion
+
+[  473.106877] Exiting krping_cq_event_handler
+
+[  473.106878] server rdma write complete 
+[  473.106881] server posted go ahead
+[  473.106885] Entering krping_cq_event_handler
+
+[  473.106888] send completion: 0
+
+[  473.106890] Exiting krping_cq_event_handler
+
+[  473.106892] Entering krping_cq_event_handler
+
+[  473.106895] Exiting krping_cq_event_handler
+
+[  473.106920] Entering krping_cq_event_handler
+
+[  473.106923] recv completion: 117440512
+
+[  473.106925] Entering server_recv 
+
+[  473.106928] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.106929] Exiting server_recv 
+
+[  473.106934] Exiting krping_cq_event_handler
+
+[  473.106938] server received sink adv
+[  473.106943] server posted rdma read req 
+[  473.106947] Entering krping_cq_event_handler
+
+[  473.106951] rdma write completion: rdma-ping-54: wxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklm
+
+[  473.106955] Exiting krping_cq_event_handler
+
+[  473.106959] server received read complete
+[  473.106963] server posted go ahead
+[  473.106966] Entering krping_cq_event_handler
+
+[  473.106969] send completion: 0
+
+[  473.106972] Exiting krping_cq_event_handler
+
+[  473.106989] Entering krping_cq_event_handler
+
+[  473.106992] recv completion: 117440512
+
+[  473.106994] Entering server_recv 
+
+[  473.106997] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.106999] Exiting server_recv 
+
+[  473.107003] Exiting krping_cq_event_handler
+
+[  473.107007] server received sink adv
+[  473.107012] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.107018] Entering krping_cq_event_handler
+
+[  473.107022] rdma write completion
+
+[  473.107026] Exiting krping_cq_event_handler
+
+[  473.107030] server rdma write complete 
+[  473.107033] server posted go ahead
+[  473.107037] Entering krping_cq_event_handler
+
+[  473.107041] send completion: 0
+
+[  473.107045] Exiting krping_cq_event_handler
+
+[  473.107060] Entering krping_cq_event_handler
+
+[  473.107064] recv completion: 117440512
+
+[  473.107066] Entering server_recv 
+
+[  473.107069] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.107070] Exiting server_recv 
+
+[  473.107075] Exiting krping_cq_event_handler
+
+[  473.107079] server received sink adv
+[  473.107083] server posted rdma read req 
+[  473.107086] Entering krping_cq_event_handler
+
+[  473.107090] rdma write completion: rdma-ping-55: xyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmn
+
+[  473.107094] Exiting krping_cq_event_handler
+
+[  473.107098] server received read complete
+[  473.107104] server posted go ahead
+[  473.107107] Entering krping_cq_event_handler
+
+[  473.107110] send completion: 0
+
+[  473.107113] Exiting krping_cq_event_handler
+
+[  473.107135] Entering krping_cq_event_handler
+
+[  473.107138] recv completion: 117440512
+
+[  473.107140] Entering server_recv 
+
+[  473.107143] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.107144] Exiting server_recv 
+
+[  473.107149] Exiting krping_cq_event_handler
+
+[  473.107153] server received sink adv
+[  473.107158] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.107164] Entering krping_cq_event_handler
+
+[  473.107167] rdma write completion
+
+[  473.107172] Exiting krping_cq_event_handler
+
+[  473.107176] server rdma write complete 
+[  473.107180] server posted go ahead
+[  473.107183] Entering krping_cq_event_handler
+
+[  473.107186] send completion: 0
+
+[  473.107188] Exiting krping_cq_event_handler
+
+[  473.107212] Entering krping_cq_event_handler
+
+[  473.107215] recv completion: 117440512
+
+[  473.107217] Entering server_recv 
+
+[  473.107220] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.107221] Exiting server_recv 
+
+[  473.107226] Exiting krping_cq_event_handler
+
+[  473.107230] server received sink adv
+[  473.107236] server posted rdma read req 
+[  473.107238] Entering krping_cq_event_handler
+
+[  473.107243] rdma write completion: rdma-ping-56: yzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmno
+
+[  473.107247] Exiting krping_cq_event_handler
+
+[  473.107252] server received read complete
+[  473.107255] server posted go ahead
+[  473.107258] Entering krping_cq_event_handler
+
+[  473.107261] send completion: 0
+
+[  473.107264] Exiting krping_cq_event_handler
+
+[  473.107272] Entering krping_cq_event_handler
+
+[  473.107275] recv completion: 117440512
+
+[  473.107277] Entering server_recv 
+
+[  473.107280] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.107282] Exiting server_recv 
+
+[  473.107286] Exiting krping_cq_event_handler
+
+[  473.107290] server received sink adv
+[  473.107295] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.107303] Entering krping_cq_event_handler
+
+[  473.107306] rdma write completion
+
+[  473.107310] Exiting krping_cq_event_handler
+
+[  473.107314] server rdma write complete 
+[  473.107318] server posted go ahead
+[  473.107321] Entering krping_cq_event_handler
+
+[  473.107325] send completion: 0
+
+[  473.107327] Exiting krping_cq_event_handler
+
+[  473.107335] Entering krping_cq_event_handler
+
+[  473.107338] recv completion: 117440512
+
+[  473.107341] Entering server_recv 
+
+[  473.107343] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.107345] Exiting server_recv 
+
+[  473.107349] Exiting krping_cq_event_handler
+
+[  473.107354] server received sink adv
+[  473.107358] server posted rdma read req 
+[  473.107362] Entering krping_cq_event_handler
+
+[  473.107365] rdma write completion: rdma-ping-57: zABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnop
+
+[  473.107370] Exiting krping_cq_event_handler
+
+[  473.107374] server received read complete
+[  473.107379] server posted go ahead
+[  473.107382] Entering krping_cq_event_handler
+
+[  473.107385] send completion: 0
+
+[  473.107388] Exiting krping_cq_event_handler
+
+[  473.107395] Entering krping_cq_event_handler
+
+[  473.107398] recv completion: 117440512
+
+[  473.107400] Entering server_recv 
+
+[  473.107403] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.107404] Exiting server_recv 
+
+[  473.107409] Exiting krping_cq_event_handler
+
+[  473.107413] server received sink adv
+[  473.107418] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.107424] Entering krping_cq_event_handler
+
+[  473.107427] rdma write completion
+
+[  473.107432] Exiting krping_cq_event_handler
+
+[  473.107436] server rdma write complete 
+[  473.107442] server posted go ahead
+[  473.107445] Entering krping_cq_event_handler
+
+[  473.107448] send completion: 0
+
+[  473.107450] Exiting krping_cq_event_handler
+
+[  473.107458] Entering krping_cq_event_handler
+
+[  473.107462] recv completion: 117440512
+
+[  473.107464] Entering server_recv 
+
+[  473.107466] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.107468] Exiting server_recv 
+
+[  473.107473] Exiting krping_cq_event_handler
+
+[  473.107513] server received sink adv
+[  473.107517] server posted rdma read req 
+[  473.107520] Entering krping_cq_event_handler
+
+[  473.107524] rdma write completion: rdma-ping-58: ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopq
+
+[  473.107529] Exiting krping_cq_event_handler
+
+[  473.107533] server received read complete
+[  473.107536] server posted go ahead
+[  473.107539] Entering krping_cq_event_handler
+
+[  473.107543] send completion: 0
+
+[  473.107545] Exiting krping_cq_event_handler
+
+[  473.107552] Entering krping_cq_event_handler
+
+[  473.107555] recv completion: 117440512
+
+[  473.107557] Entering server_recv 
+
+[  473.107560] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.107562] Exiting server_recv 
+
+[  473.107566] Exiting krping_cq_event_handler
+
+[  473.107570] server received sink adv
+[  473.107575] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.107583] Entering krping_cq_event_handler
+
+[  473.107586] rdma write completion
+
+[  473.107591] Exiting krping_cq_event_handler
+
+[  473.107595] server rdma write complete 
+[  473.107599] server posted go ahead
+[  473.107602] Entering krping_cq_event_handler
+
+[  473.107605] send completion: 0
+
+[  473.107607] Exiting krping_cq_event_handler
+
+[  473.107616] Entering krping_cq_event_handler
+
+[  473.107618] recv completion: 117440512
+
+[  473.107621] Entering server_recv 
+
+[  473.107623] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.107625] Exiting server_recv 
+
+[  473.107629] Exiting krping_cq_event_handler
+
+[  473.107633] server received sink adv
+[  473.107636] server posted rdma read req 
+[  473.107639] Entering krping_cq_event_handler
+
+[  473.107643] rdma write completion: rdma-ping-59: BCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqr
+
+[  473.107647] Exiting krping_cq_event_handler
+
+[  473.107652] server received read complete
+[  473.107657] server posted go ahead
+[  473.107665] Entering krping_cq_event_handler
+
+[  473.107676] send completion: 0
+
+[  473.107688] recv completion: 117440512
+
+[  473.107697] Entering server_recv 
+
+[  473.107705] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.107714] Exiting server_recv 
+
+[  473.107726] Exiting krping_cq_event_handler
+
+[  473.107731] server received sink adv
+[  473.107739] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.107756] Entering krping_cq_event_handler
+
+[  473.107766] rdma write completion
+
+[  473.107780] Exiting krping_cq_event_handler
+
+[  473.107785] server rdma write complete 
+[  473.107792] server posted go ahead
+[  473.107808] Entering krping_cq_event_handler
+
+[  473.107818] send completion: 0
+
+[  473.107829] recv completion: 117440512
+
+[  473.107839] Entering server_recv 
+
+[  473.107848] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.107855] Exiting server_recv 
+
+[  473.107869] Exiting krping_cq_event_handler
+
+[  473.107874] server received sink adv
+[  473.107881] server posted rdma read req 
+[  473.107896] Entering krping_cq_event_handler
+
+[  473.107908] rdma write completion: rdma-ping-60: CDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrs
+
+[  473.107922] Exiting krping_cq_event_handler
+
+[  473.107927] server received read complete
+[  473.107934] server posted go ahead
+[  473.107950] Entering krping_cq_event_handler
+
+[  473.107958] send completion: 0
+
+[  473.107970] recv completion: 117440512
+
+[  473.107979] Entering server_recv 
+
+[  473.107989] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.107998] Exiting server_recv 
+
+[  473.108012] Exiting krping_cq_event_handler
+
+[  473.108016] server received sink adv
+[  473.108023] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.108039] Entering krping_cq_event_handler
+
+[  473.108050] rdma write completion
+
+[  473.108064] Exiting krping_cq_event_handler
+
+[  473.108065] server rdma write complete 
+[  473.108071] server posted go ahead
+[  473.108077] Entering krping_cq_event_handler
+
+[  473.108080] send completion: 0
+
+[  473.108083] recv completion: 117440512
+
+[  473.108085] Entering server_recv 
+
+[  473.108088] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.108090] Exiting server_recv 
+
+[  473.108094] Exiting krping_cq_event_handler
+
+[  473.108096] Entering krping_cq_event_handler
+
+[  473.108099] server received sink adv
+[  473.108101] server posted rdma read req 
+[  473.108104] rdma write completion: rdma-ping-61: DEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrst
+
+[  473.108109] Exiting krping_cq_event_handler
+
+[  473.108111] Entering krping_cq_event_handler
+
+[  473.108114] server received read complete
+[  473.108116] server posted go ahead
+[  473.108118] send completion: 0
+
+[  473.108121] Exiting krping_cq_event_handler
+
+[  473.108123] Entering krping_cq_event_handler
+
+[  473.108126] Exiting krping_cq_event_handler
+
+[  473.108131] Entering krping_cq_event_handler
+
+[  473.108134] recv completion: 117440512
+
+[  473.108136] Entering server_recv 
+
+[  473.108139] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.108141] Exiting server_recv 
+
+[  473.108145] Exiting krping_cq_event_handler
+
+[  473.108149] server received sink adv
+[  473.108154] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.108160] Entering krping_cq_event_handler
+
+[  473.108163] rdma write completion
+
+[  473.108167] Exiting krping_cq_event_handler
+
+[  473.108171] server rdma write complete 
+[  473.108176] server posted go ahead
+[  473.108180] Entering krping_cq_event_handler
+
+[  473.108184] send completion: 0
+
+[  473.108188] Exiting krping_cq_event_handler
+
+[  473.108193] Entering krping_cq_event_handler
+
+[  473.108196] recv completion: 117440512
+
+[  473.108199] Entering server_recv 
+
+[  473.108201] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.108203] Exiting server_recv 
+
+[  473.108207] Exiting krping_cq_event_handler
+
+[  473.108211] server received sink adv
+[  473.108215] server posted rdma read req 
+[  473.108218] Entering krping_cq_event_handler
+
+[  473.108222] rdma write completion: rdma-ping-62: EFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstu
+
+[  473.108227] Exiting krping_cq_event_handler
+
+[  473.108231] server received read complete
+[  473.108235] server posted go ahead
+[  473.108238] Entering krping_cq_event_handler
+
+[  473.108241] send completion: 0
+
+[  473.108244] Exiting krping_cq_event_handler
+
+[  473.108251] Entering krping_cq_event_handler
+
+[  473.108254] recv completion: 117440512
+
+[  473.108256] Entering server_recv 
+
+[  473.108259] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.108261] Exiting server_recv 
+
+[  473.108265] Exiting krping_cq_event_handler
+
+[  473.108269] server received sink adv
+[  473.108275] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.108282] Entering krping_cq_event_handler
+
+[  473.108285] rdma write completion
+
+[  473.108290] Exiting krping_cq_event_handler
+
+[  473.108294] server rdma write complete 
+[  473.108298] server posted go ahead
+[  473.108301] Entering krping_cq_event_handler
+
+[  473.108304] send completion: 0
+
+[  473.108307] Exiting krping_cq_event_handler
+
+[  473.108315] Entering krping_cq_event_handler
+
+[  473.108318] recv completion: 117440512
+
+[  473.108320] Entering server_recv 
+
+[  473.108322] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.108324] Exiting server_recv 
+
+[  473.108328] Exiting krping_cq_event_handler
+
+[  473.108332] server received sink adv
+[  473.108336] server posted rdma read req 
+[  473.108339] Entering krping_cq_event_handler
+
+[  473.108344] rdma write completion: rdma-ping-63: FGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuv
+
+[  473.108348] Exiting krping_cq_event_handler
+
+[  473.108354] server received read complete
+[  473.108358] server posted go ahead
+[  473.108361] Entering krping_cq_event_handler
+
+[  473.108365] send completion: 0
+
+[  473.108367] Exiting krping_cq_event_handler
+
+[  473.108374] Entering krping_cq_event_handler
+
+[  473.108377] recv completion: 117440512
+
+[  473.108379] Entering server_recv 
+
+[  473.108382] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.108383] Exiting server_recv 
+
+[  473.108388] Exiting krping_cq_event_handler
+
+[  473.108392] server received sink adv
+[  473.108397] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.108403] Entering krping_cq_event_handler
+
+[  473.108406] rdma write completion
+
+[  473.108411] Exiting krping_cq_event_handler
+
+[  473.108415] server rdma write complete 
+[  473.108418] server posted go ahead
+[  473.108422] Entering krping_cq_event_handler
+
+[  473.108425] send completion: 0
+
+[  473.108427] Exiting krping_cq_event_handler
+
+[  473.108436] Entering krping_cq_event_handler
+
+[  473.108439] recv completion: 117440512
+
+[  473.108441] Entering server_recv 
+
+[  473.108444] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.108445] Exiting server_recv 
+
+[  473.108450] Exiting krping_cq_event_handler
+
+[  473.108454] server received sink adv
+[  473.108458] server posted rdma read req 
+[  473.108461] Entering krping_cq_event_handler
+
+[  473.108465] rdma write completion: rdma-ping-64: GHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvw
+
+[  473.108469] Exiting krping_cq_event_handler
+
+[  473.108475] server received read complete
+[  473.108480] server posted go ahead
+[  473.108483] Entering krping_cq_event_handler
+
+[  473.108486] send completion: 0
+
+[  473.108488] Exiting krping_cq_event_handler
+
+[  473.108496] Entering krping_cq_event_handler
+
+[  473.108499] recv completion: 117440512
+
+[  473.108501] Entering server_recv 
+
+[  473.108504] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.108505] Exiting server_recv 
+
+[  473.108510] Exiting krping_cq_event_handler
+
+[  473.108514] server received sink adv
+[  473.108518] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.108524] Entering krping_cq_event_handler
+
+[  473.108528] rdma write completion
+
+[  473.108532] Exiting krping_cq_event_handler
+
+[  473.108536] server rdma write complete 
+[  473.108542] server posted go ahead
+[  473.108545] Entering krping_cq_event_handler
+
+[  473.108548] send completion: 0
+
+[  473.108551] Exiting krping_cq_event_handler
+
+[  473.108560] Entering krping_cq_event_handler
+
+[  473.108563] recv completion: 117440512
+
+[  473.108565] Entering server_recv 
+
+[  473.108568] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.108569] Exiting server_recv 
+
+[  473.108574] Exiting krping_cq_event_handler
+
+[  473.108578] server received sink adv
+[  473.108582] server posted rdma read req 
+[  473.108584] Entering krping_cq_event_handler
+
+[  473.108589] rdma write completion: rdma-ping-65: HIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwx
+
+[  473.108593] Exiting krping_cq_event_handler
+
+[  473.108598] server received read complete
+[  473.108602] server posted go ahead
+[  473.108606] Entering krping_cq_event_handler
+
+[  473.108610] send completion: 0
+
+[  473.108614] Exiting krping_cq_event_handler
+
+[  473.108618] Entering krping_cq_event_handler
+
+[  473.108621] recv completion: 117440512
+
+[  473.108625] Entering server_recv 
+
+[  473.108630] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.108633] Exiting server_recv 
+
+[  473.108637] Exiting krping_cq_event_handler
+
+[  473.108641] server received sink adv
+[  473.108646] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.108652] Entering krping_cq_event_handler
+
+[  473.108656] rdma write completion
+
+[  473.108660] Exiting krping_cq_event_handler
+
+[  473.108664] server rdma write complete 
+[  473.108668] server posted go ahead
+[  473.108671] Entering krping_cq_event_handler
+
+[  473.108674] send completion: 0
+
+[  473.108677] Exiting krping_cq_event_handler
+
+[  473.108685] Entering krping_cq_event_handler
+
+[  473.108688] recv completion: 117440512
+
+[  473.108690] Entering server_recv 
+
+[  473.108693] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.108694] Exiting server_recv 
+
+[  473.108699] Exiting krping_cq_event_handler
+
+[  473.108703] server received sink adv
+[  473.108707] server posted rdma read req 
+[  473.108710] Entering krping_cq_event_handler
+
+[  473.108714] rdma write completion: rdma-ping-66: IJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxy
+
+[  473.108718] Exiting krping_cq_event_handler
+
+[  473.108723] server received read complete
+[  473.108726] server posted go ahead
+[  473.108729] Entering krping_cq_event_handler
+
+[  473.108733] send completion: 0
+
+[  473.108735] Exiting krping_cq_event_handler
+
+[  473.108742] Entering krping_cq_event_handler
+
+[  473.108745] recv completion: 117440512
+
+[  473.108747] Entering server_recv 
+
+[  473.108750] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.108752] Exiting server_recv 
+
+[  473.108756] Exiting krping_cq_event_handler
+
+[  473.108760] server received sink adv
+[  473.108766] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.108772] Entering krping_cq_event_handler
+
+[  473.108776] rdma write completion
+
+[  473.108780] Exiting krping_cq_event_handler
+
+[  473.108784] server rdma write complete 
+[  473.108788] server posted go ahead
+[  473.108791] Entering krping_cq_event_handler
+
+[  473.108795] send completion: 0
+
+[  473.108797] Exiting krping_cq_event_handler
+
+[  473.108805] Entering krping_cq_event_handler
+
+[  473.108808] recv completion: 117440512
+
+[  473.108811] Entering server_recv 
+
+[  473.108813] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.108815] Exiting server_recv 
+
+[  473.108819] Exiting krping_cq_event_handler
+
+[  473.108823] server received sink adv
+[  473.108829] server posted rdma read req 
+[  473.108837] Entering krping_cq_event_handler
+
+[  473.108841] rdma write completion: rdma-ping-67: JKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz
+
+[  473.108845] Exiting krping_cq_event_handler
+
+[  473.108849] server received read complete
+[  473.108853] server posted go ahead
+[  473.108856] Entering krping_cq_event_handler
+
+[  473.108859] send completion: 0
+
+[  473.108862] Exiting krping_cq_event_handler
+
+[  473.108876] Entering krping_cq_event_handler
+
+[  473.108879] recv completion: 117440512
+
+[  473.108881] Entering server_recv 
+
+[  473.108884] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.108885] Exiting server_recv 
+
+[  473.108900] Exiting krping_cq_event_handler
+
+[  473.108905] server received sink adv
+[  473.108913] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.108929] Entering krping_cq_event_handler
+
+[  473.108940] rdma write completion
+
+[  473.108954] Exiting krping_cq_event_handler
+
+[  473.108959] server rdma write complete 
+[  473.108966] server posted go ahead
+[  473.108981] Entering krping_cq_event_handler
+
+[  473.108992] send completion: 0
+
+[  473.109001] recv completion: 117440512
+
+[  473.109010] Entering server_recv 
+
+[  473.109022] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.109030] Exiting server_recv 
+
+[  473.109046] Exiting krping_cq_event_handler
+
+[  473.109046] server received sink adv
+[  473.109052] server posted rdma read req 
+[  473.109072] Entering krping_cq_event_handler
+
+[  473.109083] rdma write completion: rdma-ping-68: KLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzA
+
+[  473.109096] Exiting krping_cq_event_handler
+
+[  473.109101] server received read complete
+[  473.109108] server posted go ahead
+[  473.109124] Entering krping_cq_event_handler
+
+[  473.109132] send completion: 0
+
+[  473.109143] recv completion: 117440512
+
+[  473.109152] Entering server_recv 
+
+[  473.109165] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.109175] Exiting server_recv 
+
+[  473.109188] Exiting krping_cq_event_handler
+
+[  473.109191] server received sink adv
+[  473.109199] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.109216] Entering krping_cq_event_handler
+
+[  473.109226] rdma write completion
+
+[  473.109238] Exiting krping_cq_event_handler
+
+[  473.109245] server rdma write complete 
+[  473.109251] server posted go ahead
+[  473.109262] Entering krping_cq_event_handler
+
+[  473.109273] send completion: 0
+
+[  473.109284] recv completion: 117440512
+
+[  473.109293] Entering server_recv 
+
+[  473.109298] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.109299] Exiting server_recv 
+
+[  473.109304] Exiting krping_cq_event_handler
+
+[  473.109306] Entering krping_cq_event_handler
+
+[  473.109309] server received sink adv
+[  473.109311] server posted rdma read req 
+[  473.109315] rdma write completion: rdma-ping-69: LMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzAB
+
+[  473.109319] Exiting krping_cq_event_handler
+
+[  473.109323] Entering krping_cq_event_handler
+
+[  473.109328] Exiting krping_cq_event_handler
+
+[  473.109332] server received read complete
+[  473.109336] server posted go ahead
+[  473.109339] Entering krping_cq_event_handler
+
+[  473.109342] send completion: 0
+
+[  473.109345] Exiting krping_cq_event_handler
+
+[  473.109348] Entering krping_cq_event_handler
+
+[  473.109351] recv completion: 117440512
+
+[  473.109353] Entering server_recv 
+
+[  473.109356] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.109358] Exiting server_recv 
+
+[  473.109362] Exiting krping_cq_event_handler
+
+[  473.109366] server received sink adv
+[  473.109370] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.109377] Entering krping_cq_event_handler
+
+[  473.109380] rdma write completion
+
+[  473.109384] Exiting krping_cq_event_handler
+
+[  473.109389] server rdma write complete 
+[  473.109394] server posted go ahead
+[  473.109397] Entering krping_cq_event_handler
+
+[  473.109401] send completion: 0
+
+[  473.109403] Exiting krping_cq_event_handler
+
+[  473.109406] Entering krping_cq_event_handler
+
+[  473.109408] recv completion: 117440512
+
+[  473.109410] Entering server_recv 
+
+[  473.109413] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.109415] Exiting server_recv 
+
+[  473.109419] Exiting krping_cq_event_handler
+
+[  473.109423] server received sink adv
+[  473.109427] server posted rdma read req 
+[  473.109429] Entering krping_cq_event_handler
+
+[  473.109434] rdma write completion: rdma-ping-70: MNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABC
+
+[  473.109438] Exiting krping_cq_event_handler
+
+[  473.109442] server received read complete
+[  473.109446] server posted go ahead
+[  473.109449] Entering krping_cq_event_handler
+
+[  473.109452] send completion: 0
+
+[  473.109455] Exiting krping_cq_event_handler
+
+[  473.109457] Entering krping_cq_event_handler
+
+[  473.109460] recv completion: 117440512
+
+[  473.109462] Entering server_recv 
+
+[  473.109465] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.109466] Exiting server_recv 
+
+[  473.109471] Exiting krping_cq_event_handler
+
+[  473.109475] server received sink adv
+[  473.109480] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.109487] Entering krping_cq_event_handler
+
+[  473.109490] rdma write completion
+
+[  473.109495] Exiting krping_cq_event_handler
+
+[  473.109499] server rdma write complete 
+[  473.109502] server posted go ahead
+[  473.109505] Entering krping_cq_event_handler
+
+[  473.109509] send completion: 0
+
+[  473.109511] Exiting krping_cq_event_handler
+
+[  473.109515] Entering krping_cq_event_handler
+
+[  473.109518] recv completion: 117440512
+
+[  473.109520] Entering server_recv 
+
+[  473.109523] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.109524] Exiting server_recv 
+
+[  473.109528] Exiting krping_cq_event_handler
+
+[  473.109532] server received sink adv
+[  473.109536] server posted rdma read req 
+[  473.109539] Entering krping_cq_event_handler
+
+[  473.109543] rdma write completion: rdma-ping-71: NOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCD
+
+[  473.109548] Exiting krping_cq_event_handler
+
+[  473.109552] server received read complete
+[  473.109558] server posted go ahead
+[  473.109561] Entering krping_cq_event_handler
+
+[  473.109564] send completion: 0
+
+[  473.109567] Exiting krping_cq_event_handler
+
+[  473.109569] Entering krping_cq_event_handler
+
+[  473.109572] recv completion: 117440512
+
+[  473.109574] Entering server_recv 
+
+[  473.109577] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.109578] Exiting server_recv 
+
+[  473.109583] Exiting krping_cq_event_handler
+
+[  473.109586] server received sink adv
+[  473.109591] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.109597] Entering krping_cq_event_handler
+
+[  473.109600] rdma write completion
+
+[  473.109604] Exiting krping_cq_event_handler
+
+[  473.109608] server rdma write complete 
+[  473.109612] server posted go ahead
+[  473.109616] Entering krping_cq_event_handler
+
+[  473.109619] send completion: 0
+
+[  473.109622] Exiting krping_cq_event_handler
+
+[  473.109624] Entering krping_cq_event_handler
+
+[  473.109627] recv completion: 117440512
+
+[  473.109629] Entering server_recv 
+
+[  473.109632] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.109633] Exiting server_recv 
+
+[  473.109638] Exiting krping_cq_event_handler
+
+[  473.109642] server received sink adv
+[  473.109647] server posted rdma read req 
+[  473.109650] Entering krping_cq_event_handler
+
+[  473.109654] rdma write completion: rdma-ping-72: OPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDE
+
+[  473.109658] Exiting krping_cq_event_handler
+
+[  473.109663] server received read complete
+[  473.109666] server posted go ahead
+[  473.109669] Entering krping_cq_event_handler
+
+[  473.109673] send completion: 0
+
+[  473.109675] Exiting krping_cq_event_handler
+
+[  473.109678] Entering krping_cq_event_handler
+
+[  473.109680] recv completion: 117440512
+
+[  473.109683] Entering server_recv 
+
+[  473.109685] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.109687] Exiting server_recv 
+
+[  473.109691] Exiting krping_cq_event_handler
+
+[  473.109696] server received sink adv
+[  473.109700] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.109706] Entering krping_cq_event_handler
+
+[  473.109710] rdma write completion
+
+[  473.109714] Exiting krping_cq_event_handler
+
+[  473.109718] server rdma write complete 
+[  473.109723] server posted go ahead
+[  473.109726] Entering krping_cq_event_handler
+
+[  473.109729] send completion: 0
+
+[  473.109732] Exiting krping_cq_event_handler
+
+[  473.109734] Entering krping_cq_event_handler
+
+[  473.109737] recv completion: 117440512
+
+[  473.109739] Entering server_recv 
+
+[  473.109742] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.109743] Exiting server_recv 
+
+[  473.109748] Exiting krping_cq_event_handler
+
+[  473.109752] server received sink adv
+[  473.109756] server posted rdma read req 
+[  473.109759] Entering krping_cq_event_handler
+
+[  473.109763] rdma write completion: rdma-ping-73: PQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEF
+
+[  473.109767] Exiting krping_cq_event_handler
+
+[  473.109771] server received read complete
+[  473.109775] server posted go ahead
+[  473.109778] Entering krping_cq_event_handler
+
+[  473.109781] send completion: 0
+
+[  473.109784] Exiting krping_cq_event_handler
+
+[  473.109786] Entering krping_cq_event_handler
+
+[  473.109789] recv completion: 117440512
+
+[  473.109791] Entering server_recv 
+
+[  473.109794] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.109795] Exiting server_recv 
+
+[  473.109800] Exiting krping_cq_event_handler
+
+[  473.109804] server received sink adv
+[  473.109811] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.109817] Entering krping_cq_event_handler
+
+[  473.109820] rdma write completion
+
+[  473.109825] Exiting krping_cq_event_handler
+
+[  473.109829] server rdma write complete 
+[  473.109833] server posted go ahead
+[  473.109836] Entering krping_cq_event_handler
+
+[  473.109839] send completion: 0
+
+[  473.109842] Exiting krping_cq_event_handler
+
+[  473.109844] Entering krping_cq_event_handler
+
+[  473.109847] recv completion: 117440512
+
+[  473.109849] Entering server_recv 
+
+[  473.109852] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.109853] Exiting server_recv 
+
+[  473.109858] Exiting krping_cq_event_handler
+
+[  473.109862] server received sink adv
+[  473.109866] server posted rdma read req 
+[  473.109870] Entering krping_cq_event_handler
+
+[  473.109874] rdma write completion: rdma-ping-74: QRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFG
+
+[  473.109878] Exiting krping_cq_event_handler
+
+[  473.109882] server received read complete
+[  473.109888] server posted go ahead
+[  473.109891] Entering krping_cq_event_handler
+
+[  473.109894] send completion: 0
+
+[  473.109897] Exiting krping_cq_event_handler
+
+[  473.109899] Entering krping_cq_event_handler
+
+[  473.109902] recv completion: 117440512
+
+[  473.109904] Entering server_recv 
+
+[  473.109907] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.109908] Exiting server_recv 
+
+[  473.109913] Exiting krping_cq_event_handler
+
+[  473.109917] server received sink adv
+[  473.109921] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.109927] Entering krping_cq_event_handler
+
+[  473.109930] rdma write completion
+
+[  473.109935] Exiting krping_cq_event_handler
+
+[  473.109939] server rdma write complete 
+[  473.109943] server posted go ahead
+[  473.109946] Entering krping_cq_event_handler
+
+[  473.109949] send completion: 0
+
+[  473.109952] Exiting krping_cq_event_handler
+
+[  473.109954] Entering krping_cq_event_handler
+
+[  473.109957] recv completion: 117440512
+
+[  473.109959] Entering server_recv 
+
+[  473.109962] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.109963] Exiting server_recv 
+
+[  473.109968] Exiting krping_cq_event_handler
+
+[  473.109972] server received sink adv
+[  473.109978] server posted rdma read req 
+[  473.109980] Entering krping_cq_event_handler
+
+[  473.109985] rdma write completion: rdma-ping-75: RSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGH
+
+[  473.109989] Exiting krping_cq_event_handler
+
+[  473.109993] server received read complete
+[  473.109997] server posted go ahead
+[  473.110000] Entering krping_cq_event_handler
+
+[  473.110004] send completion: 0
+
+[  473.110006] Exiting krping_cq_event_handler
+
+[  473.110008] Entering krping_cq_event_handler
+
+[  473.110011] recv completion: 117440512
+
+[  473.110013] Entering server_recv 
+
+[  473.110016] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.110018] Exiting server_recv 
+
+[  473.110022] Exiting krping_cq_event_handler
+
+[  473.110026] server received sink adv
+[  473.110031] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.110066] Entering krping_cq_event_handler
+
+[  473.110070] rdma write completion
+
+[  473.110074] Exiting krping_cq_event_handler
+
+[  473.110078] server rdma write complete 
+[  473.110081] server posted go ahead
+[  473.110084] Entering krping_cq_event_handler
+
+[  473.110087] send completion: 0
+
+[  473.110089] Exiting krping_cq_event_handler
+
+[  473.110093] Entering krping_cq_event_handler
+
+[  473.110096] recv completion: 117440512
+
+[  473.110098] Entering server_recv 
+
+[  473.110100] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.110101] Exiting server_recv 
+
+[  473.110106] Exiting krping_cq_event_handler
+
+[  473.110110] server received sink adv
+[  473.110113] server posted rdma read req 
+[  473.110117] Entering krping_cq_event_handler
+
+[  473.110120] rdma write completion: rdma-ping-76: STUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHI
+
+[  473.110124] Exiting krping_cq_event_handler
+
+[  473.110128] server received read complete
+[  473.110133] server posted go ahead
+[  473.110136] Entering krping_cq_event_handler
+
+[  473.110139] send completion: 0
+
+[  473.110141] Exiting krping_cq_event_handler
+
+[  473.110149] Entering krping_cq_event_handler
+
+[  473.110161] recv completion: 117440512
+
+[  473.110169] Entering server_recv 
+
+[  473.110177] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.110184] Exiting server_recv 
+
+[  473.110196] Exiting krping_cq_event_handler
+
+[  473.110197] server received sink adv
+[  473.110203] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.110221] Entering krping_cq_event_handler
+
+[  473.110231] rdma write completion
+
+[  473.110241] Exiting krping_cq_event_handler
+
+[  473.110245] server rdma write complete 
+[  473.110251] server posted go ahead
+[  473.110266] Entering krping_cq_event_handler
+
+[  473.110274] send completion: 0
+
+[  473.110283] recv completion: 117440512
+
+[  473.110292] Entering server_recv 
+
+[  473.110301] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.110308] Exiting server_recv 
+
+[  473.110320] Exiting krping_cq_event_handler
+
+[  473.110325] server received sink adv
+[  473.110330] server posted rdma read req 
+[  473.110345] Entering krping_cq_event_handler
+
+[  473.110355] rdma write completion: rdma-ping-77: TUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJ
+
+[  473.110364] Exiting krping_cq_event_handler
+
+[  473.110369] server received read complete
+[  473.110375] server posted go ahead
+[  473.110388] Entering krping_cq_event_handler
+
+[  473.110397] send completion: 0
+
+[  473.110407] recv completion: 117440512
+
+[  473.110415] Entering server_recv 
+
+[  473.110427] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.110435] Exiting server_recv 
+
+[  473.110448] Exiting krping_cq_event_handler
+
+[  473.110451] server received sink adv
+[  473.110456] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.110472] Entering krping_cq_event_handler
+
+[  473.110483] rdma write completion
+
+[  473.110493] Exiting krping_cq_event_handler
+
+[  473.110497] server rdma write complete 
+[  473.110502] server posted go ahead
+[  473.110516] Entering krping_cq_event_handler
+
+[  473.110521] send completion: 0
+
+[  473.110524] recv completion: 117440512
+
+[  473.110526] Entering server_recv 
+
+[  473.110528] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.110530] Exiting server_recv 
+
+[  473.110534] Exiting krping_cq_event_handler
+
+[  473.110536] Entering krping_cq_event_handler
+
+[  473.110539] server received sink adv
+[  473.110541] server posted rdma read req 
+[  473.110544] rdma write completion: rdma-ping-78: UVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJK
+
+[  473.110548] Exiting krping_cq_event_handler
+
+[  473.110552] Entering krping_cq_event_handler
+
+[  473.110556] Exiting krping_cq_event_handler
+
+[  473.110560] server received read complete
+[  473.110563] server posted go ahead
+[  473.110566] Entering krping_cq_event_handler
+
+[  473.110569] send completion: 0
+
+[  473.110572] Exiting krping_cq_event_handler
+
+[  473.110574] Entering krping_cq_event_handler
+
+[  473.110576] recv completion: 117440512
+
+[  473.110578] Entering server_recv 
+
+[  473.110581] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.110582] Exiting server_recv 
+
+[  473.110586] Exiting krping_cq_event_handler
+
+[  473.110590] server received sink adv
+[  473.110594] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.110601] Entering krping_cq_event_handler
+
+[  473.110604] rdma write completion
+
+[  473.110608] Exiting krping_cq_event_handler
+
+[  473.110611] server rdma write complete 
+[  473.110615] server posted go ahead
+[  473.110618] Entering krping_cq_event_handler
+
+[  473.110621] send completion: 0
+
+[  473.110623] Exiting krping_cq_event_handler
+
+[  473.110627] Entering krping_cq_event_handler
+
+[  473.110630] recv completion: 117440512
+
+[  473.110632] Entering server_recv 
+
+[  473.110634] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.110636] Exiting server_recv 
+
+[  473.110640] Exiting krping_cq_event_handler
+
+[  473.110644] server received sink adv
+[  473.110647] server posted rdma read req 
+[  473.110649] Entering krping_cq_event_handler
+
+[  473.110653] rdma write completion: rdma-ping-79: VWXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKL
+
+[  473.110657] Exiting krping_cq_event_handler
+
+[  473.110661] server received read complete
+[  473.110664] server posted go ahead
+[  473.110668] Entering krping_cq_event_handler
+
+[  473.110671] send completion: 0
+
+[  473.110673] Exiting krping_cq_event_handler
+
+[  473.110675] Entering krping_cq_event_handler
+
+[  473.110678] recv completion: 117440512
+
+[  473.110680] Entering server_recv 
+
+[  473.110682] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.110683] Exiting server_recv 
+
+[  473.110688] Exiting krping_cq_event_handler
+
+[  473.110691] server received sink adv
+[  473.110697] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.110703] Entering krping_cq_event_handler
+
+[  473.110706] rdma write completion
+
+[  473.110710] Exiting krping_cq_event_handler
+
+[  473.110714] server rdma write complete 
+[  473.110717] server posted go ahead
+[  473.110720] Entering krping_cq_event_handler
+
+[  473.110723] send completion: 0
+
+[  473.110725] Exiting krping_cq_event_handler
+
+[  473.110729] Entering krping_cq_event_handler
+
+[  473.110731] recv completion: 117440512
+
+[  473.110733] Entering server_recv 
+
+[  473.110736] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.110737] Exiting server_recv 
+
+[  473.110741] Exiting krping_cq_event_handler
+
+[  473.110745] server received sink adv
+[  473.110748] server posted rdma read req 
+[  473.110750] Entering krping_cq_event_handler
+
+[  473.110754] rdma write completion: rdma-ping-80: WXYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLM
+
+[  473.110758] Exiting krping_cq_event_handler
+
+[  473.110762] server received read complete
+[  473.110766] server posted go ahead
+[  473.110769] Entering krping_cq_event_handler
+
+[  473.110772] send completion: 0
+
+[  473.110775] Exiting krping_cq_event_handler
+
+[  473.110777] Entering krping_cq_event_handler
+
+[  473.110779] recv completion: 117440512
+
+[  473.110781] Entering server_recv 
+
+[  473.110784] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.110785] Exiting server_recv 
+
+[  473.110789] Exiting krping_cq_event_handler
+
+[  473.110793] server received sink adv
+[  473.110797] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.110803] Entering krping_cq_event_handler
+
+[  473.110806] rdma write completion
+
+[  473.110810] Exiting krping_cq_event_handler
+
+[  473.110814] server rdma write complete 
+[  473.110817] server posted go ahead
+[  473.110821] Entering krping_cq_event_handler
+
+[  473.110824] send completion: 0
+
+[  473.110826] Exiting krping_cq_event_handler
+
+[  473.110828] Entering krping_cq_event_handler
+
+[  473.110831] recv completion: 117440512
+
+[  473.110833] Entering server_recv 
+
+[  473.110835] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.110837] Exiting server_recv 
+
+[  473.110841] Exiting krping_cq_event_handler
+
+[  473.110845] server received sink adv
+[  473.110850] server posted rdma read req 
+[  473.110852] Entering krping_cq_event_handler
+
+[  473.110856] rdma write completion: rdma-ping-81: XYZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMN
+
+[  473.110860] Exiting krping_cq_event_handler
+
+[  473.110863] server received read complete
+[  473.110867] server posted go ahead
+[  473.110870] Entering krping_cq_event_handler
+
+[  473.110873] send completion: 0
+
+[  473.110875] Exiting krping_cq_event_handler
+
+[  473.110877] Entering krping_cq_event_handler
+
+[  473.110880] recv completion: 117440512
+
+[  473.110882] Entering server_recv 
+
+[  473.110884] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.110885] Exiting server_recv 
+
+[  473.110890] Exiting krping_cq_event_handler
+
+[  473.110893] server received sink adv
+[  473.110897] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.110903] Entering krping_cq_event_handler
+
+[  473.110906] rdma write completion
+
+[  473.110910] Exiting krping_cq_event_handler
+
+[  473.110914] server rdma write complete 
+[  473.110918] server posted go ahead
+[  473.110922] Entering krping_cq_event_handler
+
+[  473.110925] send completion: 0
+
+[  473.110927] Exiting krping_cq_event_handler
+
+[  473.110929] Entering krping_cq_event_handler
+
+[  473.110931] recv completion: 117440512
+
+[  473.110933] Entering server_recv 
+
+[  473.110936] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.110937] Exiting server_recv 
+
+[  473.110941] Exiting krping_cq_event_handler
+
+[  473.110945] server received sink adv
+[  473.110949] server posted rdma read req 
+[  473.110951] Entering krping_cq_event_handler
+
+[  473.110955] rdma write completion: rdma-ping-82: YZ[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNO
+
+[  473.110959] Exiting krping_cq_event_handler
+
+[  473.110962] server received read complete
+[  473.110965] server posted go ahead
+[  473.110968] Entering krping_cq_event_handler
+
+[  473.110972] send completion: 0
+
+[  473.110974] Exiting krping_cq_event_handler
+
+[  473.110976] Entering krping_cq_event_handler
+
+[  473.110978] recv completion: 117440512
+
+[  473.110980] Entering server_recv 
+
+[  473.110983] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.110984] Exiting server_recv 
+
+[  473.110988] Exiting krping_cq_event_handler
+
+[  473.110992] server received sink adv
+[  473.110998] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.111003] Entering krping_cq_event_handler
+
+[  473.111006] rdma write completion
+
+[  473.111011] Exiting krping_cq_event_handler
+
+[  473.111014] server rdma write complete 
+[  473.111018] server posted go ahead
+[  473.111021] Entering krping_cq_event_handler
+
+[  473.111024] send completion: 0
+
+[  473.111026] Exiting krping_cq_event_handler
+
+[  473.111030] Entering krping_cq_event_handler
+
+[  473.111032] recv completion: 117440512
+
+[  473.111034] Entering server_recv 
+
+[  473.111037] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.111038] Exiting server_recv 
+
+[  473.111042] Exiting krping_cq_event_handler
+
+[  473.111046] server received sink adv
+[  473.111049] server posted rdma read req 
+[  473.111053] Entering krping_cq_event_handler
+
+[  473.111056] rdma write completion: rdma-ping-83: Z[\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP
+
+[  473.111061] Exiting krping_cq_event_handler
+
+[  473.111064] server received read complete
+[  473.111069] server posted go ahead
+[  473.111072] Entering krping_cq_event_handler
+
+[  473.111075] send completion: 0
+
+[  473.111077] Exiting krping_cq_event_handler
+
+[  473.111079] Entering krping_cq_event_handler
+
+[  473.111082] recv completion: 117440512
+
+[  473.111084] Entering server_recv 
+
+[  473.111086] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.111088] Exiting server_recv 
+
+[  473.111092] Exiting krping_cq_event_handler
+
+[  473.111096] server received sink adv
+[  473.111100] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.111106] Entering krping_cq_event_handler
+
+[  473.111109] rdma write completion
+
+[  473.111113] Exiting krping_cq_event_handler
+
+[  473.111117] server rdma write complete 
+[  473.111120] server posted go ahead
+[  473.111124] Entering krping_cq_event_handler
+
+[  473.111127] send completion: 0
+
+[  473.111129] Exiting krping_cq_event_handler
+
+[  473.111131] Entering krping_cq_event_handler
+
+[  473.111133] recv completion: 117440512
+
+[  473.111136] Entering server_recv 
+
+[  473.111138] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.111139] Exiting server_recv 
+
+[  473.111144] Exiting krping_cq_event_handler
+
+[  473.111147] server received sink adv
+[  473.111152] server posted rdma read req 
+[  473.111155] Entering krping_cq_event_handler
+
+[  473.111158] rdma write completion: rdma-ping-84: [\]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQ
+
+[  473.111163] Exiting krping_cq_event_handler
+
+[  473.111166] server received read complete
+[  473.111170] server posted go ahead
+[  473.111172] Entering krping_cq_event_handler
+
+[  473.111176] send completion: 0
+
+[  473.111178] Exiting krping_cq_event_handler
+
+[  473.111180] Entering krping_cq_event_handler
+
+[  473.111182] recv completion: 117440512
+
+[  473.111184] Entering server_recv 
+
+[  473.111187] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.111188] Exiting server_recv 
+
+[  473.111193] Exiting krping_cq_event_handler
+
+[  473.111196] server received sink adv
+[  473.111201] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.111207] Entering krping_cq_event_handler
+
+[  473.111210] rdma write completion
+
+[  473.111214] Exiting krping_cq_event_handler
+
+[  473.111218] server rdma write complete 
+[  473.111221] server posted go ahead
+[  473.111232] Entering krping_cq_event_handler
+
+[  473.111236] send completion: 0
+
+[  473.111238] Exiting krping_cq_event_handler
+
+[  473.111241] Entering krping_cq_event_handler
+
+[  473.111244] recv completion: 117440512
+
+[  473.111246] Entering server_recv 
+
+[  473.111255] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.111263] Exiting server_recv 
+
+[  473.111275] Exiting krping_cq_event_handler
+
+[  473.111278] server received sink adv
+[  473.111283] server posted rdma read req 
+[  473.111299] Entering krping_cq_event_handler
+
+[  473.111308] rdma write completion: rdma-ping-85: \]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR
+
+[  473.111318] Exiting krping_cq_event_handler
+
+[  473.111322] server received read complete
+[  473.111327] server posted go ahead
+[  473.111341] Entering krping_cq_event_handler
+
+[  473.111349] send completion: 0
+
+[  473.111358] recv completion: 117440512
+
+[  473.111366] Entering server_recv 
+
+[  473.111376] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.111384] Exiting server_recv 
+
+[  473.111398] Exiting krping_cq_event_handler
+
+[  473.111399] server received sink adv
+[  473.111403] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.111419] Entering krping_cq_event_handler
+
+[  473.111430] rdma write completion
+
+[  473.111441] Exiting krping_cq_event_handler
+
+[  473.111445] server rdma write complete 
+[  473.111450] server posted go ahead
+[  473.111464] Entering krping_cq_event_handler
+
+[  473.111474] send completion: 0
+
+[  473.111484] recv completion: 117440512
+
+[  473.111492] Entering server_recv 
+
+[  473.111501] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.111508] Exiting server_recv 
+
+[  473.111522] Exiting krping_cq_event_handler
+
+[  473.111527] server received sink adv
+[  473.111532] server posted rdma read req 
+[  473.111546] Entering krping_cq_event_handler
+
+[  473.111556] rdma write completion: rdma-ping-86: ]^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRS
+
+[  473.111567] Exiting krping_cq_event_handler
+
+[  473.111572] server received read complete
+[  473.111577] server posted go ahead
+[  473.111591] Entering krping_cq_event_handler
+
+[  473.111601] send completion: 0
+
+[  473.111611] recv completion: 117440512
+
+[  473.111620] Entering server_recv 
+
+[  473.111623] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.111624] Exiting server_recv 
+
+[  473.111628] Exiting krping_cq_event_handler
+
+[  473.111631] Entering krping_cq_event_handler
+
+[  473.111633] server received sink adv
+[  473.111636] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.111638] Exiting krping_cq_event_handler
+
+[  473.111640] Entering krping_cq_event_handler
+
+[  473.111643] rdma write completion
+
+[  473.111646] Exiting krping_cq_event_handler
+
+[  473.111650] server rdma write complete 
+[  473.111654] server posted go ahead
+[  473.111658] Entering krping_cq_event_handler
+
+[  473.111662] send completion: 0
+
+[  473.111665] Exiting krping_cq_event_handler
+
+[  473.111669] Entering krping_cq_event_handler
+
+[  473.111673] recv completion: 117440512
+
+[  473.111677] Entering server_recv 
+
+[  473.111681] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.111683] Exiting server_recv 
+
+[  473.111687] Exiting krping_cq_event_handler
+
+[  473.111691] server received sink adv
+[  473.111694] server posted rdma read req 
+[  473.111697] Entering krping_cq_event_handler
+
+[  473.111701] rdma write completion: rdma-ping-87: ^_`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRST
+
+[  473.111705] Exiting krping_cq_event_handler
+
+[  473.111709] server received read complete
+[  473.111712] server posted go ahead
+[  473.111715] Entering krping_cq_event_handler
+
+[  473.111718] send completion: 0
+
+[  473.111720] Exiting krping_cq_event_handler
+
+[  473.111723] Entering krping_cq_event_handler
+
+[  473.111725] recv completion: 117440512
+
+[  473.111727] Entering server_recv 
+
+[  473.111730] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.111731] Exiting server_recv 
+
+[  473.111735] Exiting krping_cq_event_handler
+
+[  473.111739] server received sink adv
+[  473.111743] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.111751] Entering krping_cq_event_handler
+
+[  473.111754] rdma write completion
+
+[  473.111758] Exiting krping_cq_event_handler
+
+[  473.111762] server rdma write complete 
+[  473.111765] server posted go ahead
+[  473.111768] Entering krping_cq_event_handler
+
+[  473.111771] send completion: 0
+
+[  473.111774] Exiting krping_cq_event_handler
+
+[  473.111776] Entering krping_cq_event_handler
+
+[  473.111778] recv completion: 117440512
+
+[  473.111780] Entering server_recv 
+
+[  473.111783] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.111784] Exiting server_recv 
+
+[  473.111788] Exiting krping_cq_event_handler
+
+[  473.111792] server received sink adv
+[  473.111796] server posted rdma read req 
+[  473.111799] Entering krping_cq_event_handler
+
+[  473.111803] rdma write completion: rdma-ping-88: _`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTU
+
+[  473.111807] Exiting krping_cq_event_handler
+
+[  473.111811] server received read complete
+[  473.111815] server posted go ahead
+[  473.111818] Entering krping_cq_event_handler
+
+[  473.111821] send completion: 0
+
+[  473.111823] Exiting krping_cq_event_handler
+
+[  473.111826] Entering krping_cq_event_handler
+
+[  473.111828] recv completion: 117440512
+
+[  473.111830] Entering server_recv 
+
+[  473.111833] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.111834] Exiting server_recv 
+
+[  473.111838] Exiting krping_cq_event_handler
+
+[  473.111842] server received sink adv
+[  473.111846] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.111852] Entering krping_cq_event_handler
+
+[  473.111855] rdma write completion
+
+[  473.111859] Exiting krping_cq_event_handler
+
+[  473.111863] server rdma write complete 
+[  473.111867] server posted go ahead
+[  473.111870] Entering krping_cq_event_handler
+
+[  473.111874] send completion: 0
+
+[  473.111878] Exiting krping_cq_event_handler
+
+[  473.111882] Entering krping_cq_event_handler
+
+[  473.111886] recv completion: 117440512
+
+[  473.111889] Entering server_recv 
+
+[  473.111894] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.111896] Exiting server_recv 
+
+[  473.111900] Exiting krping_cq_event_handler
+
+[  473.111904] server received sink adv
+[  473.111908] server posted rdma read req 
+[  473.111910] Entering krping_cq_event_handler
+
+[  473.111914] rdma write completion: rdma-ping-89: `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUV
+
+[  473.111919] Exiting krping_cq_event_handler
+
+[  473.111922] server received read complete
+[  473.111925] server posted go ahead
+[  473.111928] Entering krping_cq_event_handler
+
+[  473.111931] send completion: 0
+
+[  473.111933] Exiting krping_cq_event_handler
+
+[  473.111936] Entering krping_cq_event_handler
+
+[  473.111938] recv completion: 117440512
+
+[  473.111940] Entering server_recv 
+
+[  473.111943] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.111944] Exiting server_recv 
+
+[  473.111948] Exiting krping_cq_event_handler
+
+[  473.111952] server received sink adv
+[  473.111956] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.111964] Entering krping_cq_event_handler
+
+[  473.111967] rdma write completion
+
+[  473.111971] Exiting krping_cq_event_handler
+
+[  473.111975] server rdma write complete 
+[  473.111978] server posted go ahead
+[  473.111981] Entering krping_cq_event_handler
+
+[  473.111984] send completion: 0
+
+[  473.111986] Exiting krping_cq_event_handler
+
+[  473.111988] Entering krping_cq_event_handler
+
+[  473.111991] recv completion: 117440512
+
+[  473.111993] Entering server_recv 
+
+[  473.111995] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.111997] Exiting server_recv 
+
+[  473.112001] Exiting krping_cq_event_handler
+
+[  473.112004] server received sink adv
+[  473.112008] server posted rdma read req 
+[  473.112011] Entering krping_cq_event_handler
+
+[  473.112014] rdma write completion: rdma-ping-90: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVW
+
+[  473.112018] Exiting krping_cq_event_handler
+
+[  473.112022] server received read complete
+[  473.112026] server posted go ahead
+[  473.112030] Entering krping_cq_event_handler
+
+[  473.112033] send completion: 0
+
+[  473.112035] Exiting krping_cq_event_handler
+
+[  473.112037] Entering krping_cq_event_handler
+
+[  473.112040] recv completion: 117440512
+
+[  473.112042] Entering server_recv 
+
+[  473.112044] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.112046] Exiting server_recv 
+
+[  473.112050] Exiting krping_cq_event_handler
+
+[  473.112053] server received sink adv
+[  473.112057] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.112063] Entering krping_cq_event_handler
+
+[  473.112066] rdma write completion
+
+[  473.112070] Exiting krping_cq_event_handler
+
+[  473.112074] server rdma write complete 
+[  473.112077] server posted go ahead
+[  473.112081] Entering krping_cq_event_handler
+
+[  473.112084] send completion: 0
+
+[  473.112087] Exiting krping_cq_event_handler
+
+[  473.112089] Entering krping_cq_event_handler
+
+[  473.112092] recv completion: 117440512
+
+[  473.112094] Entering server_recv 
+
+[  473.112096] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.112097] Exiting server_recv 
+
+[  473.112102] Exiting krping_cq_event_handler
+
+[  473.112105] server received sink adv
+[  473.112109] server posted rdma read req 
+[  473.112112] Entering krping_cq_event_handler
+
+[  473.112115] rdma write completion: rdma-ping-91: bcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
+
+[  473.112119] Exiting krping_cq_event_handler
+
+[  473.112123] server received read complete
+[  473.112126] server posted go ahead
+[  473.112129] Entering krping_cq_event_handler
+
+[  473.112132] send completion: 0
+
+[  473.112135] Exiting krping_cq_event_handler
+
+[  473.112137] Entering krping_cq_event_handler
+
+[  473.112139] recv completion: 117440512
+
+[  473.112141] Entering server_recv 
+
+[  473.112144] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.112145] Exiting server_recv 
+
+[  473.112149] Exiting krping_cq_event_handler
+
+[  473.112153] server received sink adv
+[  473.112157] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.112163] Entering krping_cq_event_handler
+
+[  473.112166] rdma write completion
+
+[  473.112170] Exiting krping_cq_event_handler
+
+[  473.112174] server rdma write complete 
+[  473.112177] server posted go ahead
+[  473.112180] Entering krping_cq_event_handler
+
+[  473.112184] send completion: 0
+
+[  473.112186] Exiting krping_cq_event_handler
+
+[  473.112188] Entering krping_cq_event_handler
+
+[  473.112190] recv completion: 117440512
+
+[  473.112192] Entering server_recv 
+
+[  473.112195] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.112196] Exiting server_recv 
+
+[  473.112200] Exiting krping_cq_event_handler
+
+[  473.112203] server received sink adv
+[  473.112206] server posted rdma read req 
+[  473.112209] Entering krping_cq_event_handler
+
+[  473.112212] rdma write completion: rdma-ping-92: cdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY
+
+[  473.112216] Exiting krping_cq_event_handler
+
+[  473.112220] server received read complete
+[  473.112224] server posted go ahead
+[  473.112227] Entering krping_cq_event_handler
+
+[  473.112230] send completion: 0
+
+[  473.112232] Exiting krping_cq_event_handler
+
+[  473.112234] Entering krping_cq_event_handler
+
+[  473.112237] recv completion: 117440512
+
+[  473.112239] Entering server_recv 
+
+[  473.112241] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.112242] Exiting server_recv 
+
+[  473.112247] Exiting krping_cq_event_handler
+
+[  473.112250] server received sink adv
+[  473.112255] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.112262] Entering krping_cq_event_handler
+
+[  473.112265] rdma write completion
+
+[  473.112269] Exiting krping_cq_event_handler
+
+[  473.112272] server rdma write complete 
+[  473.112276] server posted go ahead
+[  473.112279] Entering krping_cq_event_handler
+
+[  473.112282] send completion: 0
+
+[  473.112284] Exiting krping_cq_event_handler
+
+[  473.112287] Entering krping_cq_event_handler
+
+[  473.112290] recv completion: 117440512
+
+[  473.112292] Entering server_recv 
+
+[  473.112294] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.112296] Exiting server_recv 
+
+[  473.112300] Exiting krping_cq_event_handler
+
+[  473.112303] server received sink adv
+[  473.112307] server posted rdma read req 
+[  473.112309] Entering krping_cq_event_handler
+
+[  473.112313] rdma write completion: rdma-ping-93: defghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+[  473.112317] Exiting krping_cq_event_handler
+
+[  473.112321] server received read complete
+[  473.112324] server posted go ahead
+[  473.112328] Entering krping_cq_event_handler
+
+[  473.112331] send completion: 0
+
+[  473.112333] Exiting krping_cq_event_handler
+
+[  473.112335] Entering krping_cq_event_handler
+
+[  473.112337] recv completion: 117440512
+
+[  473.112339] Entering server_recv 
+
+[  473.112342] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.112343] Exiting server_recv 
+
+[  473.112351] Exiting krping_cq_event_handler
+
+[  473.112354] server received sink adv
+[  473.112361] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.112375] Entering krping_cq_event_handler
+
+[  473.112385] rdma write completion
+
+[  473.112399] Exiting krping_cq_event_handler
+
+[  473.112402] server rdma write complete 
+[  473.112408] server posted go ahead
+[  473.112422] Entering krping_cq_event_handler
+
+[  473.112432] send completion: 0
+
+[  473.112442] recv completion: 117440512
+
+[  473.112450] Entering server_recv 
+
+[  473.112459] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.112466] Exiting server_recv 
+
+[  473.112480] Exiting krping_cq_event_handler
+
+[  473.112481] server received sink adv
+[  473.112485] server posted rdma read req 
+[  473.112502] Entering krping_cq_event_handler
+
+[  473.112512] rdma write completion: rdma-ping-94: efghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[
+
+[  473.112523] Exiting krping_cq_event_handler
+
+[  473.112528] server received read complete
+[  473.112534] server posted go ahead
+[  473.112547] Entering krping_cq_event_handler
+
+[  473.112557] send completion: 0
+
+[  473.112567] recv completion: 117440512
+
+[  473.112578] Entering server_recv 
+
+[  473.112588] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.112595] Exiting server_recv 
+
+[  473.112608] Exiting krping_cq_event_handler
+
+[  473.112613] server received sink adv
+[  473.112619] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.112635] Entering krping_cq_event_handler
+
+[  473.112644] rdma write completion
+
+[  473.112656] Exiting krping_cq_event_handler
+
+[  473.112661] server rdma write complete 
+[  473.112667] server posted go ahead
+[  473.112681] Entering krping_cq_event_handler
+
+[  473.112691] send completion: 0
+
+[  473.112700] recv completion: 117440512
+
+[  473.112709] Entering server_recv 
+
+[  473.112718] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.112721] Exiting server_recv 
+
+[  473.112726] Exiting krping_cq_event_handler
+
+[  473.112728] Entering krping_cq_event_handler
+
+[  473.112730] server received sink adv
+[  473.112733] server posted rdma read req 
+[  473.112734] Exiting krping_cq_event_handler
+
+[  473.112737] Entering krping_cq_event_handler
+
+[  473.112741] rdma write completion: rdma-ping-95: fghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\
+
+[  473.112745] Exiting krping_cq_event_handler
+
+[  473.112752] server received read complete
+[  473.112755] server posted go ahead
+[  473.112758] Entering krping_cq_event_handler
+
+[  473.112761] send completion: 0
+
+[  473.112764] Exiting krping_cq_event_handler
+
+[  473.112788] Entering krping_cq_event_handler
+
+[  473.112790] recv completion: 117440512
+
+[  473.112793] Entering server_recv 
+
+[  473.112795] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.112796] Exiting server_recv 
+
+[  473.112801] Exiting krping_cq_event_handler
+
+[  473.112804] server received sink adv
+[  473.112809] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.112815] Entering krping_cq_event_handler
+
+[  473.112818] rdma write completion
+
+[  473.112822] Exiting krping_cq_event_handler
+
+[  473.112826] server rdma write complete 
+[  473.112829] server posted go ahead
+[  473.112834] Entering krping_cq_event_handler
+
+[  473.112837] send completion: 0
+
+[  473.112839] Exiting krping_cq_event_handler
+
+[  473.112883] Entering krping_cq_event_handler
+
+[  473.112886] recv completion: 117440512
+
+[  473.112888] Entering server_recv 
+
+[  473.112890] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.112892] Exiting server_recv 
+
+[  473.112896] Exiting krping_cq_event_handler
+
+[  473.112900] server received sink adv
+[  473.112903] server posted rdma read req 
+[  473.112908] Entering krping_cq_event_handler
+
+[  473.112911] rdma write completion: rdma-ping-96: ghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]
+
+[  473.112916] Exiting krping_cq_event_handler
+
+[  473.112919] server received read complete
+[  473.112923] server posted go ahead
+[  473.112926] Entering krping_cq_event_handler
+
+[  473.112929] send completion: 0
+
+[  473.112931] Exiting krping_cq_event_handler
+
+[  473.112959] Entering krping_cq_event_handler
+
+[  473.112962] recv completion: 117440512
+
+[  473.112964] Entering server_recv 
+
+[  473.112966] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.112967] Exiting server_recv 
+
+[  473.112972] Exiting krping_cq_event_handler
+
+[  473.112975] server received sink adv
+[  473.112980] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.112987] Entering krping_cq_event_handler
+
+[  473.112990] rdma write completion
+
+[  473.112994] Exiting krping_cq_event_handler
+
+[  473.112998] server rdma write complete 
+[  473.113001] server posted go ahead
+[  473.113004] Entering krping_cq_event_handler
+
+[  473.113007] send completion: 0
+
+[  473.113010] Exiting krping_cq_event_handler
+
+[  473.113072] Entering krping_cq_event_handler
+
+[  473.113075] recv completion: 117440512
+
+[  473.113077] Entering server_recv 
+
+[  473.113079] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.113081] Exiting server_recv 
+
+[  473.113085] Exiting krping_cq_event_handler
+
+[  473.113089] server received sink adv
+[  473.113094] server posted rdma read req 
+[  473.113096] Entering krping_cq_event_handler
+
+[  473.113101] rdma write completion: rdma-ping-97: hijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^
+
+[  473.113105] Exiting krping_cq_event_handler
+
+[  473.113109] server received read complete
+[  473.113112] server posted go ahead
+[  473.113115] Entering krping_cq_event_handler
+
+[  473.113118] send completion: 0
+
+[  473.113120] Exiting krping_cq_event_handler
+
+[  473.113146] Entering krping_cq_event_handler
+
+[  473.113149] recv completion: 117440512
+
+[  473.113151] Entering server_recv 
+
+[  473.113154] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.113155] Exiting server_recv 
+
+[  473.113159] Exiting krping_cq_event_handler
+
+[  473.113163] server received sink adv
+[  473.113168] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.113175] Entering krping_cq_event_handler
+
+[  473.113178] rdma write completion
+
+[  473.113182] Exiting krping_cq_event_handler
+
+[  473.113185] server rdma write complete 
+[  473.113189] server posted go ahead
+[  473.113192] Entering krping_cq_event_handler
+
+[  473.113195] send completion: 0
+
+[  473.113197] Exiting krping_cq_event_handler
+
+[  473.113227] Entering krping_cq_event_handler
+
+[  473.113229] recv completion: 117440512
+
+[  473.113231] Entering server_recv 
+
+[  473.113234] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.113235] Exiting server_recv 
+
+[  473.113240] Exiting krping_cq_event_handler
+
+[  473.113243] server received sink adv
+[  473.113248] server posted rdma read req 
+[  473.113251] Entering krping_cq_event_handler
+
+[  473.113254] rdma write completion: rdma-ping-98: ijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_
+
+[  473.113258] Exiting krping_cq_event_handler
+
+[  473.113262] server received read complete
+[  473.113266] server posted go ahead
+[  473.113268] Entering krping_cq_event_handler
+
+[  473.113272] send completion: 0
+
+[  473.113274] Exiting krping_cq_event_handler
+
+[  473.113291] Entering krping_cq_event_handler
+
+[  473.113294] recv completion: 117440512
+
+[  473.113296] Entering server_recv 
+
+[  473.113298] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.113300] Exiting server_recv 
+
+[  473.113304] Exiting krping_cq_event_handler
+
+[  473.113307] server received sink adv
+[  473.113312] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.113317] Entering krping_cq_event_handler
+
+[  473.113320] rdma write completion
+
+[  473.113324] Exiting krping_cq_event_handler
+
+[  473.113328] server rdma write complete 
+[  473.113332] server posted go ahead
+[  473.113336] Entering krping_cq_event_handler
+
+[  473.113339] send completion: 0
+
+[  473.113343] Exiting krping_cq_event_handler
+
+[  473.113347] Entering krping_cq_event_handler
+
+[  473.113351] recv completion: 117440512
+
+[  473.113355] Entering server_recv 
+
+[  473.113359] Received rkey 1981 addr 7bdc14d00 len 64 from peer
+[  473.113361] Exiting server_recv 
+
+[  473.113365] Exiting krping_cq_event_handler
+
+[  473.113369] server received sink adv
+[  473.113371] server posted rdma read req 
+[  473.113373] Entering krping_cq_event_handler
+
+[  473.113377] rdma write completion: rdma-ping-99: jklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`
+
+[  473.113381] Exiting krping_cq_event_handler
+
+[  473.113385] server received read complete
+[  473.113388] server posted go ahead
+[  473.113391] Entering krping_cq_event_handler
+
+[  473.113394] send completion: 0
+
+[  473.113396] Exiting krping_cq_event_handler
+
+[  473.113408] Entering krping_cq_event_handler
+
+[  473.113411] recv completion: 117440512
+
+[  473.113413] Entering server_recv 
+
+[  473.113415] Received rkey 1981 addr 7bdc142c0 len 64 from peer
+[  473.113417] Exiting server_recv 
+
+[  473.113427] Exiting krping_cq_event_handler
+
+[  473.113431] server received sink adv
+[  473.113438] rdma write from lkey 1f56 laddr 7f3f8ab80 len 64
+[  473.113452] Entering krping_cq_event_handler
+
+[  473.113463] rdma write completion
+
+[  473.113473] Exiting krping_cq_event_handler
+
+[  473.113480] server rdma write complete 
+[  473.113486] server posted go ahead
+[  473.113496] Entering krping_cq_event_handler
+
+[  473.113506] send completion: 0
+
+[  473.113515] Exiting krping_cq_event_handler
+
+[  473.115001] krping: DISCONNECT EVENT...
+[  473.115026] krping: wait for RDMA_READ_ADV state 10
+[  473.115749] Entering krping_cq_event_handler
+
+[  473.115759] krping: cq completion in ERROR state

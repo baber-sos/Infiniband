@@ -1,0 +1,3178 @@
+[  453.749905] Entered krping_write_proc
+[  453.749917] Entered krping_doit
+[  453.749925] Op has the value: c
+[  453.749930] Op has the value: a
+[  453.749936] Op has the value: p
+[  453.749940] Op has the value: C
+[  453.749950] Entered krping_run_client
+[  453.749953] Entered krping_bind_client
+[  453.749955] Entered fill_sockaddr
+[  453.749957] Left fill_sockaddr
+[  453.750770] Entered krping_cma_event_handler
+[  453.750798] LEFT krping_cma_event_handler
+[  453.751182] Entered krping_cma_event_handler
+[  453.751192] LEFT krping_cma_event_handler
+[  453.751233] Left krping_bind_client
+[  453.751240] Entered krping_setup_qp
+[  453.751613] Entered krping_setup_qp first
+[  453.751985] Entered krping_setup_qp second
+[  453.751993] created cq ffff8807dc198a00
+[  453.751997] device pointer ffff8807e5a20000
+[  453.752001] created cq krping_setup_qp
+[  453.752006] IF_CONDITION#End krping_setup_qp
+[  453.752010] Entered krping_setup_qp third
+[  453.752014] Entered krping_create_qp
+[  453.752018] krping_create_qp: checkpoint0
+[  453.752022] krping_create_qp: checkpoint1
+[  453.752025] krping_create_qp: checkpoint3a. inside else of if(cb->server)
+[  453.752701] krping_create_qp: checkpoint3b. created qp
+[  453.752706] krping_create_qp: checkpoint3c. inside else of if(cb->server)
+[  453.752710] Leaving krping_create_qp
+[  453.752714] Entered krping_setup_qp fourth
+[  453.752718] LEFT krping_setup_qp
+[  453.752721] Entered krping_setup_buffers
+[  453.752725] krping_setup_buffers setup 1
+[  453.752725] 
+[  453.752732] krping_setup_buffers setup 2
+[  453.752732] 
+[  453.752738] krping_setup_buffers setup 3
+[  453.752738] 
+[  453.752743] krping_setup_buffers setup 4
+[  453.752743] 
+[  453.752749] krping_setup_buffers setup 5
+[  453.752749] 
+[  453.752878] krping_setup_buffers setup 6
+[  453.752878] 
+[  453.752884] krping_setup_buffers setup 7
+[  453.752884] 
+[  453.752890] krping_setup_buffers setup 9
+[  453.752890] 
+[  453.752896] krping_setup_buffers setup 10
+[  453.752896] 
+[  453.752901] krping_setup_buffers setup 11
+[  453.752901] 
+[  453.752907] krping_setup_buffers setup 12
+[  453.752907] 
+[  453.752913] Entered krping_setup_wr
+[  453.752917] Left krping_setup_wr
+[  453.752921] Left krping_setup_buffers
+[  453.752926] Entered krping_connect_client
+[  453.756987] Entered krping_cma_event_handler
+[  453.757013] LEFT krping_cma_event_handler
+[  453.757027] Left krping_connect_client
+[  453.757035] Entered krping_test_client
+[  453.757041] Entered krping_format_send
+[  453.757045] Entered krping_rdma_rkey
+[  453.757048] Left krping_rdma_rkey
+[  453.757054] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.757057] Left krping_format_send
+[  453.757105] Entered krping_cq_event_handler
+[  453.757115] send completion: 117440512
+[  453.757115] 
+[  453.757119] Left krping_cq_event_handler
+[  453.757238] Entered krping_cq_event_handler
+[  453.757247] recv completion: 0
+[  453.757247] 
+[  453.757251] Entered client_recv
+[  453.757254] Left client_recv
+[  453.757264] Left krping_cq_event_handler
+[  453.757276] Entered krping_format_send
+[  453.757279] Entered krping_rdma_rkey
+[  453.757281] Left krping_rdma_rkey
+[  453.757285] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.757287] Left krping_format_send
+[  453.757298] Entered krping_cq_event_handler
+[  453.757301] send completion: 117440512
+[  453.757301] 
+[  453.757305] Left krping_cq_event_handler
+[  453.757428] Entered krping_cq_event_handler
+[  453.757438] recv completion: 0
+[  453.757438] 
+[  453.757442] Entered client_recv
+[  453.757445] Left client_recv
+[  453.757454] Left krping_cq_event_handler
+[  453.757467] Left krping_test_client
+[  453.757470] Entered krping_format_send
+[  453.757472] Entered krping_rdma_rkey
+[  453.757474] Left krping_rdma_rkey
+[  453.757478] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.757481] Left krping_format_send
+[  453.757492] Entered krping_cq_event_handler
+[  453.757495] send completion: 117440512
+[  453.757495] 
+[  453.757498] Left krping_cq_event_handler
+[  453.757622] Entered krping_cq_event_handler
+[  453.757632] recv completion: 0
+[  453.757632] 
+[  453.757636] Entered client_recv
+[  453.757638] Left client_recv
+[  453.757648] Left krping_cq_event_handler
+[  453.757660] Entered krping_format_send
+[  453.757663] Entered krping_rdma_rkey
+[  453.757665] Left krping_rdma_rkey
+[  453.757669] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.757671] Left krping_format_send
+[  453.757682] Entered krping_cq_event_handler
+[  453.757685] send completion: 117440512
+[  453.757685] 
+[  453.757689] Left krping_cq_event_handler
+[  453.757777] Entered krping_cq_event_handler
+[  453.757780] recv completion: 0
+[  453.757780] 
+[  453.757783] Entered client_recv
+[  453.757785] Left client_recv
+[  453.757790] Left krping_cq_event_handler
+[  453.757796] Left krping_test_client
+[  453.757799] Entered krping_format_send
+[  453.757801] Entered krping_rdma_rkey
+[  453.757803] Left krping_rdma_rkey
+[  453.757807] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.757809] Left krping_format_send
+[  453.757815] Entered krping_cq_event_handler
+[  453.757818] send completion: 117440512
+[  453.757818] 
+[  453.757821] Left krping_cq_event_handler
+[  453.757910] Entered krping_cq_event_handler
+[  453.757913] recv completion: 0
+[  453.757913] 
+[  453.757916] Entered client_recv
+[  453.757918] Left client_recv
+[  453.757922] Left krping_cq_event_handler
+[  453.757928] Entered krping_format_send
+[  453.757930] Entered krping_rdma_rkey
+[  453.757932] Left krping_rdma_rkey
+[  453.757935] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.757937] Left krping_format_send
+[  453.757944] Entered krping_cq_event_handler
+[  453.757946] send completion: 117440512
+[  453.757946] 
+[  453.757950] Left krping_cq_event_handler
+[  453.758039] Entered krping_cq_event_handler
+[  453.758042] recv completion: 0
+[  453.758042] 
+[  453.758045] Entered client_recv
+[  453.758047] Left client_recv
+[  453.758050] Left krping_cq_event_handler
+[  453.758056] Left krping_test_client
+[  453.758059] Entered krping_format_send
+[  453.758061] Entered krping_rdma_rkey
+[  453.758064] Left krping_rdma_rkey
+[  453.758066] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.758068] Left krping_format_send
+[  453.758078] Entered krping_cq_event_handler
+[  453.758081] send completion: 117440512
+[  453.758081] 
+[  453.758084] Left krping_cq_event_handler
+[  453.758192] Entered krping_cq_event_handler
+[  453.758197] recv completion: 0
+[  453.758197] 
+[  453.758200] Entered client_recv
+[  453.758202] Left client_recv
+[  453.758206] Left krping_cq_event_handler
+[  453.758215] Entered krping_format_send
+[  453.758217] Entered krping_rdma_rkey
+[  453.758219] Left krping_rdma_rkey
+[  453.758222] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.758224] Left krping_format_send
+[  453.758231] Entered krping_cq_event_handler
+[  453.758234] send completion: 117440512
+[  453.758234] 
+[  453.758237] Left krping_cq_event_handler
+[  453.758346] Entered krping_cq_event_handler
+[  453.758351] recv completion: 0
+[  453.758351] 
+[  453.758354] Entered client_recv
+[  453.758356] Left client_recv
+[  453.758361] Left krping_cq_event_handler
+[  453.758368] Left krping_test_client
+[  453.758371] Entered krping_format_send
+[  453.758373] Entered krping_rdma_rkey
+[  453.758376] Left krping_rdma_rkey
+[  453.758378] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.758380] Left krping_format_send
+[  453.758387] Entered krping_cq_event_handler
+[  453.758390] send completion: 117440512
+[  453.758390] 
+[  453.758393] Left krping_cq_event_handler
+[  453.758508] Entered krping_cq_event_handler
+[  453.758517] recv completion: 0
+[  453.758517] 
+[  453.758521] Entered client_recv
+[  453.758523] Left client_recv
+[  453.758533] Left krping_cq_event_handler
+[  453.758545] Entered krping_format_send
+[  453.758548] Entered krping_rdma_rkey
+[  453.758550] Left krping_rdma_rkey
+[  453.758554] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.758557] Left krping_format_send
+[  453.758567] Entered krping_cq_event_handler
+[  453.758570] send completion: 117440512
+[  453.758570] 
+[  453.758574] Left krping_cq_event_handler
+[  453.758692] Entered krping_cq_event_handler
+[  453.758701] recv completion: 0
+[  453.758701] 
+[  453.758706] Entered client_recv
+[  453.758708] Left client_recv
+[  453.758718] Left krping_cq_event_handler
+[  453.758730] Left krping_test_client
+[  453.758733] Entered krping_format_send
+[  453.758736] Entered krping_rdma_rkey
+[  453.758738] Left krping_rdma_rkey
+[  453.758742] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.758744] Left krping_format_send
+[  453.758755] Entered krping_cq_event_handler
+[  453.758758] send completion: 117440512
+[  453.758758] 
+[  453.758762] Left krping_cq_event_handler
+[  453.758859] Entered krping_cq_event_handler
+[  453.758863] recv completion: 0
+[  453.758863] 
+[  453.758866] Entered client_recv
+[  453.758868] Left client_recv
+[  453.758874] Left krping_cq_event_handler
+[  453.758882] Entered krping_format_send
+[  453.758884] Entered krping_rdma_rkey
+[  453.758887] Left krping_rdma_rkey
+[  453.758890] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.758892] Left krping_format_send
+[  453.758899] Entered krping_cq_event_handler
+[  453.758902] send completion: 117440512
+[  453.758902] 
+[  453.758905] Left krping_cq_event_handler
+[  453.758987] Entered krping_cq_event_handler
+[  453.758992] recv completion: 0
+[  453.758992] 
+[  453.758995] Entered client_recv
+[  453.758997] Left client_recv
+[  453.759001] Left krping_cq_event_handler
+[  453.759009] Left krping_test_client
+[  453.759012] Entered krping_format_send
+[  453.759014] Entered krping_rdma_rkey
+[  453.759016] Left krping_rdma_rkey
+[  453.759019] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.759021] Left krping_format_send
+[  453.759028] Entered krping_cq_event_handler
+[  453.759031] send completion: 117440512
+[  453.759031] 
+[  453.759034] Left krping_cq_event_handler
+[  453.759093] Entered krping_cq_event_handler
+[  453.759097] recv completion: 0
+[  453.759097] 
+[  453.759100] Entered client_recv
+[  453.759102] Left client_recv
+[  453.759108] Left krping_cq_event_handler
+[  453.759116] Entered krping_format_send
+[  453.759118] Entered krping_rdma_rkey
+[  453.759120] Left krping_rdma_rkey
+[  453.759123] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.759125] Left krping_format_send
+[  453.759131] Entered krping_cq_event_handler
+[  453.759134] send completion: 117440512
+[  453.759134] 
+[  453.759137] Left krping_cq_event_handler
+[  453.759183] Entered krping_cq_event_handler
+[  453.759186] recv completion: 0
+[  453.759186] 
+[  453.759189] Entered client_recv
+[  453.759191] Left client_recv
+[  453.759195] Left krping_cq_event_handler
+[  453.759201] Left krping_test_client
+[  453.759203] Entered krping_format_send
+[  453.759206] Entered krping_rdma_rkey
+[  453.759208] Left krping_rdma_rkey
+[  453.759210] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.759212] Left krping_format_send
+[  453.759223] Entered krping_cq_event_handler
+[  453.759226] send completion: 117440512
+[  453.759226] 
+[  453.759229] Left krping_cq_event_handler
+[  453.759271] Entered krping_cq_event_handler
+[  453.759274] recv completion: 0
+[  453.759274] 
+[  453.759276] Entered client_recv
+[  453.759278] Left client_recv
+[  453.759282] Left krping_cq_event_handler
+[  453.759288] Entered krping_format_send
+[  453.759290] Entered krping_rdma_rkey
+[  453.759292] Left krping_rdma_rkey
+[  453.759295] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.759297] Left krping_format_send
+[  453.759308] Entered krping_cq_event_handler
+[  453.759311] send completion: 117440512
+[  453.759311] 
+[  453.759314] Left krping_cq_event_handler
+[  453.759355] Entered krping_cq_event_handler
+[  453.759358] recv completion: 0
+[  453.759358] 
+[  453.759361] Entered client_recv
+[  453.759363] Left client_recv
+[  453.759366] Left krping_cq_event_handler
+[  453.759372] Left krping_test_client
+[  453.759375] Entered krping_format_send
+[  453.759377] Entered krping_rdma_rkey
+[  453.759379] Left krping_rdma_rkey
+[  453.759382] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.759384] Left krping_format_send
+[  453.759404] Entered krping_cq_event_handler
+[  453.759408] send completion: 117440512
+[  453.759408] 
+[  453.759411] Left krping_cq_event_handler
+[  453.759439] Entered krping_cq_event_handler
+[  453.759442] recv completion: 0
+[  453.759442] 
+[  453.759444] Entered client_recv
+[  453.759446] Left client_recv
+[  453.759453] Left krping_cq_event_handler
+[  453.759493] Entered krping_format_send
+[  453.759508] Entered krping_rdma_rkey
+[  453.759521] Left krping_rdma_rkey
+[  453.759537] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.759549] Left krping_format_send
+[  453.759567] Entered krping_cq_event_handler
+[  453.759570] send completion: 117440512
+[  453.759570] 
+[  453.759574] Left krping_cq_event_handler
+[  453.759619] Entered krping_cq_event_handler
+[  453.759622] recv completion: 0
+[  453.759622] 
+[  453.759625] Entered client_recv
+[  453.759627] Left client_recv
+[  453.759632] Left krping_cq_event_handler
+[  453.759650] Left krping_test_client
+[  453.759655] Entered krping_format_send
+[  453.759657] Entered krping_rdma_rkey
+[  453.759659] Left krping_rdma_rkey
+[  453.759663] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.759665] Left krping_format_send
+[  453.759673] Entered krping_cq_event_handler
+[  453.759677] send completion: 117440512
+[  453.759677] 
+[  453.759680] Left krping_cq_event_handler
+[  453.759721] Entered krping_cq_event_handler
+[  453.759724] recv completion: 0
+[  453.759724] 
+[  453.759727] Entered client_recv
+[  453.759728] Left client_recv
+[  453.759734] Left krping_cq_event_handler
+[  453.759739] Entered krping_format_send
+[  453.759742] Entered krping_rdma_rkey
+[  453.759744] Left krping_rdma_rkey
+[  453.759747] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.759749] Left krping_format_send
+[  453.759756] Entered krping_cq_event_handler
+[  453.759759] send completion: 117440512
+[  453.759759] 
+[  453.759762] Left krping_cq_event_handler
+[  453.759806] Entered krping_cq_event_handler
+[  453.759809] recv completion: 0
+[  453.759809] 
+[  453.759812] Entered client_recv
+[  453.759814] Left client_recv
+[  453.759820] Left krping_cq_event_handler
+[  453.759859] Left krping_test_client
+[  453.759867] Entered krping_format_send
+[  453.759870] Entered krping_rdma_rkey
+[  453.759872] Left krping_rdma_rkey
+[  453.759876] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.759878] Left krping_format_send
+[  453.759887] Entered krping_cq_event_handler
+[  453.759890] send completion: 117440512
+[  453.759890] 
+[  453.759894] Left krping_cq_event_handler
+[  453.759934] Entered krping_cq_event_handler
+[  453.759937] recv completion: 0
+[  453.759937] 
+[  453.759940] Entered client_recv
+[  453.759942] Left client_recv
+[  453.759947] Left krping_cq_event_handler
+[  453.759985] Entered krping_format_send
+[  453.759991] Entered krping_rdma_rkey
+[  453.759994] Left krping_rdma_rkey
+[  453.759998] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.760001] Left krping_format_send
+[  453.760012] Entered krping_cq_event_handler
+[  453.760018] send completion: 117440512
+[  453.760018] 
+[  453.760024] Left krping_cq_event_handler
+[  453.760062] Entered krping_cq_event_handler
+[  453.760067] recv completion: 0
+[  453.760067] 
+[  453.760072] Entered client_recv
+[  453.760076] Left client_recv
+[  453.760084] Left krping_cq_event_handler
+[  453.760094] Left krping_test_client
+[  453.760100] Entered krping_format_send
+[  453.760103] Entered krping_rdma_rkey
+[  453.760107] Left krping_rdma_rkey
+[  453.760113] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.760116] Left krping_format_send
+[  453.760127] Entered krping_cq_event_handler
+[  453.760132] send completion: 117440512
+[  453.760132] 
+[  453.760138] Left krping_cq_event_handler
+[  453.760196] Entered krping_cq_event_handler
+[  453.760201] recv completion: 0
+[  453.760201] 
+[  453.760207] Entered client_recv
+[  453.760210] Left client_recv
+[  453.760217] Left krping_cq_event_handler
+[  453.760227] Entered krping_format_send
+[  453.760230] Entered krping_rdma_rkey
+[  453.760234] Left krping_rdma_rkey
+[  453.760239] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.760243] Left krping_format_send
+[  453.760252] Entered krping_cq_event_handler
+[  453.760257] send completion: 117440512
+[  453.760257] 
+[  453.760262] Left krping_cq_event_handler
+[  453.760305] Entered krping_cq_event_handler
+[  453.760321] recv completion: 0
+[  453.760321] 
+[  453.760341] Entered client_recv
+[  453.760359] Left client_recv
+[  453.760378] Left krping_cq_event_handler
+[  453.760401] Left krping_test_client
+[  453.760417] Entered krping_format_send
+[  453.760435] Entered krping_rdma_rkey
+[  453.760453] Left krping_rdma_rkey
+[  453.760470] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.760489] Left krping_format_send
+[  453.760512] Entered krping_cq_event_handler
+[  453.760531] send completion: 117440512
+[  453.760531] 
+[  453.760539] Left krping_cq_event_handler
+[  453.760560] Entered krping_cq_event_handler
+[  453.760566] recv completion: 0
+[  453.760566] 
+[  453.760571] Entered client_recv
+[  453.760575] Left client_recv
+[  453.760581] Left krping_cq_event_handler
+[  453.760590] Entered krping_format_send
+[  453.760594] Entered krping_rdma_rkey
+[  453.760598] Left krping_rdma_rkey
+[  453.760603] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.760607] Left krping_format_send
+[  453.760615] Entered krping_cq_event_handler
+[  453.760620] send completion: 117440512
+[  453.760620] 
+[  453.760626] Left krping_cq_event_handler
+[  453.760769] Entered krping_cq_event_handler
+[  453.760776] recv completion: 0
+[  453.760776] 
+[  453.760781] Entered client_recv
+[  453.760785] Left client_recv
+[  453.760792] Left krping_cq_event_handler
+[  453.760802] Left krping_test_client
+[  453.760808] Entered krping_format_send
+[  453.760811] Entered krping_rdma_rkey
+[  453.760815] Left krping_rdma_rkey
+[  453.760820] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.760823] Left krping_format_send
+[  453.760834] Entered krping_cq_event_handler
+[  453.760839] send completion: 117440512
+[  453.760839] 
+[  453.760845] Left krping_cq_event_handler
+[  453.760983] Entered krping_cq_event_handler
+[  453.760988] recv completion: 0
+[  453.760988] 
+[  453.760993] Entered client_recv
+[  453.760997] Left client_recv
+[  453.761003] Left krping_cq_event_handler
+[  453.761013] Entered krping_format_send
+[  453.761016] Entered krping_rdma_rkey
+[  453.761020] Left krping_rdma_rkey
+[  453.761025] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.761029] Left krping_format_send
+[  453.761038] Entered krping_cq_event_handler
+[  453.761043] send completion: 117440512
+[  453.761043] 
+[  453.761051] Left krping_cq_event_handler
+[  453.761189] Entered krping_cq_event_handler
+[  453.761199] recv completion: 0
+[  453.761199] 
+[  453.761205] Entered client_recv
+[  453.761208] Left client_recv
+[  453.761215] Left krping_cq_event_handler
+[  453.761224] Left krping_test_client
+[  453.761229] Entered krping_format_send
+[  453.761233] Entered krping_rdma_rkey
+[  453.761237] Left krping_rdma_rkey
+[  453.761242] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.761245] Left krping_format_send
+[  453.761255] Entered krping_cq_event_handler
+[  453.761260] send completion: 117440512
+[  453.761260] 
+[  453.761266] Left krping_cq_event_handler
+[  453.761315] Entered krping_cq_event_handler
+[  453.761321] recv completion: 0
+[  453.761321] 
+[  453.761327] Entered client_recv
+[  453.761330] Left client_recv
+[  453.761337] Left krping_cq_event_handler
+[  453.761347] Entered krping_format_send
+[  453.761351] Entered krping_rdma_rkey
+[  453.761355] Left krping_rdma_rkey
+[  453.761360] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.761363] Left krping_format_send
+[  453.761372] Entered krping_cq_event_handler
+[  453.761377] send completion: 117440512
+[  453.761377] 
+[  453.761382] Left krping_cq_event_handler
+[  453.761435] Entered krping_cq_event_handler
+[  453.761440] recv completion: 0
+[  453.761440] 
+[  453.761444] Entered client_recv
+[  453.761447] Left client_recv
+[  453.761454] Left krping_cq_event_handler
+[  453.761463] Left krping_test_client
+[  453.761468] Entered krping_format_send
+[  453.761472] Entered krping_rdma_rkey
+[  453.761476] Left krping_rdma_rkey
+[  453.761480] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.761484] Left krping_format_send
+[  453.761494] Entered krping_cq_event_handler
+[  453.761499] send completion: 117440512
+[  453.761499] 
+[  453.761505] Left krping_cq_event_handler
+[  453.761551] Entered krping_cq_event_handler
+[  453.761556] recv completion: 0
+[  453.761556] 
+[  453.761561] Entered client_recv
+[  453.761565] Left client_recv
+[  453.761571] Left krping_cq_event_handler
+[  453.761580] Entered krping_format_send
+[  453.761584] Entered krping_rdma_rkey
+[  453.761588] Left krping_rdma_rkey
+[  453.761593] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.761596] Left krping_format_send
+[  453.761605] Entered krping_cq_event_handler
+[  453.761610] send completion: 117440512
+[  453.761610] 
+[  453.761616] Left krping_cq_event_handler
+[  453.761668] Entered krping_cq_event_handler
+[  453.761673] recv completion: 0
+[  453.761673] 
+[  453.761679] Entered client_recv
+[  453.761682] Left client_recv
+[  453.761688] Left krping_cq_event_handler
+[  453.761698] Left krping_test_client
+[  453.761703] Entered krping_format_send
+[  453.761706] Entered krping_rdma_rkey
+[  453.761710] Left krping_rdma_rkey
+[  453.761715] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.761719] Left krping_format_send
+[  453.761728] Entered krping_cq_event_handler
+[  453.761733] send completion: 117440512
+[  453.761733] 
+[  453.761738] Left krping_cq_event_handler
+[  453.761785] Entered krping_cq_event_handler
+[  453.761790] recv completion: 0
+[  453.761790] 
+[  453.761795] Entered client_recv
+[  453.761799] Left client_recv
+[  453.761808] Left krping_cq_event_handler
+[  453.761828] Entered krping_format_send
+[  453.761847] Entered krping_rdma_rkey
+[  453.761863] Left krping_rdma_rkey
+[  453.761882] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.761900] Left krping_format_send
+[  453.761924] Entered krping_cq_event_handler
+[  453.761943] send completion: 117440512
+[  453.761943] 
+[  453.761961] Left krping_cq_event_handler
+[  453.761979] Entered krping_cq_event_handler
+[  453.761998] recv completion: 0
+[  453.761998] 
+[  453.762015] Entered client_recv
+[  453.762035] Left client_recv
+[  453.762051] Left krping_cq_event_handler
+[  453.762072] Left krping_test_client
+[  453.762090] Entered krping_format_send
+[  453.762106] Entered krping_rdma_rkey
+[  453.762120] Left krping_rdma_rkey
+[  453.762125] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.762128] Left krping_format_send
+[  453.762137] Entered krping_cq_event_handler
+[  453.762142] send completion: 117440512
+[  453.762142] 
+[  453.762147] Left krping_cq_event_handler
+[  453.762284] Entered krping_cq_event_handler
+[  453.762289] recv completion: 0
+[  453.762289] 
+[  453.762295] Entered client_recv
+[  453.762298] Left client_recv
+[  453.762305] Left krping_cq_event_handler
+[  453.762314] Entered krping_format_send
+[  453.762318] Entered krping_rdma_rkey
+[  453.762322] Left krping_rdma_rkey
+[  453.762327] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.762331] Left krping_format_send
+[  453.762340] Entered krping_cq_event_handler
+[  453.762345] send completion: 117440512
+[  453.762345] 
+[  453.762351] Left krping_cq_event_handler
+[  453.762487] Entered krping_cq_event_handler
+[  453.762492] recv completion: 0
+[  453.762492] 
+[  453.762497] Entered client_recv
+[  453.762501] Left client_recv
+[  453.762507] Left krping_cq_event_handler
+[  453.762517] Left krping_test_client
+[  453.762522] Entered krping_format_send
+[  453.762525] Entered krping_rdma_rkey
+[  453.762529] Left krping_rdma_rkey
+[  453.762534] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.762537] Left krping_format_send
+[  453.762547] Entered krping_cq_event_handler
+[  453.762551] send completion: 117440512
+[  453.762551] 
+[  453.762557] Left krping_cq_event_handler
+[  453.762612] Entered krping_cq_event_handler
+[  453.762626] recv completion: 0
+[  453.762626] 
+[  453.762646] Entered client_recv
+[  453.762662] Left client_recv
+[  453.762683] Left krping_cq_event_handler
+[  453.762704] Entered krping_format_send
+[  453.762722] Entered krping_rdma_rkey
+[  453.762741] Left krping_rdma_rkey
+[  453.762758] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.762778] Left krping_format_send
+[  453.762800] Entered krping_cq_event_handler
+[  453.762818] send completion: 117440512
+[  453.762818] 
+[  453.762838] Left krping_cq_event_handler
+[  453.762863] Entered krping_cq_event_handler
+[  453.762881] recv completion: 0
+[  453.762881] 
+[  453.762899] Entered client_recv
+[  453.762919] Left client_recv
+[  453.762933] Left krping_cq_event_handler
+[  453.762942] Left krping_test_client
+[  453.762947] Entered krping_format_send
+[  453.762951] Entered krping_rdma_rkey
+[  453.762955] Left krping_rdma_rkey
+[  453.762960] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.762964] Left krping_format_send
+[  453.762973] Entered krping_cq_event_handler
+[  453.762978] send completion: 117440512
+[  453.762978] 
+[  453.762983] Left krping_cq_event_handler
+[  453.763031] Entered krping_cq_event_handler
+[  453.763036] recv completion: 0
+[  453.763036] 
+[  453.763042] Entered client_recv
+[  453.763045] Left client_recv
+[  453.763051] Left krping_cq_event_handler
+[  453.763061] Entered krping_format_send
+[  453.763064] Entered krping_rdma_rkey
+[  453.763068] Left krping_rdma_rkey
+[  453.763073] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.763077] Left krping_format_send
+[  453.763086] Entered krping_cq_event_handler
+[  453.763091] send completion: 117440512
+[  453.763091] 
+[  453.763096] Left krping_cq_event_handler
+[  453.763147] Entered krping_cq_event_handler
+[  453.763153] recv completion: 0
+[  453.763153] 
+[  453.763158] Entered client_recv
+[  453.763161] Left client_recv
+[  453.763168] Left krping_cq_event_handler
+[  453.763177] Left krping_test_client
+[  453.763182] Entered krping_format_send
+[  453.763186] Entered krping_rdma_rkey
+[  453.763189] Left krping_rdma_rkey
+[  453.763194] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.763198] Left krping_format_send
+[  453.763207] Entered krping_cq_event_handler
+[  453.763212] send completion: 117440512
+[  453.763212] 
+[  453.763217] Left krping_cq_event_handler
+[  453.763266] Entered krping_cq_event_handler
+[  453.763271] recv completion: 0
+[  453.763271] 
+[  453.763277] Entered client_recv
+[  453.763280] Left client_recv
+[  453.763286] Left krping_cq_event_handler
+[  453.763296] Entered krping_format_send
+[  453.763300] Entered krping_rdma_rkey
+[  453.763303] Left krping_rdma_rkey
+[  453.763308] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.763312] Left krping_format_send
+[  453.763321] Entered krping_cq_event_handler
+[  453.763326] send completion: 117440512
+[  453.763326] 
+[  453.763331] Left krping_cq_event_handler
+[  453.763382] Entered krping_cq_event_handler
+[  453.763387] recv completion: 0
+[  453.763387] 
+[  453.763392] Entered client_recv
+[  453.763395] Left client_recv
+[  453.763401] Left krping_cq_event_handler
+[  453.763439] Left krping_test_client
+[  453.763440] Entered krping_format_send
+[  453.763442] Entered krping_rdma_rkey
+[  453.763443] Left krping_rdma_rkey
+[  453.763445] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.763446] Left krping_format_send
+[  453.763453] Entered krping_cq_event_handler
+[  453.763455] send completion: 117440512
+[  453.763455] 
+[  453.763457] Left krping_cq_event_handler
+[  453.763590] Entered krping_cq_event_handler
+[  453.763593] recv completion: 0
+[  453.763593] 
+[  453.763595] Entered client_recv
+[  453.763596] Left client_recv
+[  453.763599] Left krping_cq_event_handler
+[  453.763602] Entered krping_format_send
+[  453.763604] Entered krping_rdma_rkey
+[  453.763605] Left krping_rdma_rkey
+[  453.763607] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.763608] Left krping_format_send
+[  453.763614] Entered krping_cq_event_handler
+[  453.763616] send completion: 117440512
+[  453.763616] 
+[  453.763618] Left krping_cq_event_handler
+[  453.763773] Entered krping_cq_event_handler
+[  453.763774] recv completion: 0
+[  453.763774] 
+[  453.763775] Entered client_recv
+[  453.763776] Left client_recv
+[  453.763778] Left krping_cq_event_handler
+[  453.763780] Left krping_test_client
+[  453.763781] Entered krping_format_send
+[  453.763782] Entered krping_rdma_rkey
+[  453.763783] Left krping_rdma_rkey
+[  453.763784] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.763785] Left krping_format_send
+[  453.763789] Entered krping_cq_event_handler
+[  453.763790] send completion: 117440512
+[  453.763790] 
+[  453.763791] Left krping_cq_event_handler
+[  453.763919] Entered krping_cq_event_handler
+[  453.763920] recv completion: 0
+[  453.763920] 
+[  453.763922] Entered client_recv
+[  453.763922] Left client_recv
+[  453.763924] Left krping_cq_event_handler
+[  453.763926] Entered krping_format_send
+[  453.763927] Entered krping_rdma_rkey
+[  453.763928] Left krping_rdma_rkey
+[  453.763929] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.763929] Left krping_format_send
+[  453.763935] Entered krping_cq_event_handler
+[  453.763936] send completion: 117440512
+[  453.763936] 
+[  453.763937] Left krping_cq_event_handler
+[  453.763993] Entered krping_cq_event_handler
+[  453.763994] recv completion: 0
+[  453.763994] 
+[  453.763995] Entered client_recv
+[  453.763996] Left client_recv
+[  453.763997] Left krping_cq_event_handler
+[  453.764000] Left krping_test_client
+[  453.764001] Entered krping_format_send
+[  453.764002] Entered krping_rdma_rkey
+[  453.764003] Left krping_rdma_rkey
+[  453.764004] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.764004] Left krping_format_send
+[  453.764008] Entered krping_cq_event_handler
+[  453.764010] send completion: 117440512
+[  453.764010] 
+[  453.764011] Left krping_cq_event_handler
+[  453.764064] Entered krping_cq_event_handler
+[  453.764065] recv completion: 0
+[  453.764065] 
+[  453.764066] Entered client_recv
+[  453.764067] Left client_recv
+[  453.764068] Left krping_cq_event_handler
+[  453.764070] Entered krping_format_send
+[  453.764071] Entered krping_rdma_rkey
+[  453.764072] Left krping_rdma_rkey
+[  453.764073] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.764073] Left krping_format_send
+[  453.764077] Entered krping_cq_event_handler
+[  453.764078] send completion: 117440512
+[  453.764078] 
+[  453.764080] Left krping_cq_event_handler
+[  453.764138] Entered krping_cq_event_handler
+[  453.764139] recv completion: 0
+[  453.764139] 
+[  453.764140] Entered client_recv
+[  453.764140] Left client_recv
+[  453.764142] Left krping_cq_event_handler
+[  453.764144] Left krping_test_client
+[  453.764145] Entered krping_format_send
+[  453.764146] Entered krping_rdma_rkey
+[  453.764146] Left krping_rdma_rkey
+[  453.764147] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.764148] Left krping_format_send
+[  453.764152] Entered krping_cq_event_handler
+[  453.764153] send completion: 117440512
+[  453.764153] 
+[  453.764154] Left krping_cq_event_handler
+[  453.764206] Entered krping_cq_event_handler
+[  453.764207] recv completion: 0
+[  453.764207] 
+[  453.764208] Entered client_recv
+[  453.764209] Left client_recv
+[  453.764210] Left krping_cq_event_handler
+[  453.764212] Entered krping_format_send
+[  453.764213] Entered krping_rdma_rkey
+[  453.764214] Left krping_rdma_rkey
+[  453.764215] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.764216] Left krping_format_send
+[  453.764220] Entered krping_cq_event_handler
+[  453.764221] send completion: 117440512
+[  453.764221] 
+[  453.764222] Left krping_cq_event_handler
+[  453.764278] Entered krping_cq_event_handler
+[  453.764279] recv completion: 0
+[  453.764279] 
+[  453.764280] Entered client_recv
+[  453.764281] Left client_recv
+[  453.764282] Left krping_cq_event_handler
+[  453.764284] Left krping_test_client
+[  453.764285] Entered krping_format_send
+[  453.764286] Entered krping_rdma_rkey
+[  453.764287] Left krping_rdma_rkey
+[  453.764288] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.764288] Left krping_format_send
+[  453.764292] Entered krping_cq_event_handler
+[  453.764293] send completion: 117440512
+[  453.764293] 
+[  453.764295] Left krping_cq_event_handler
+[  453.764355] Entered krping_cq_event_handler
+[  453.764356] recv completion: 0
+[  453.764356] 
+[  453.764357] Entered client_recv
+[  453.764358] Left client_recv
+[  453.764359] Left krping_cq_event_handler
+[  453.764361] Entered krping_format_send
+[  453.764362] Entered krping_rdma_rkey
+[  453.764363] Left krping_rdma_rkey
+[  453.764364] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.764364] Left krping_format_send
+[  453.764368] Entered krping_cq_event_handler
+[  453.764370] send completion: 117440512
+[  453.764370] 
+[  453.764371] Left krping_cq_event_handler
+[  453.764430] Entered krping_cq_event_handler
+[  453.764431] recv completion: 0
+[  453.764431] 
+[  453.764432] Entered client_recv
+[  453.764433] Left client_recv
+[  453.764434] Left krping_cq_event_handler
+[  453.764436] Left krping_test_client
+[  453.764437] Entered krping_format_send
+[  453.764438] Entered krping_rdma_rkey
+[  453.764438] Left krping_rdma_rkey
+[  453.764439] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.764440] Left krping_format_send
+[  453.764444] Entered krping_cq_event_handler
+[  453.764445] send completion: 117440512
+[  453.764445] 
+[  453.764446] Left krping_cq_event_handler
+[  453.764502] Entered krping_cq_event_handler
+[  453.764503] recv completion: 0
+[  453.764503] 
+[  453.764504] Entered client_recv
+[  453.764505] Left client_recv
+[  453.764506] Left krping_cq_event_handler
+[  453.764508] Entered krping_format_send
+[  453.764509] Entered krping_rdma_rkey
+[  453.764510] Left krping_rdma_rkey
+[  453.764511] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.764512] Left krping_format_send
+[  453.764516] Entered krping_cq_event_handler
+[  453.764517] send completion: 117440512
+[  453.764517] 
+[  453.764518] Left krping_cq_event_handler
+[  453.764571] Entered krping_cq_event_handler
+[  453.764572] recv completion: 0
+[  453.764572] 
+[  453.764573] Entered client_recv
+[  453.764574] Left client_recv
+[  453.764575] Left krping_cq_event_handler
+[  453.764577] Left krping_test_client
+[  453.764578] Entered krping_format_send
+[  453.764579] Entered krping_rdma_rkey
+[  453.764580] Left krping_rdma_rkey
+[  453.764581] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.764582] Left krping_format_send
+[  453.764586] Entered krping_cq_event_handler
+[  453.764587] send completion: 117440512
+[  453.764587] 
+[  453.764588] Left krping_cq_event_handler
+[  453.764676] Entered krping_cq_event_handler
+[  453.764677] recv completion: 0
+[  453.764677] 
+[  453.764678] Entered client_recv
+[  453.764678] Left client_recv
+[  453.764680] Left krping_cq_event_handler
+[  453.764682] Entered krping_format_send
+[  453.764683] Entered krping_rdma_rkey
+[  453.764683] Left krping_rdma_rkey
+[  453.764684] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.764685] Left krping_format_send
+[  453.764689] Entered krping_cq_event_handler
+[  453.764690] send completion: 117440512
+[  453.764690] 
+[  453.764691] Left krping_cq_event_handler
+[  453.764742] Entered krping_cq_event_handler
+[  453.764743] recv completion: 0
+[  453.764743] 
+[  453.764745] Entered client_recv
+[  453.764745] Left client_recv
+[  453.764747] Left krping_cq_event_handler
+[  453.764749] Left krping_test_client
+[  453.764750] Entered krping_format_send
+[  453.764750] Entered krping_rdma_rkey
+[  453.764751] Left krping_rdma_rkey
+[  453.764752] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.764753] Left krping_format_send
+[  453.764757] Entered krping_cq_event_handler
+[  453.764758] send completion: 117440512
+[  453.764758] 
+[  453.764759] Left krping_cq_event_handler
+[  453.764806] Entered krping_cq_event_handler
+[  453.764807] recv completion: 0
+[  453.764807] 
+[  453.764808] Entered client_recv
+[  453.764809] Left client_recv
+[  453.764810] Left krping_cq_event_handler
+[  453.764812] Entered krping_format_send
+[  453.764813] Entered krping_rdma_rkey
+[  453.764814] Left krping_rdma_rkey
+[  453.764815] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.764815] Left krping_format_send
+[  453.764819] Entered krping_cq_event_handler
+[  453.764820] send completion: 117440512
+[  453.764820] 
+[  453.764822] Left krping_cq_event_handler
+[  453.764871] Entered krping_cq_event_handler
+[  453.764872] recv completion: 0
+[  453.764872] 
+[  453.764873] Entered client_recv
+[  453.764874] Left client_recv
+[  453.764875] Left krping_cq_event_handler
+[  453.764877] Left krping_test_client
+[  453.764878] Entered krping_format_send
+[  453.764879] Entered krping_rdma_rkey
+[  453.764879] Left krping_rdma_rkey
+[  453.764880] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.764881] Left krping_format_send
+[  453.764885] Entered krping_cq_event_handler
+[  453.764886] send completion: 117440512
+[  453.764886] 
+[  453.764888] Left krping_cq_event_handler
+[  453.764961] Entered krping_cq_event_handler
+[  453.764962] recv completion: 0
+[  453.764962] 
+[  453.764963] Entered client_recv
+[  453.764964] Left client_recv
+[  453.764965] Left krping_cq_event_handler
+[  453.764968] Entered krping_format_send
+[  453.764968] Entered krping_rdma_rkey
+[  453.764969] Left krping_rdma_rkey
+[  453.764970] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.764971] Left krping_format_send
+[  453.764975] Entered krping_cq_event_handler
+[  453.764976] send completion: 117440512
+[  453.764976] 
+[  453.764977] Left krping_cq_event_handler
+[  453.765142] Entered krping_cq_event_handler
+[  453.765143] recv completion: 0
+[  453.765143] 
+[  453.765144] Entered client_recv
+[  453.765145] Left client_recv
+[  453.765146] Left krping_cq_event_handler
+[  453.765148] Left krping_test_client
+[  453.765149] Entered krping_format_send
+[  453.765150] Entered krping_rdma_rkey
+[  453.765151] Left krping_rdma_rkey
+[  453.765152] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.765152] Left krping_format_send
+[  453.765156] Entered krping_cq_event_handler
+[  453.765158] send completion: 117440512
+[  453.765158] 
+[  453.765159] Left krping_cq_event_handler
+[  453.765299] Entered krping_cq_event_handler
+[  453.765300] recv completion: 0
+[  453.765300] 
+[  453.765301] Entered client_recv
+[  453.765302] Left client_recv
+[  453.765303] Left krping_cq_event_handler
+[  453.765305] Entered krping_format_send
+[  453.765306] Entered krping_rdma_rkey
+[  453.765307] Left krping_rdma_rkey
+[  453.765308] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.765309] Left krping_format_send
+[  453.765313] Entered krping_cq_event_handler
+[  453.765314] send completion: 117440512
+[  453.765314] 
+[  453.765315] Left krping_cq_event_handler
+[  453.765458] Entered krping_cq_event_handler
+[  453.765459] recv completion: 0
+[  453.765459] 
+[  453.765460] Entered client_recv
+[  453.765460] Left client_recv
+[  453.765462] Left krping_cq_event_handler
+[  453.765464] Left krping_test_client
+[  453.765465] Entered krping_format_send
+[  453.765466] Entered krping_rdma_rkey
+[  453.765466] Left krping_rdma_rkey
+[  453.765467] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.765468] Left krping_format_send
+[  453.765472] Entered krping_cq_event_handler
+[  453.765473] send completion: 117440512
+[  453.765473] 
+[  453.765474] Left krping_cq_event_handler
+[  453.765521] Entered krping_cq_event_handler
+[  453.765522] recv completion: 0
+[  453.765522] 
+[  453.765523] Entered client_recv
+[  453.765524] Left client_recv
+[  453.765525] Left krping_cq_event_handler
+[  453.765527] Entered krping_format_send
+[  453.765528] Entered krping_rdma_rkey
+[  453.765529] Left krping_rdma_rkey
+[  453.765530] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.765530] Left krping_format_send
+[  453.765534] Entered krping_cq_event_handler
+[  453.765536] send completion: 117440512
+[  453.765536] 
+[  453.765537] Left krping_cq_event_handler
+[  453.765588] Entered krping_cq_event_handler
+[  453.765589] recv completion: 0
+[  453.765589] 
+[  453.765590] Entered client_recv
+[  453.765591] Left client_recv
+[  453.765592] Left krping_cq_event_handler
+[  453.765594] Left krping_test_client
+[  453.765595] Entered krping_format_send
+[  453.765596] Entered krping_rdma_rkey
+[  453.765597] Left krping_rdma_rkey
+[  453.765598] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.765598] Left krping_format_send
+[  453.765602] Entered krping_cq_event_handler
+[  453.765604] send completion: 117440512
+[  453.765604] 
+[  453.765605] Left krping_cq_event_handler
+[  453.765654] Entered krping_cq_event_handler
+[  453.765655] recv completion: 0
+[  453.765655] 
+[  453.765656] Entered client_recv
+[  453.765657] Left client_recv
+[  453.765658] Left krping_cq_event_handler
+[  453.765660] Entered krping_format_send
+[  453.765661] Entered krping_rdma_rkey
+[  453.765661] Left krping_rdma_rkey
+[  453.765662] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.765663] Left krping_format_send
+[  453.765667] Entered krping_cq_event_handler
+[  453.765668] send completion: 117440512
+[  453.765668] 
+[  453.765670] Left krping_cq_event_handler
+[  453.765721] Entered krping_cq_event_handler
+[  453.765722] recv completion: 0
+[  453.765722] 
+[  453.765723] Entered client_recv
+[  453.765724] Left client_recv
+[  453.765725] Left krping_cq_event_handler
+[  453.765727] Left krping_test_client
+[  453.765728] Entered krping_format_send
+[  453.765729] Entered krping_rdma_rkey
+[  453.765730] Left krping_rdma_rkey
+[  453.765731] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.765732] Left krping_format_send
+[  453.765736] Entered krping_cq_event_handler
+[  453.765737] send completion: 117440512
+[  453.765737] 
+[  453.765738] Left krping_cq_event_handler
+[  453.765785] Entered krping_cq_event_handler
+[  453.765786] recv completion: 0
+[  453.765786] 
+[  453.765787] Entered client_recv
+[  453.765788] Left client_recv
+[  453.765789] Left krping_cq_event_handler
+[  453.765792] Entered krping_format_send
+[  453.765792] Entered krping_rdma_rkey
+[  453.765793] Left krping_rdma_rkey
+[  453.765794] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.765795] Left krping_format_send
+[  453.765799] Entered krping_cq_event_handler
+[  453.765800] send completion: 117440512
+[  453.765800] 
+[  453.765801] Left krping_cq_event_handler
+[  453.765849] Entered krping_cq_event_handler
+[  453.765850] recv completion: 0
+[  453.765850] 
+[  453.765851] Entered client_recv
+[  453.765851] Left client_recv
+[  453.765853] Left krping_cq_event_handler
+[  453.765855] Left krping_test_client
+[  453.765856] Entered krping_format_send
+[  453.765857] Entered krping_rdma_rkey
+[  453.765857] Left krping_rdma_rkey
+[  453.765858] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.765859] Left krping_format_send
+[  453.765863] Entered krping_cq_event_handler
+[  453.765864] send completion: 117440512
+[  453.765864] 
+[  453.765865] Left krping_cq_event_handler
+[  453.765914] Entered krping_cq_event_handler
+[  453.765915] recv completion: 0
+[  453.765915] 
+[  453.765916] Entered client_recv
+[  453.765917] Left client_recv
+[  453.765918] Left krping_cq_event_handler
+[  453.765920] Entered krping_format_send
+[  453.765921] Entered krping_rdma_rkey
+[  453.765922] Left krping_rdma_rkey
+[  453.765923] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.765924] Left krping_format_send
+[  453.765928] Entered krping_cq_event_handler
+[  453.765929] send completion: 117440512
+[  453.765929] 
+[  453.765930] Left krping_cq_event_handler
+[  453.765978] Entered krping_cq_event_handler
+[  453.765979] recv completion: 0
+[  453.765979] 
+[  453.765980] Entered client_recv
+[  453.765981] Left client_recv
+[  453.765982] Left krping_cq_event_handler
+[  453.765985] Left krping_test_client
+[  453.765986] Entered krping_format_send
+[  453.765986] Entered krping_rdma_rkey
+[  453.765987] Left krping_rdma_rkey
+[  453.765988] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.765989] Left krping_format_send
+[  453.765993] Entered krping_cq_event_handler
+[  453.765994] send completion: 117440512
+[  453.765994] 
+[  453.765995] Left krping_cq_event_handler
+[  453.766042] Entered krping_cq_event_handler
+[  453.766043] recv completion: 0
+[  453.766043] 
+[  453.766044] Entered client_recv
+[  453.766045] Left client_recv
+[  453.766046] Left krping_cq_event_handler
+[  453.766048] Entered krping_format_send
+[  453.766049] Entered krping_rdma_rkey
+[  453.766050] Left krping_rdma_rkey
+[  453.766051] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.766052] Left krping_format_send
+[  453.766056] Entered krping_cq_event_handler
+[  453.766057] send completion: 117440512
+[  453.766057] 
+[  453.766058] Left krping_cq_event_handler
+[  453.766117] Entered krping_cq_event_handler
+[  453.766118] recv completion: 0
+[  453.766118] 
+[  453.766119] Entered client_recv
+[  453.766119] Left client_recv
+[  453.766121] Left krping_cq_event_handler
+[  453.766123] Left krping_test_client
+[  453.766124] Entered krping_format_send
+[  453.766125] Entered krping_rdma_rkey
+[  453.766125] Left krping_rdma_rkey
+[  453.766126] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.766127] Left krping_format_send
+[  453.766131] Entered krping_cq_event_handler
+[  453.766132] send completion: 117440512
+[  453.766132] 
+[  453.766133] Left krping_cq_event_handler
+[  453.766182] Entered krping_cq_event_handler
+[  453.766183] recv completion: 0
+[  453.766183] 
+[  453.766184] Entered client_recv
+[  453.766185] Left client_recv
+[  453.766186] Left krping_cq_event_handler
+[  453.766188] Entered krping_format_send
+[  453.766189] Entered krping_rdma_rkey
+[  453.766189] Left krping_rdma_rkey
+[  453.766190] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.766191] Left krping_format_send
+[  453.766195] Entered krping_cq_event_handler
+[  453.766196] send completion: 117440512
+[  453.766196] 
+[  453.766197] Left krping_cq_event_handler
+[  453.766248] Entered krping_cq_event_handler
+[  453.766249] recv completion: 0
+[  453.766249] 
+[  453.766250] Entered client_recv
+[  453.766251] Left client_recv
+[  453.766252] Left krping_cq_event_handler
+[  453.766254] Left krping_test_client
+[  453.766255] Entered krping_format_send
+[  453.766256] Entered krping_rdma_rkey
+[  453.766257] Left krping_rdma_rkey
+[  453.766258] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.766258] Left krping_format_send
+[  453.766262] Entered krping_cq_event_handler
+[  453.766263] send completion: 117440512
+[  453.766263] 
+[  453.766264] Left krping_cq_event_handler
+[  453.766314] Entered krping_cq_event_handler
+[  453.766315] recv completion: 0
+[  453.766315] 
+[  453.766316] Entered client_recv
+[  453.766316] Left client_recv
+[  453.766318] Left krping_cq_event_handler
+[  453.766320] Entered krping_format_send
+[  453.766321] Entered krping_rdma_rkey
+[  453.766321] Left krping_rdma_rkey
+[  453.766322] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.766323] Left krping_format_send
+[  453.766327] Entered krping_cq_event_handler
+[  453.766328] send completion: 117440512
+[  453.766328] 
+[  453.766329] Left krping_cq_event_handler
+[  453.766441] Entered krping_cq_event_handler
+[  453.766442] recv completion: 0
+[  453.766442] 
+[  453.766443] Entered client_recv
+[  453.766444] Left client_recv
+[  453.766445] Left krping_cq_event_handler
+[  453.766447] Left krping_test_client
+[  453.766448] Entered krping_format_send
+[  453.766449] Entered krping_rdma_rkey
+[  453.766450] Left krping_rdma_rkey
+[  453.766451] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.766452] Left krping_format_send
+[  453.766456] Entered krping_cq_event_handler
+[  453.766457] send completion: 117440512
+[  453.766457] 
+[  453.766458] Left krping_cq_event_handler
+[  453.766594] Entered krping_cq_event_handler
+[  453.766596] recv completion: 0
+[  453.766596] 
+[  453.766597] Entered client_recv
+[  453.766597] Left client_recv
+[  453.766599] Left krping_cq_event_handler
+[  453.766601] Entered krping_format_send
+[  453.766601] Entered krping_rdma_rkey
+[  453.766602] Left krping_rdma_rkey
+[  453.766603] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.766604] Left krping_format_send
+[  453.766609] Entered krping_cq_event_handler
+[  453.766610] send completion: 117440512
+[  453.766610] 
+[  453.766612] Left krping_cq_event_handler
+[  453.766749] Entered krping_cq_event_handler
+[  453.766750] recv completion: 0
+[  453.766750] 
+[  453.766751] Entered client_recv
+[  453.766752] Left client_recv
+[  453.766753] Left krping_cq_event_handler
+[  453.766755] Left krping_test_client
+[  453.766756] Entered krping_format_send
+[  453.766757] Entered krping_rdma_rkey
+[  453.766758] Left krping_rdma_rkey
+[  453.766759] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.766759] Left krping_format_send
+[  453.766764] Entered krping_cq_event_handler
+[  453.766765] send completion: 117440512
+[  453.766765] 
+[  453.766766] Left krping_cq_event_handler
+[  453.766841] Entered krping_cq_event_handler
+[  453.766842] recv completion: 0
+[  453.766842] 
+[  453.766843] Entered client_recv
+[  453.766844] Left client_recv
+[  453.766845] Left krping_cq_event_handler
+[  453.766847] Entered krping_format_send
+[  453.766848] Entered krping_rdma_rkey
+[  453.766848] Left krping_rdma_rkey
+[  453.766849] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.766850] Left krping_format_send
+[  453.766854] Entered krping_cq_event_handler
+[  453.766855] send completion: 117440512
+[  453.766855] 
+[  453.766857] Left krping_cq_event_handler
+[  453.766908] Entered krping_cq_event_handler
+[  453.766910] recv completion: 0
+[  453.766910] 
+[  453.766911] Entered client_recv
+[  453.766911] Left client_recv
+[  453.766913] Left krping_cq_event_handler
+[  453.766915] Left krping_test_client
+[  453.766916] Entered krping_format_send
+[  453.766916] Entered krping_rdma_rkey
+[  453.766917] Left krping_rdma_rkey
+[  453.766918] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.766919] Left krping_format_send
+[  453.766923] Entered krping_cq_event_handler
+[  453.766924] send completion: 117440512
+[  453.766924] 
+[  453.766925] Left krping_cq_event_handler
+[  453.766974] Entered krping_cq_event_handler
+[  453.766975] recv completion: 0
+[  453.766975] 
+[  453.766976] Entered client_recv
+[  453.766977] Left client_recv
+[  453.766978] Left krping_cq_event_handler
+[  453.766980] Entered krping_format_send
+[  453.766981] Entered krping_rdma_rkey
+[  453.766982] Left krping_rdma_rkey
+[  453.766983] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.766984] Left krping_format_send
+[  453.766988] Entered krping_cq_event_handler
+[  453.766989] send completion: 117440512
+[  453.766989] 
+[  453.766990] Left krping_cq_event_handler
+[  453.767039] Entered krping_cq_event_handler
+[  453.767040] recv completion: 0
+[  453.767040] 
+[  453.767041] Entered client_recv
+[  453.767042] Left client_recv
+[  453.767043] Left krping_cq_event_handler
+[  453.767046] Left krping_test_client
+[  453.767047] Entered krping_format_send
+[  453.767047] Entered krping_rdma_rkey
+[  453.767048] Left krping_rdma_rkey
+[  453.767049] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.767050] Left krping_format_send
+[  453.767054] Entered krping_cq_event_handler
+[  453.767055] send completion: 117440512
+[  453.767055] 
+[  453.767056] Left krping_cq_event_handler
+[  453.767104] Entered krping_cq_event_handler
+[  453.767105] recv completion: 0
+[  453.767105] 
+[  453.767106] Entered client_recv
+[  453.767107] Left client_recv
+[  453.767108] Left krping_cq_event_handler
+[  453.767110] Entered krping_format_send
+[  453.767111] Entered krping_rdma_rkey
+[  453.767112] Left krping_rdma_rkey
+[  453.767113] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.767114] Left krping_format_send
+[  453.767118] Entered krping_cq_event_handler
+[  453.767119] send completion: 117440512
+[  453.767119] 
+[  453.767120] Left krping_cq_event_handler
+[  453.767171] Entered krping_cq_event_handler
+[  453.767172] recv completion: 0
+[  453.767172] 
+[  453.767173] Entered client_recv
+[  453.767174] Left client_recv
+[  453.767175] Left krping_cq_event_handler
+[  453.767177] Left krping_test_client
+[  453.767178] Entered krping_format_send
+[  453.767179] Entered krping_rdma_rkey
+[  453.767180] Left krping_rdma_rkey
+[  453.767181] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.767182] Left krping_format_send
+[  453.767186] Entered krping_cq_event_handler
+[  453.767187] send completion: 117440512
+[  453.767187] 
+[  453.767188] Left krping_cq_event_handler
+[  453.767237] Entered krping_cq_event_handler
+[  453.767238] recv completion: 0
+[  453.767238] 
+[  453.767239] Entered client_recv
+[  453.767240] Left client_recv
+[  453.767241] Left krping_cq_event_handler
+[  453.767243] Entered krping_format_send
+[  453.767244] Entered krping_rdma_rkey
+[  453.767245] Left krping_rdma_rkey
+[  453.767246] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.767246] Left krping_format_send
+[  453.767251] Entered krping_cq_event_handler
+[  453.767252] send completion: 117440512
+[  453.767252] 
+[  453.767253] Left krping_cq_event_handler
+[  453.767303] Entered krping_cq_event_handler
+[  453.767304] recv completion: 0
+[  453.767304] 
+[  453.767305] Entered client_recv
+[  453.767306] Left client_recv
+[  453.767307] Left krping_cq_event_handler
+[  453.767309] Left krping_test_client
+[  453.767310] Entered krping_format_send
+[  453.767311] Entered krping_rdma_rkey
+[  453.767312] Left krping_rdma_rkey
+[  453.767313] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.767313] Left krping_format_send
+[  453.767318] Entered krping_cq_event_handler
+[  453.767319] send completion: 117440512
+[  453.767319] 
+[  453.767320] Left krping_cq_event_handler
+[  453.767374] Entered krping_cq_event_handler
+[  453.767376] recv completion: 0
+[  453.767376] 
+[  453.767377] Entered client_recv
+[  453.767377] Left client_recv
+[  453.767379] Left krping_cq_event_handler
+[  453.767381] Entered krping_format_send
+[  453.767381] Entered krping_rdma_rkey
+[  453.767382] Left krping_rdma_rkey
+[  453.767383] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.767384] Left krping_format_send
+[  453.767389] Entered krping_cq_event_handler
+[  453.767390] send completion: 117440512
+[  453.767390] 
+[  453.767392] Left krping_cq_event_handler
+[  453.767439] Entered krping_cq_event_handler
+[  453.767440] recv completion: 0
+[  453.767440] 
+[  453.767441] Entered client_recv
+[  453.767441] Left client_recv
+[  453.767443] Left krping_cq_event_handler
+[  453.767463] Left krping_test_client
+[  453.767466] Entered krping_format_send
+[  453.767467] Entered krping_rdma_rkey
+[  453.767468] Left krping_rdma_rkey
+[  453.767469] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.767470] Left krping_format_send
+[  453.767475] Entered krping_cq_event_handler
+[  453.767477] send completion: 117440512
+[  453.767477] 
+[  453.767478] Left krping_cq_event_handler
+[  453.767525] Entered krping_cq_event_handler
+[  453.767526] recv completion: 0
+[  453.767526] 
+[  453.767527] Entered client_recv
+[  453.767528] Left client_recv
+[  453.767529] Left krping_cq_event_handler
+[  453.767548] Entered krping_format_send
+[  453.767551] Entered krping_rdma_rkey
+[  453.767552] Left krping_rdma_rkey
+[  453.767553] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.767554] Left krping_format_send
+[  453.767559] Entered krping_cq_event_handler
+[  453.767560] send completion: 117440512
+[  453.767560] 
+[  453.767561] Left krping_cq_event_handler
+[  453.767616] Entered krping_cq_event_handler
+[  453.767618] recv completion: 0
+[  453.767618] 
+[  453.767619] Entered client_recv
+[  453.767620] Left client_recv
+[  453.767622] Left krping_cq_event_handler
+[  453.767640] Left krping_test_client
+[  453.767643] Entered krping_format_send
+[  453.767644] Entered krping_rdma_rkey
+[  453.767645] Left krping_rdma_rkey
+[  453.767647] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.767650] Left krping_format_send
+[  453.767658] Entered krping_cq_event_handler
+[  453.767660] send completion: 117440512
+[  453.767660] 
+[  453.767661] Left krping_cq_event_handler
+[  453.767713] Entered krping_cq_event_handler
+[  453.767714] recv completion: 0
+[  453.767714] 
+[  453.767715] Entered client_recv
+[  453.767716] Left client_recv
+[  453.767717] Left krping_cq_event_handler
+[  453.767736] Entered krping_format_send
+[  453.767738] Entered krping_rdma_rkey
+[  453.767739] Left krping_rdma_rkey
+[  453.767741] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.767742] Left krping_format_send
+[  453.767746] Entered krping_cq_event_handler
+[  453.767748] send completion: 117440512
+[  453.767748] 
+[  453.767749] Left krping_cq_event_handler
+[  453.767869] Entered krping_cq_event_handler
+[  453.767870] recv completion: 0
+[  453.767870] 
+[  453.767871] Entered client_recv
+[  453.767871] Left client_recv
+[  453.767873] Left krping_cq_event_handler
+[  453.767876] Left krping_test_client
+[  453.767881] Entered krping_format_send
+[  453.767885] Entered krping_rdma_rkey
+[  453.767890] Left krping_rdma_rkey
+[  453.767895] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.767899] Left krping_format_send
+[  453.767907] Entered krping_cq_event_handler
+[  453.767908] send completion: 117440512
+[  453.767908] 
+[  453.767909] Left krping_cq_event_handler
+[  453.768042] Entered krping_cq_event_handler
+[  453.768043] recv completion: 0
+[  453.768043] 
+[  453.768044] Entered client_recv
+[  453.768045] Left client_recv
+[  453.768047] Left krping_cq_event_handler
+[  453.768066] Entered krping_format_send
+[  453.768072] Entered krping_rdma_rkey
+[  453.768076] Left krping_rdma_rkey
+[  453.768082] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.768086] Left krping_format_send
+[  453.768094] Entered krping_cq_event_handler
+[  453.768095] send completion: 117440512
+[  453.768095] 
+[  453.768096] Left krping_cq_event_handler
+[  453.768180] Entered krping_cq_event_handler
+[  453.768182] recv completion: 0
+[  453.768182] 
+[  453.768183] Entered client_recv
+[  453.768183] Left client_recv
+[  453.768185] Left krping_cq_event_handler
+[  453.768204] Left krping_test_client
+[  453.768207] Entered krping_format_send
+[  453.768208] Entered krping_rdma_rkey
+[  453.768209] Left krping_rdma_rkey
+[  453.768210] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.768211] Left krping_format_send
+[  453.768215] Entered krping_cq_event_handler
+[  453.768217] send completion: 117440512
+[  453.768217] 
+[  453.768218] Left krping_cq_event_handler
+[  453.768266] Entered krping_cq_event_handler
+[  453.768267] recv completion: 0
+[  453.768267] 
+[  453.768268] Entered client_recv
+[  453.768269] Left client_recv
+[  453.768271] Left krping_cq_event_handler
+[  453.768290] Entered krping_format_send
+[  453.768295] Entered krping_rdma_rkey
+[  453.768300] Left krping_rdma_rkey
+[  453.768305] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.768310] Left krping_format_send
+[  453.768318] Entered krping_cq_event_handler
+[  453.768319] send completion: 117440512
+[  453.768319] 
+[  453.768320] Left krping_cq_event_handler
+[  453.768371] Entered krping_cq_event_handler
+[  453.768373] recv completion: 0
+[  453.768373] 
+[  453.768374] Entered client_recv
+[  453.768374] Left client_recv
+[  453.768376] Left krping_cq_event_handler
+[  453.768396] Left krping_test_client
+[  453.768399] Entered krping_format_send
+[  453.768400] Entered krping_rdma_rkey
+[  453.768401] Left krping_rdma_rkey
+[  453.768402] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.768403] Left krping_format_send
+[  453.768408] Entered krping_cq_event_handler
+[  453.768409] send completion: 117440512
+[  453.768409] 
+[  453.768410] Left krping_cq_event_handler
+[  453.768453] Entered krping_cq_event_handler
+[  453.768454] recv completion: 0
+[  453.768454] 
+[  453.768456] Entered client_recv
+[  453.768456] Left client_recv
+[  453.768458] Left krping_cq_event_handler
+[  453.768460] Entered krping_format_send
+[  453.768461] Entered krping_rdma_rkey
+[  453.768462] Left krping_rdma_rkey
+[  453.768463] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.768464] Left krping_format_send
+[  453.768468] Entered krping_cq_event_handler
+[  453.768469] send completion: 117440512
+[  453.768469] 
+[  453.768470] Left krping_cq_event_handler
+[  453.768521] Entered krping_cq_event_handler
+[  453.768522] recv completion: 0
+[  453.768522] 
+[  453.768523] Entered client_recv
+[  453.768524] Left client_recv
+[  453.768526] Left krping_cq_event_handler
+[  453.768528] Left krping_test_client
+[  453.768533] Entered krping_format_send
+[  453.768538] Entered krping_rdma_rkey
+[  453.768542] Left krping_rdma_rkey
+[  453.768547] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.768551] Left krping_format_send
+[  453.768559] Entered krping_cq_event_handler
+[  453.768560] send completion: 117440512
+[  453.768560] 
+[  453.768561] Left krping_cq_event_handler
+[  453.768637] Entered krping_cq_event_handler
+[  453.768638] recv completion: 0
+[  453.768638] 
+[  453.768639] Entered client_recv
+[  453.768640] Left client_recv
+[  453.768642] Left krping_cq_event_handler
+[  453.768644] Entered krping_format_send
+[  453.768645] Entered krping_rdma_rkey
+[  453.768646] Left krping_rdma_rkey
+[  453.768647] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.768648] Left krping_format_send
+[  453.768651] Entered krping_cq_event_handler
+[  453.768653] send completion: 117440512
+[  453.768653] 
+[  453.768654] Left krping_cq_event_handler
+[  453.768700] Entered krping_cq_event_handler
+[  453.768701] recv completion: 0
+[  453.768701] 
+[  453.768703] Entered client_recv
+[  453.768703] Left client_recv
+[  453.768705] Left krping_cq_event_handler
+[  453.768707] Left krping_test_client
+[  453.768708] Entered krping_format_send
+[  453.768709] Entered krping_rdma_rkey
+[  453.768710] Left krping_rdma_rkey
+[  453.768711] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.768712] Left krping_format_send
+[  453.768715] Entered krping_cq_event_handler
+[  453.768717] send completion: 117440512
+[  453.768717] 
+[  453.768718] Left krping_cq_event_handler
+[  453.768761] Entered krping_cq_event_handler
+[  453.768762] recv completion: 0
+[  453.768762] 
+[  453.768763] Entered client_recv
+[  453.768764] Left client_recv
+[  453.768766] Left krping_cq_event_handler
+[  453.768768] Entered krping_format_send
+[  453.768772] Entered krping_rdma_rkey
+[  453.768777] Left krping_rdma_rkey
+[  453.768782] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.768786] Left krping_format_send
+[  453.768793] Entered krping_cq_event_handler
+[  453.768794] send completion: 117440512
+[  453.768794] 
+[  453.768795] Left krping_cq_event_handler
+[  453.768838] Entered krping_cq_event_handler
+[  453.768839] recv completion: 0
+[  453.768839] 
+[  453.768840] Entered client_recv
+[  453.768841] Left client_recv
+[  453.768843] Left krping_cq_event_handler
+[  453.768844] Left krping_test_client
+[  453.768846] Entered krping_format_send
+[  453.768846] Entered krping_rdma_rkey
+[  453.768847] Left krping_rdma_rkey
+[  453.768848] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.768849] Left krping_format_send
+[  453.768853] Entered krping_cq_event_handler
+[  453.768854] send completion: 117440512
+[  453.768854] 
+[  453.768855] Left krping_cq_event_handler
+[  453.768898] Entered krping_cq_event_handler
+[  453.768899] recv completion: 0
+[  453.768899] 
+[  453.768900] Entered client_recv
+[  453.768901] Left client_recv
+[  453.768903] Left krping_cq_event_handler
+[  453.768905] Entered krping_format_send
+[  453.768906] Entered krping_rdma_rkey
+[  453.768907] Left krping_rdma_rkey
+[  453.768908] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.768909] Left krping_format_send
+[  453.768912] Entered krping_cq_event_handler
+[  453.768914] send completion: 117440512
+[  453.768914] 
+[  453.768915] Left krping_cq_event_handler
+[  453.768957] Entered krping_cq_event_handler
+[  453.768958] recv completion: 0
+[  453.768958] 
+[  453.768959] Entered client_recv
+[  453.768960] Left client_recv
+[  453.768961] Left krping_cq_event_handler
+[  453.768963] Left krping_test_client
+[  453.768964] Entered krping_format_send
+[  453.768965] Entered krping_rdma_rkey
+[  453.768966] Left krping_rdma_rkey
+[  453.768967] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.768968] Left krping_format_send
+[  453.768971] Entered krping_cq_event_handler
+[  453.768973] send completion: 117440512
+[  453.768973] 
+[  453.768974] Left krping_cq_event_handler
+[  453.769025] Entered krping_cq_event_handler
+[  453.769026] recv completion: 0
+[  453.769026] 
+[  453.769027] Entered client_recv
+[  453.769028] Left client_recv
+[  453.769030] Left krping_cq_event_handler
+[  453.769032] Entered krping_format_send
+[  453.769036] Entered krping_rdma_rkey
+[  453.769041] Left krping_rdma_rkey
+[  453.769046] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.769050] Left krping_format_send
+[  453.769057] Entered krping_cq_event_handler
+[  453.769059] send completion: 117440512
+[  453.769059] 
+[  453.769060] Left krping_cq_event_handler
+[  453.769177] Entered krping_cq_event_handler
+[  453.769178] recv completion: 0
+[  453.769178] 
+[  453.769179] Entered client_recv
+[  453.769180] Left client_recv
+[  453.769182] Left krping_cq_event_handler
+[  453.769184] Left krping_test_client
+[  453.769185] Entered krping_format_send
+[  453.769186] Entered krping_rdma_rkey
+[  453.769187] Left krping_rdma_rkey
+[  453.769188] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.769188] Left krping_format_send
+[  453.769192] Entered krping_cq_event_handler
+[  453.769193] send completion: 117440512
+[  453.769193] 
+[  453.769195] Left krping_cq_event_handler
+[  453.769314] Entered krping_cq_event_handler
+[  453.769315] recv completion: 0
+[  453.769315] 
+[  453.769316] Entered client_recv
+[  453.769317] Left client_recv
+[  453.769319] Left krping_cq_event_handler
+[  453.769321] Entered krping_format_send
+[  453.769321] Entered krping_rdma_rkey
+[  453.769322] Left krping_rdma_rkey
+[  453.769323] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.769324] Left krping_format_send
+[  453.769328] Entered krping_cq_event_handler
+[  453.769329] send completion: 117440512
+[  453.769329] 
+[  453.769330] Left krping_cq_event_handler
+[  453.769454] Entered krping_cq_event_handler
+[  453.769455] recv completion: 0
+[  453.769455] 
+[  453.769456] Entered client_recv
+[  453.769457] Left client_recv
+[  453.769459] Left krping_cq_event_handler
+[  453.769461] Left krping_test_client
+[  453.769466] Entered krping_format_send
+[  453.769470] Entered krping_rdma_rkey
+[  453.769475] Left krping_rdma_rkey
+[  453.769479] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.769484] Left krping_format_send
+[  453.769491] Entered krping_cq_event_handler
+[  453.769492] send completion: 117440512
+[  453.769492] 
+[  453.769493] Left krping_cq_event_handler
+[  453.769536] Entered krping_cq_event_handler
+[  453.769537] recv completion: 0
+[  453.769537] 
+[  453.769539] Entered client_recv
+[  453.769539] Left client_recv
+[  453.769541] Left krping_cq_event_handler
+[  453.769552] Entered krping_format_send
+[  453.769553] Entered krping_rdma_rkey
+[  453.769554] Left krping_rdma_rkey
+[  453.769555] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.769556] Left krping_format_send
+[  453.769560] Entered krping_cq_event_handler
+[  453.769561] send completion: 117440512
+[  453.769561] 
+[  453.769562] Left krping_cq_event_handler
+[  453.769607] Entered krping_cq_event_handler
+[  453.769608] recv completion: 0
+[  453.769608] 
+[  453.769609] Entered client_recv
+[  453.769610] Left client_recv
+[  453.769611] Left krping_cq_event_handler
+[  453.769623] Left krping_test_client
+[  453.769624] Entered krping_format_send
+[  453.769625] Entered krping_rdma_rkey
+[  453.769626] Left krping_rdma_rkey
+[  453.769627] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.769627] Left krping_format_send
+[  453.769632] Entered krping_cq_event_handler
+[  453.769633] send completion: 117440512
+[  453.769633] 
+[  453.769634] Left krping_cq_event_handler
+[  453.769678] Entered krping_cq_event_handler
+[  453.769679] recv completion: 0
+[  453.769679] 
+[  453.769680] Entered client_recv
+[  453.769681] Left client_recv
+[  453.769682] Left krping_cq_event_handler
+[  453.769694] Entered krping_format_send
+[  453.769698] Entered krping_rdma_rkey
+[  453.769699] Left krping_rdma_rkey
+[  453.769700] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.769701] Left krping_format_send
+[  453.769705] Entered krping_cq_event_handler
+[  453.769706] send completion: 117440512
+[  453.769706] 
+[  453.769708] Left krping_cq_event_handler
+[  453.769753] Entered krping_cq_event_handler
+[  453.769754] recv completion: 0
+[  453.769754] 
+[  453.769755] Entered client_recv
+[  453.769756] Left client_recv
+[  453.769757] Left krping_cq_event_handler
+[  453.769769] Left krping_test_client
+[  453.769774] Entered krping_format_send
+[  453.769776] Entered krping_rdma_rkey
+[  453.769777] Left krping_rdma_rkey
+[  453.769778] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.769779] Left krping_format_send
+[  453.769783] Entered krping_cq_event_handler
+[  453.769784] send completion: 117440512
+[  453.769784] 
+[  453.769785] Left krping_cq_event_handler
+[  453.769829] Entered krping_cq_event_handler
+[  453.769830] recv completion: 0
+[  453.769830] 
+[  453.769831] Entered client_recv
+[  453.769832] Left client_recv
+[  453.769833] Left krping_cq_event_handler
+[  453.769836] Entered krping_format_send
+[  453.769837] Entered krping_rdma_rkey
+[  453.769838] Left krping_rdma_rkey
+[  453.769839] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.769840] Left krping_format_send
+[  453.769844] Entered krping_cq_event_handler
+[  453.769845] send completion: 117440512
+[  453.769845] 
+[  453.769846] Left krping_cq_event_handler
+[  453.769892] Entered krping_cq_event_handler
+[  453.769893] recv completion: 0
+[  453.769893] 
+[  453.769894] Entered client_recv
+[  453.769895] Left client_recv
+[  453.769896] Left krping_cq_event_handler
+[  453.769898] Left krping_test_client
+[  453.769899] Entered krping_format_send
+[  453.769900] Entered krping_rdma_rkey
+[  453.769901] Left krping_rdma_rkey
+[  453.769902] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.769903] Left krping_format_send
+[  453.769907] Entered krping_cq_event_handler
+[  453.769908] send completion: 117440512
+[  453.769908] 
+[  453.769909] Left krping_cq_event_handler
+[  453.769953] Entered krping_cq_event_handler
+[  453.769954] recv completion: 0
+[  453.769954] 
+[  453.769955] Entered client_recv
+[  453.769955] Left client_recv
+[  453.769957] Left krping_cq_event_handler
+[  453.769959] Entered krping_format_send
+[  453.769960] Entered krping_rdma_rkey
+[  453.769960] Left krping_rdma_rkey
+[  453.769961] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.769962] Left krping_format_send
+[  453.769966] Entered krping_cq_event_handler
+[  453.769967] send completion: 117440512
+[  453.769967] 
+[  453.769968] Left krping_cq_event_handler
+[  453.770015] Entered krping_cq_event_handler
+[  453.770016] recv completion: 0
+[  453.770016] 
+[  453.770017] Entered client_recv
+[  453.770018] Left client_recv
+[  453.770019] Left krping_cq_event_handler
+[  453.770021] Left krping_test_client
+[  453.770022] Entered krping_format_send
+[  453.770023] Entered krping_rdma_rkey
+[  453.770024] Left krping_rdma_rkey
+[  453.770025] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.770026] Left krping_format_send
+[  453.770030] Entered krping_cq_event_handler
+[  453.770031] send completion: 117440512
+[  453.770031] 
+[  453.770032] Left krping_cq_event_handler
+[  453.770110] Entered krping_cq_event_handler
+[  453.770111] recv completion: 0
+[  453.770111] 
+[  453.770112] Entered client_recv
+[  453.770113] Left client_recv
+[  453.770114] Left krping_cq_event_handler
+[  453.770116] Entered krping_format_send
+[  453.770117] Entered krping_rdma_rkey
+[  453.770118] Left krping_rdma_rkey
+[  453.770119] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.770119] Left krping_format_send
+[  453.770124] Entered krping_cq_event_handler
+[  453.770125] send completion: 117440512
+[  453.770125] 
+[  453.770126] Left krping_cq_event_handler
+[  453.770172] Entered krping_cq_event_handler
+[  453.770174] recv completion: 0
+[  453.770174] 
+[  453.770175] Entered client_recv
+[  453.770175] Left client_recv
+[  453.770177] Left krping_cq_event_handler
+[  453.770179] Left krping_test_client
+[  453.770180] Entered krping_format_send
+[  453.770180] Entered krping_rdma_rkey
+[  453.770181] Left krping_rdma_rkey
+[  453.770182] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.770183] Left krping_format_send
+[  453.770187] Entered krping_cq_event_handler
+[  453.770188] send completion: 117440512
+[  453.770188] 
+[  453.770189] Left krping_cq_event_handler
+[  453.770230] Entered krping_cq_event_handler
+[  453.770232] recv completion: 0
+[  453.770232] 
+[  453.770233] Entered client_recv
+[  453.770233] Left client_recv
+[  453.770235] Left krping_cq_event_handler
+[  453.770237] Entered krping_format_send
+[  453.770238] Entered krping_rdma_rkey
+[  453.770238] Left krping_rdma_rkey
+[  453.770239] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.770240] Left krping_format_send
+[  453.770244] Entered krping_cq_event_handler
+[  453.770245] send completion: 117440512
+[  453.770245] 
+[  453.770247] Left krping_cq_event_handler
+[  453.770360] Entered krping_cq_event_handler
+[  453.770361] recv completion: 0
+[  453.770361] 
+[  453.770362] Entered client_recv
+[  453.770363] Left client_recv
+[  453.770364] Left krping_cq_event_handler
+[  453.770366] Left krping_test_client
+[  453.770367] Entered krping_format_send
+[  453.770368] Entered krping_rdma_rkey
+[  453.770369] Left krping_rdma_rkey
+[  453.770370] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.770370] Left krping_format_send
+[  453.770374] Entered krping_cq_event_handler
+[  453.770375] send completion: 117440512
+[  453.770375] 
+[  453.770377] Left krping_cq_event_handler
+[  453.770502] Entered krping_cq_event_handler
+[  453.770503] recv completion: 0
+[  453.770503] 
+[  453.770504] Entered client_recv
+[  453.770505] Left client_recv
+[  453.770506] Left krping_cq_event_handler
+[  453.770508] Entered krping_format_send
+[  453.770509] Entered krping_rdma_rkey
+[  453.770510] Left krping_rdma_rkey
+[  453.770511] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.770512] Left krping_format_send
+[  453.770516] Entered krping_cq_event_handler
+[  453.770517] send completion: 117440512
+[  453.770517] 
+[  453.770518] Left krping_cq_event_handler
+[  453.770640] Entered krping_cq_event_handler
+[  453.770641] recv completion: 0
+[  453.770641] 
+[  453.770642] Entered client_recv
+[  453.770643] Left client_recv
+[  453.770644] Left krping_cq_event_handler
+[  453.770647] Left krping_test_client
+[  453.770648] Entered krping_format_send
+[  453.770648] Entered krping_rdma_rkey
+[  453.770649] Left krping_rdma_rkey
+[  453.770650] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.770651] Left krping_format_send
+[  453.770655] Entered krping_cq_event_handler
+[  453.770656] send completion: 117440512
+[  453.770656] 
+[  453.770657] Left krping_cq_event_handler
+[  453.770689] Entered krping_cq_event_handler
+[  453.770690] recv completion: 0
+[  453.770690] 
+[  453.770691] Entered client_recv
+[  453.770692] Left client_recv
+[  453.770693] Left krping_cq_event_handler
+[  453.770695] Entered krping_format_send
+[  453.770696] Entered krping_rdma_rkey
+[  453.770697] Left krping_rdma_rkey
+[  453.770698] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.770698] Left krping_format_send
+[  453.770702] Entered krping_cq_event_handler
+[  453.770704] send completion: 117440512
+[  453.770704] 
+[  453.770705] Left krping_cq_event_handler
+[  453.770749] Entered krping_cq_event_handler
+[  453.770750] recv completion: 0
+[  453.770750] 
+[  453.770751] Entered client_recv
+[  453.770752] Left client_recv
+[  453.770753] Left krping_cq_event_handler
+[  453.770756] Left krping_test_client
+[  453.770757] Entered krping_format_send
+[  453.770757] Entered krping_rdma_rkey
+[  453.770758] Left krping_rdma_rkey
+[  453.770759] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.770760] Left krping_format_send
+[  453.770764] Entered krping_cq_event_handler
+[  453.770765] send completion: 117440512
+[  453.770765] 
+[  453.770766] Left krping_cq_event_handler
+[  453.770808] Entered krping_cq_event_handler
+[  453.770810] recv completion: 0
+[  453.770810] 
+[  453.770811] Entered client_recv
+[  453.770811] Left client_recv
+[  453.770813] Left krping_cq_event_handler
+[  453.770815] Entered krping_format_send
+[  453.770816] Entered krping_rdma_rkey
+[  453.770816] Left krping_rdma_rkey
+[  453.770817] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.770818] Left krping_format_send
+[  453.770822] Entered krping_cq_event_handler
+[  453.770823] send completion: 117440512
+[  453.770823] 
+[  453.770824] Left krping_cq_event_handler
+[  453.770871] Entered krping_cq_event_handler
+[  453.770872] recv completion: 0
+[  453.770872] 
+[  453.770873] Entered client_recv
+[  453.770874] Left client_recv
+[  453.770875] Left krping_cq_event_handler
+[  453.770877] Left krping_test_client
+[  453.770878] Entered krping_format_send
+[  453.770879] Entered krping_rdma_rkey
+[  453.770880] Left krping_rdma_rkey
+[  453.770881] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.770882] Left krping_format_send
+[  453.770886] Entered krping_cq_event_handler
+[  453.770887] send completion: 117440512
+[  453.770887] 
+[  453.770888] Left krping_cq_event_handler
+[  453.770931] Entered krping_cq_event_handler
+[  453.770932] recv completion: 0
+[  453.770932] 
+[  453.770933] Entered client_recv
+[  453.770934] Left client_recv
+[  453.770935] Left krping_cq_event_handler
+[  453.770938] Entered krping_format_send
+[  453.770938] Entered krping_rdma_rkey
+[  453.770939] Left krping_rdma_rkey
+[  453.770940] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.770941] Left krping_format_send
+[  453.770945] Entered krping_cq_event_handler
+[  453.770946] send completion: 117440512
+[  453.770946] 
+[  453.770947] Left krping_cq_event_handler
+[  453.770992] Entered krping_cq_event_handler
+[  453.770993] recv completion: 0
+[  453.770993] 
+[  453.770994] Entered client_recv
+[  453.770995] Left client_recv
+[  453.770996] Left krping_cq_event_handler
+[  453.770998] Left krping_test_client
+[  453.770999] Entered krping_format_send
+[  453.771000] Entered krping_rdma_rkey
+[  453.771001] Left krping_rdma_rkey
+[  453.771002] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.771002] Left krping_format_send
+[  453.771007] Entered krping_cq_event_handler
+[  453.771008] send completion: 117440512
+[  453.771008] 
+[  453.771009] Left krping_cq_event_handler
+[  453.771053] Entered krping_cq_event_handler
+[  453.771054] recv completion: 0
+[  453.771054] 
+[  453.771055] Entered client_recv
+[  453.771056] Left client_recv
+[  453.771057] Left krping_cq_event_handler
+[  453.771059] Entered krping_format_send
+[  453.771060] Entered krping_rdma_rkey
+[  453.771061] Left krping_rdma_rkey
+[  453.771062] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.771062] Left krping_format_send
+[  453.771067] Entered krping_cq_event_handler
+[  453.771068] send completion: 117440512
+[  453.771068] 
+[  453.771069] Left krping_cq_event_handler
+[  453.771115] Entered krping_cq_event_handler
+[  453.771116] recv completion: 0
+[  453.771116] 
+[  453.771118] Entered client_recv
+[  453.771118] Left client_recv
+[  453.771119] Left krping_cq_event_handler
+[  453.771122] Left krping_test_client
+[  453.771123] Entered krping_format_send
+[  453.771124] Entered krping_rdma_rkey
+[  453.771124] Left krping_rdma_rkey
+[  453.771125] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.771126] Left krping_format_send
+[  453.771131] Entered krping_cq_event_handler
+[  453.771132] send completion: 117440512
+[  453.771132] 
+[  453.771133] Left krping_cq_event_handler
+[  453.771175] Entered krping_cq_event_handler
+[  453.771176] recv completion: 0
+[  453.771176] 
+[  453.771177] Entered client_recv
+[  453.771178] Left client_recv
+[  453.771179] Left krping_cq_event_handler
+[  453.771181] Entered krping_format_send
+[  453.771182] Entered krping_rdma_rkey
+[  453.771183] Left krping_rdma_rkey
+[  453.771184] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.771185] Left krping_format_send
+[  453.771189] Entered krping_cq_event_handler
+[  453.771190] send completion: 117440512
+[  453.771190] 
+[  453.771191] Left krping_cq_event_handler
+[  453.771241] Entered krping_cq_event_handler
+[  453.771242] recv completion: 0
+[  453.771242] 
+[  453.771243] Entered client_recv
+[  453.771244] Left client_recv
+[  453.771245] Left krping_cq_event_handler
+[  453.771247] Left krping_test_client
+[  453.771248] Entered krping_format_send
+[  453.771249] Entered krping_rdma_rkey
+[  453.771250] Left krping_rdma_rkey
+[  453.771251] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.771252] Left krping_format_send
+[  453.771256] Entered krping_cq_event_handler
+[  453.771257] send completion: 117440512
+[  453.771257] 
+[  453.771258] Left krping_cq_event_handler
+[  453.771300] Entered krping_cq_event_handler
+[  453.771301] recv completion: 0
+[  453.771301] 
+[  453.771302] Entered client_recv
+[  453.771303] Left client_recv
+[  453.771304] Left krping_cq_event_handler
+[  453.771306] Entered krping_format_send
+[  453.771307] Entered krping_rdma_rkey
+[  453.771307] Left krping_rdma_rkey
+[  453.771308] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.771309] Left krping_format_send
+[  453.771313] Entered krping_cq_event_handler
+[  453.771314] send completion: 117440512
+[  453.771314] 
+[  453.771316] Left krping_cq_event_handler
+[  453.771362] Entered krping_cq_event_handler
+[  453.771363] recv completion: 0
+[  453.771363] 
+[  453.771364] Entered client_recv
+[  453.771365] Left client_recv
+[  453.771366] Left krping_cq_event_handler
+[  453.771368] Left krping_test_client
+[  453.771369] Entered krping_format_send
+[  453.771370] Entered krping_rdma_rkey
+[  453.771371] Left krping_rdma_rkey
+[  453.771372] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.771372] Left krping_format_send
+[  453.771376] Entered krping_cq_event_handler
+[  453.771377] send completion: 117440512
+[  453.771377] 
+[  453.771378] Left krping_cq_event_handler
+[  453.771426] Entered krping_cq_event_handler
+[  453.771426] recv completion: 0
+[  453.771426] 
+[  453.771427] Entered client_recv
+[  453.771428] Left client_recv
+[  453.771429] Left krping_cq_event_handler
+[  453.771440] Entered krping_format_send
+[  453.771441] Entered krping_rdma_rkey
+[  453.771441] Left krping_rdma_rkey
+[  453.771442] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.771443] Left krping_format_send
+[  453.771446] Entered krping_cq_event_handler
+[  453.771447] send completion: 117440512
+[  453.771447] 
+[  453.771447] Left krping_cq_event_handler
+[  453.771533] Entered krping_cq_event_handler
+[  453.771533] recv completion: 0
+[  453.771533] 
+[  453.771534] Entered client_recv
+[  453.771534] Left client_recv
+[  453.771535] Left krping_cq_event_handler
+[  453.771546] Left krping_test_client
+[  453.771549] Entered krping_format_send
+[  453.771552] Entered krping_rdma_rkey
+[  453.771554] Left krping_rdma_rkey
+[  453.771557] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.771560] Left krping_format_send
+[  453.771565] Entered krping_cq_event_handler
+[  453.771566] send completion: 117440512
+[  453.771566] 
+[  453.771567] Left krping_cq_event_handler
+[  453.771676] Entered krping_cq_event_handler
+[  453.771676] recv completion: 0
+[  453.771676] 
+[  453.771677] Entered client_recv
+[  453.771677] Left client_recv
+[  453.771678] Left krping_cq_event_handler
+[  453.771689] Entered krping_format_send
+[  453.771689] Entered krping_rdma_rkey
+[  453.771690] Left krping_rdma_rkey
+[  453.771691] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.771691] Left krping_format_send
+[  453.771695] Entered krping_cq_event_handler
+[  453.771696] send completion: 117440512
+[  453.771696] 
+[  453.771696] Left krping_cq_event_handler
+[  453.771819] Entered krping_cq_event_handler
+[  453.771820] recv completion: 0
+[  453.771820] 
+[  453.771820] Entered client_recv
+[  453.771821] Left client_recv
+[  453.771822] Left krping_cq_event_handler
+[  453.771832] Left krping_test_client
+[  453.771833] Entered krping_format_send
+[  453.771833] Entered krping_rdma_rkey
+[  453.771834] Left krping_rdma_rkey
+[  453.771834] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.771835] Left krping_format_send
+[  453.771838] Entered krping_cq_event_handler
+[  453.771839] send completion: 117440512
+[  453.771839] 
+[  453.771840] Left krping_cq_event_handler
+[  453.771909] Entered krping_cq_event_handler
+[  453.771910] recv completion: 0
+[  453.771910] 
+[  453.771910] Entered client_recv
+[  453.771911] Left client_recv
+[  453.771912] Left krping_cq_event_handler
+[  453.771913] Entered krping_format_send
+[  453.771914] Entered krping_rdma_rkey
+[  453.771914] Left krping_rdma_rkey
+[  453.771915] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.771915] Left krping_format_send
+[  453.771919] Entered krping_cq_event_handler
+[  453.771919] send completion: 117440512
+[  453.771919] 
+[  453.771920] Left krping_cq_event_handler
+[  453.771967] Entered krping_cq_event_handler
+[  453.771968] recv completion: 0
+[  453.771968] 
+[  453.771968] Entered client_recv
+[  453.771969] Left client_recv
+[  453.771970] Left krping_cq_event_handler
+[  453.771971] Left krping_test_client
+[  453.771971] Entered krping_format_send
+[  453.771972] Entered krping_rdma_rkey
+[  453.771972] Left krping_rdma_rkey
+[  453.771973] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.771973] Left krping_format_send
+[  453.771977] Entered krping_cq_event_handler
+[  453.771977] send completion: 117440512
+[  453.771977] 
+[  453.771978] Left krping_cq_event_handler
+[  453.772019] Entered krping_cq_event_handler
+[  453.772019] recv completion: 0
+[  453.772019] 
+[  453.772020] Entered client_recv
+[  453.772020] Left client_recv
+[  453.772021] Left krping_cq_event_handler
+[  453.772023] Entered krping_format_send
+[  453.772023] Entered krping_rdma_rkey
+[  453.772023] Left krping_rdma_rkey
+[  453.772024] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.772025] Left krping_format_send
+[  453.772028] Entered krping_cq_event_handler
+[  453.772029] send completion: 117440512
+[  453.772029] 
+[  453.772029] Left krping_cq_event_handler
+[  453.772075] Entered krping_cq_event_handler
+[  453.772076] recv completion: 0
+[  453.772076] 
+[  453.772076] Entered client_recv
+[  453.772077] Left client_recv
+[  453.772078] Left krping_cq_event_handler
+[  453.772079] Left krping_test_client
+[  453.772079] Entered krping_format_send
+[  453.772080] Entered krping_rdma_rkey
+[  453.772080] Left krping_rdma_rkey
+[  453.772081] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.772081] Left krping_format_send
+[  453.772085] Entered krping_cq_event_handler
+[  453.772085] send completion: 117440512
+[  453.772085] 
+[  453.772086] Left krping_cq_event_handler
+[  453.772130] Entered krping_cq_event_handler
+[  453.772131] recv completion: 0
+[  453.772131] 
+[  453.772132] Entered client_recv
+[  453.772132] Left client_recv
+[  453.772133] Left krping_cq_event_handler
+[  453.772134] Entered krping_format_send
+[  453.772135] Entered krping_rdma_rkey
+[  453.772135] Left krping_rdma_rkey
+[  453.772136] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.772136] Left krping_format_send
+[  453.772140] Entered krping_cq_event_handler
+[  453.772140] send completion: 117440512
+[  453.772140] 
+[  453.772141] Left krping_cq_event_handler
+[  453.772185] Entered krping_cq_event_handler
+[  453.772185] recv completion: 0
+[  453.772185] 
+[  453.772186] Entered client_recv
+[  453.772187] Left client_recv
+[  453.772187] Left krping_cq_event_handler
+[  453.772189] Left krping_test_client
+[  453.772189] Entered krping_format_send
+[  453.772190] Entered krping_rdma_rkey
+[  453.772190] Left krping_rdma_rkey
+[  453.772191] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.772191] Left krping_format_send
+[  453.772194] Entered krping_cq_event_handler
+[  453.772195] send completion: 117440512
+[  453.772195] 
+[  453.772196] Left krping_cq_event_handler
+[  453.772239] Entered krping_cq_event_handler
+[  453.772240] recv completion: 0
+[  453.772240] 
+[  453.772240] Entered client_recv
+[  453.772241] Left client_recv
+[  453.772241] Left krping_cq_event_handler
+[  453.772243] Entered krping_format_send
+[  453.772243] Entered krping_rdma_rkey
+[  453.772244] Left krping_rdma_rkey
+[  453.772244] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.772245] Left krping_format_send
+[  453.772248] Entered krping_cq_event_handler
+[  453.772249] send completion: 117440512
+[  453.772249] 
+[  453.772249] Left krping_cq_event_handler
+[  453.772295] Entered krping_cq_event_handler
+[  453.772296] recv completion: 0
+[  453.772296] 
+[  453.772297] Entered client_recv
+[  453.772297] Left client_recv
+[  453.772298] Left krping_cq_event_handler
+[  453.772299] Left krping_test_client
+[  453.772300] Entered krping_format_send
+[  453.772300] Entered krping_rdma_rkey
+[  453.772301] Left krping_rdma_rkey
+[  453.772301] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.772302] Left krping_format_send
+[  453.772305] Entered krping_cq_event_handler
+[  453.772306] send completion: 117440512
+[  453.772306] 
+[  453.772307] Left krping_cq_event_handler
+[  453.772347] Entered krping_cq_event_handler
+[  453.772348] recv completion: 0
+[  453.772348] 
+[  453.772349] Entered client_recv
+[  453.772350] Left client_recv
+[  453.772350] Left krping_cq_event_handler
+[  453.772352] Entered krping_format_send
+[  453.772352] Entered krping_rdma_rkey
+[  453.772353] Left krping_rdma_rkey
+[  453.772353] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.772354] Left krping_format_send
+[  453.772357] Entered krping_cq_event_handler
+[  453.772358] send completion: 117440512
+[  453.772358] 
+[  453.772358] Left krping_cq_event_handler
+[  453.772405] Entered krping_cq_event_handler
+[  453.772406] recv completion: 0
+[  453.772406] 
+[  453.772407] Entered client_recv
+[  453.772407] Left client_recv
+[  453.772408] Left krping_cq_event_handler
+[  453.772409] Left krping_test_client
+[  453.772410] Entered krping_format_send
+[  453.772410] Entered krping_rdma_rkey
+[  453.772411] Left krping_rdma_rkey
+[  453.772411] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.772412] Left krping_format_send
+[  453.772415] Entered krping_cq_event_handler
+[  453.772416] send completion: 117440512
+[  453.772416] 
+[  453.772416] Left krping_cq_event_handler
+[  453.772460] Entered krping_cq_event_handler
+[  453.772461] recv completion: 0
+[  453.772461] 
+[  453.772462] Entered client_recv
+[  453.772462] Left client_recv
+[  453.772463] Left krping_cq_event_handler
+[  453.772464] Entered krping_format_send
+[  453.772465] Entered krping_rdma_rkey
+[  453.772465] Left krping_rdma_rkey
+[  453.772466] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.772466] Left krping_format_send
+[  453.772470] Entered krping_cq_event_handler
+[  453.772470] send completion: 117440512
+[  453.772470] 
+[  453.772471] Left krping_cq_event_handler
+[  453.772515] Entered krping_cq_event_handler
+[  453.772516] recv completion: 0
+[  453.772516] 
+[  453.772517] Entered client_recv
+[  453.772517] Left client_recv
+[  453.772518] Left krping_cq_event_handler
+[  453.772519] Left krping_test_client
+[  453.772520] Entered krping_format_send
+[  453.772520] Entered krping_rdma_rkey
+[  453.772521] Left krping_rdma_rkey
+[  453.772521] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.772522] Left krping_format_send
+[  453.772525] Entered krping_cq_event_handler
+[  453.772526] send completion: 117440512
+[  453.772526] 
+[  453.772526] Left krping_cq_event_handler
+[  453.772570] Entered krping_cq_event_handler
+[  453.772570] recv completion: 0
+[  453.772570] 
+[  453.772571] Entered client_recv
+[  453.772571] Left client_recv
+[  453.772572] Left krping_cq_event_handler
+[  453.772573] Entered krping_format_send
+[  453.772574] Entered krping_rdma_rkey
+[  453.772574] Left krping_rdma_rkey
+[  453.772575] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.772575] Left krping_format_send
+[  453.772579] Entered krping_cq_event_handler
+[  453.772579] send completion: 117440512
+[  453.772579] 
+[  453.772580] Left krping_cq_event_handler
+[  453.772653] Entered krping_cq_event_handler
+[  453.772654] recv completion: 0
+[  453.772654] 
+[  453.772655] Entered client_recv
+[  453.772655] Left client_recv
+[  453.772656] Left krping_cq_event_handler
+[  453.772657] Left krping_test_client
+[  453.772658] Entered krping_format_send
+[  453.772658] Entered krping_rdma_rkey
+[  453.772659] Left krping_rdma_rkey
+[  453.772659] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.772660] Left krping_format_send
+[  453.772663] Entered krping_cq_event_handler
+[  453.772664] send completion: 117440512
+[  453.772664] 
+[  453.772664] Left krping_cq_event_handler
+[  453.772705] Entered krping_cq_event_handler
+[  453.772706] recv completion: 0
+[  453.772706] 
+[  453.772707] Entered client_recv
+[  453.772707] Left client_recv
+[  453.772708] Left krping_cq_event_handler
+[  453.772709] Entered krping_format_send
+[  453.772710] Entered krping_rdma_rkey
+[  453.772710] Left krping_rdma_rkey
+[  453.772711] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.772711] Left krping_format_send
+[  453.772714] Entered krping_cq_event_handler
+[  453.772715] send completion: 117440512
+[  453.772715] 
+[  453.772716] Left krping_cq_event_handler
+[  453.772819] Entered krping_cq_event_handler
+[  453.772820] recv completion: 0
+[  453.772820] 
+[  453.772820] Entered client_recv
+[  453.772821] Left client_recv
+[  453.772821] Left krping_cq_event_handler
+[  453.772823] Left krping_test_client
+[  453.772823] Entered krping_format_send
+[  453.772824] Entered krping_rdma_rkey
+[  453.772824] Left krping_rdma_rkey
+[  453.772824] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.772825] Left krping_format_send
+[  453.772828] Entered krping_cq_event_handler
+[  453.772829] send completion: 117440512
+[  453.772829] 
+[  453.772829] Left krping_cq_event_handler
+[  453.772943] Entered krping_cq_event_handler
+[  453.772944] recv completion: 0
+[  453.772944] 
+[  453.772944] Entered client_recv
+[  453.772945] Left client_recv
+[  453.772945] Left krping_cq_event_handler
+[  453.772947] Entered krping_format_send
+[  453.772947] Entered krping_rdma_rkey
+[  453.772947] Left krping_rdma_rkey
+[  453.772948] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.772948] Left krping_format_send
+[  453.772952] Entered krping_cq_event_handler
+[  453.772952] send completion: 117440512
+[  453.772952] 
+[  453.772953] Left krping_cq_event_handler
+[  453.773071] Entered krping_cq_event_handler
+[  453.773072] recv completion: 0
+[  453.773072] 
+[  453.773072] Entered client_recv
+[  453.773073] Left client_recv
+[  453.773073] Left krping_cq_event_handler
+[  453.773075] Left krping_test_client
+[  453.773075] Entered krping_format_send
+[  453.773076] Entered krping_rdma_rkey
+[  453.773076] Left krping_rdma_rkey
+[  453.773077] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.773077] Left krping_format_send
+[  453.773080] Entered krping_cq_event_handler
+[  453.773081] send completion: 117440512
+[  453.773081] 
+[  453.773081] Left krping_cq_event_handler
+[  453.773136] Entered krping_cq_event_handler
+[  453.773136] recv completion: 0
+[  453.773136] 
+[  453.773137] Entered client_recv
+[  453.773137] Left client_recv
+[  453.773138] Left krping_cq_event_handler
+[  453.773139] Entered krping_format_send
+[  453.773140] Entered krping_rdma_rkey
+[  453.773140] Left krping_rdma_rkey
+[  453.773141] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.773141] Left krping_format_send
+[  453.773144] Entered krping_cq_event_handler
+[  453.773145] send completion: 117440512
+[  453.773145] 
+[  453.773146] Left krping_cq_event_handler
+[  453.773187] Entered krping_cq_event_handler
+[  453.773188] recv completion: 0
+[  453.773188] 
+[  453.773188] Entered client_recv
+[  453.773189] Left client_recv
+[  453.773190] Left krping_cq_event_handler
+[  453.773191] Left krping_test_client
+[  453.773191] Entered krping_format_send
+[  453.773192] Entered krping_rdma_rkey
+[  453.773192] Left krping_rdma_rkey
+[  453.773193] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.773193] Left krping_format_send
+[  453.773196] Entered krping_cq_event_handler
+[  453.773197] send completion: 117440512
+[  453.773197] 
+[  453.773197] Left krping_cq_event_handler
+[  453.773237] Entered krping_cq_event_handler
+[  453.773237] recv completion: 0
+[  453.773237] 
+[  453.773238] Entered client_recv
+[  453.773238] Left client_recv
+[  453.773239] Left krping_cq_event_handler
+[  453.773240] Entered krping_format_send
+[  453.773241] Entered krping_rdma_rkey
+[  453.773241] Left krping_rdma_rkey
+[  453.773242] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.773242] Left krping_format_send
+[  453.773245] Entered krping_cq_event_handler
+[  453.773246] send completion: 117440512
+[  453.773246] 
+[  453.773246] Left krping_cq_event_handler
+[  453.773289] Entered krping_cq_event_handler
+[  453.773290] recv completion: 0
+[  453.773290] 
+[  453.773291] Entered client_recv
+[  453.773291] Left client_recv
+[  453.773292] Left krping_cq_event_handler
+[  453.773293] Left krping_test_client
+[  453.773294] Entered krping_format_send
+[  453.773294] Entered krping_rdma_rkey
+[  453.773294] Left krping_rdma_rkey
+[  453.773295] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.773295] Left krping_format_send
+[  453.773298] Entered krping_cq_event_handler
+[  453.773299] send completion: 117440512
+[  453.773299] 
+[  453.773300] Left krping_cq_event_handler
+[  453.773339] Entered krping_cq_event_handler
+[  453.773339] recv completion: 0
+[  453.773339] 
+[  453.773340] Entered client_recv
+[  453.773340] Left client_recv
+[  453.773341] Left krping_cq_event_handler
+[  453.773342] Entered krping_format_send
+[  453.773342] Entered krping_rdma_rkey
+[  453.773343] Left krping_rdma_rkey
+[  453.773343] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.773344] Left krping_format_send
+[  453.773347] Entered krping_cq_event_handler
+[  453.773348] send completion: 117440512
+[  453.773348] 
+[  453.773348] Left krping_cq_event_handler
+[  453.773390] Entered krping_cq_event_handler
+[  453.773390] recv completion: 0
+[  453.773390] 
+[  453.773391] Entered client_recv
+[  453.773391] Left client_recv
+[  453.773392] Left krping_cq_event_handler
+[  453.773393] Left krping_test_client
+[  453.773394] Entered krping_format_send
+[  453.773394] Entered krping_rdma_rkey
+[  453.773395] Left krping_rdma_rkey
+[  453.773395] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.773396] Left krping_format_send
+[  453.773399] Entered krping_cq_event_handler
+[  453.773400] send completion: 117440512
+[  453.773400] 
+[  453.773400] Left krping_cq_event_handler
+[  453.773439] Entered krping_cq_event_handler
+[  453.773440] recv completion: 0
+[  453.773440] 
+[  453.773440] Entered client_recv
+[  453.773441] Left client_recv
+[  453.773441] Left krping_cq_event_handler
+[  453.773442] Entered krping_format_send
+[  453.773443] Entered krping_rdma_rkey
+[  453.773443] Left krping_rdma_rkey
+[  453.773444] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.773444] Left krping_format_send
+[  453.773447] Entered krping_cq_event_handler
+[  453.773448] send completion: 117440512
+[  453.773448] 
+[  453.773449] Left krping_cq_event_handler
+[  453.773491] Entered krping_cq_event_handler
+[  453.773491] recv completion: 0
+[  453.773491] 
+[  453.773492] Entered client_recv
+[  453.773492] Left client_recv
+[  453.773493] Left krping_cq_event_handler
+[  453.773494] Left krping_test_client
+[  453.773495] Entered krping_format_send
+[  453.773495] Entered krping_rdma_rkey
+[  453.773496] Left krping_rdma_rkey
+[  453.773496] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.773497] Left krping_format_send
+[  453.773500] Entered krping_cq_event_handler
+[  453.773500] send completion: 117440512
+[  453.773500] 
+[  453.773501] Left krping_cq_event_handler
+[  453.773538] Entered krping_cq_event_handler
+[  453.773539] recv completion: 0
+[  453.773539] 
+[  453.773539] Entered client_recv
+[  453.773540] Left client_recv
+[  453.773540] Left krping_cq_event_handler
+[  453.773541] Entered krping_format_send
+[  453.773542] Entered krping_rdma_rkey
+[  453.773542] Left krping_rdma_rkey
+[  453.773543] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.773543] Left krping_format_send
+[  453.773546] Entered krping_cq_event_handler
+[  453.773547] send completion: 117440512
+[  453.773547] 
+[  453.773548] Left krping_cq_event_handler
+[  453.773590] Entered krping_cq_event_handler
+[  453.773590] recv completion: 0
+[  453.773590] 
+[  453.773591] Entered client_recv
+[  453.773591] Left client_recv
+[  453.773592] Left krping_cq_event_handler
+[  453.773593] Left krping_test_client
+[  453.773594] Entered krping_format_send
+[  453.773594] Entered krping_rdma_rkey
+[  453.773595] Left krping_rdma_rkey
+[  453.773595] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.773596] Left krping_format_send
+[  453.773599] Entered krping_cq_event_handler
+[  453.773599] send completion: 117440512
+[  453.773599] 
+[  453.773600] Left krping_cq_event_handler
+[  453.773641] Entered krping_cq_event_handler
+[  453.773642] recv completion: 0
+[  453.773642] 
+[  453.773643] Entered client_recv
+[  453.773643] Left client_recv
+[  453.773644] Left krping_cq_event_handler
+[  453.773645] Entered krping_format_send
+[  453.773645] Entered krping_rdma_rkey
+[  453.773646] Left krping_rdma_rkey
+[  453.773646] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.773647] Left krping_format_send
+[  453.773650] Entered krping_cq_event_handler
+[  453.773650] send completion: 117440512
+[  453.773650] 
+[  453.773651] Left krping_cq_event_handler
+[  453.773692] Entered krping_cq_event_handler
+[  453.773693] recv completion: 0
+[  453.773693] 
+[  453.773694] Entered client_recv
+[  453.773694] Left client_recv
+[  453.773695] Left krping_cq_event_handler
+[  453.773696] Left krping_test_client
+[  453.773696] Entered krping_format_send
+[  453.773697] Entered krping_rdma_rkey
+[  453.773697] Left krping_rdma_rkey
+[  453.773698] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.773698] Left krping_format_send
+[  453.773701] Entered krping_cq_event_handler
+[  453.773702] send completion: 117440512
+[  453.773702] 
+[  453.773703] Left krping_cq_event_handler
+[  453.773742] Entered krping_cq_event_handler
+[  453.773742] recv completion: 0
+[  453.773742] 
+[  453.773743] Entered client_recv
+[  453.773743] Left client_recv
+[  453.773744] Left krping_cq_event_handler
+[  453.773745] Entered krping_format_send
+[  453.773746] Entered krping_rdma_rkey
+[  453.773746] Left krping_rdma_rkey
+[  453.773747] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.773747] Left krping_format_send
+[  453.773750] Entered krping_cq_event_handler
+[  453.773751] send completion: 117440512
+[  453.773751] 
+[  453.773751] Left krping_cq_event_handler
+[  453.773802] Entered krping_cq_event_handler
+[  453.773802] recv completion: 0
+[  453.773802] 
+[  453.773803] Entered client_recv
+[  453.773803] Left client_recv
+[  453.773804] Left krping_cq_event_handler
+[  453.773805] Left krping_test_client
+[  453.773806] Entered krping_format_send
+[  453.773806] Entered krping_rdma_rkey
+[  453.773807] Left krping_rdma_rkey
+[  453.773807] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.773807] Left krping_format_send
+[  453.773811] Entered krping_cq_event_handler
+[  453.773811] send completion: 117440512
+[  453.773811] 
+[  453.773812] Left krping_cq_event_handler
+[  453.773896] Entered krping_cq_event_handler
+[  453.773897] recv completion: 0
+[  453.773897] 
+[  453.773897] Entered client_recv
+[  453.773898] Left client_recv
+[  453.773898] Left krping_cq_event_handler
+[  453.773899] Entered krping_format_send
+[  453.773900] Entered krping_rdma_rkey
+[  453.773900] Left krping_rdma_rkey
+[  453.773901] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.773901] Left krping_format_send
+[  453.773904] Entered krping_cq_event_handler
+[  453.773905] send completion: 117440512
+[  453.773905] 
+[  453.773906] Left krping_cq_event_handler
+[  453.774019] Entered krping_cq_event_handler
+[  453.774020] recv completion: 0
+[  453.774020] 
+[  453.774020] Entered client_recv
+[  453.774021] Left client_recv
+[  453.774021] Left krping_cq_event_handler
+[  453.774022] Left krping_test_client
+[  453.774023] Entered krping_format_send
+[  453.774023] Entered krping_rdma_rkey
+[  453.774024] Left krping_rdma_rkey
+[  453.774024] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.774025] Left krping_format_send
+[  453.774028] Entered krping_cq_event_handler
+[  453.774029] send completion: 117440512
+[  453.774029] 
+[  453.774029] Left krping_cq_event_handler
+[  453.774145] Entered krping_cq_event_handler
+[  453.774146] recv completion: 0
+[  453.774146] 
+[  453.774146] Entered client_recv
+[  453.774147] Left client_recv
+[  453.774148] Left krping_cq_event_handler
+[  453.774149] Entered krping_format_send
+[  453.774149] Entered krping_rdma_rkey
+[  453.774149] Left krping_rdma_rkey
+[  453.774150] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.774150] Left krping_format_send
+[  453.774154] Entered krping_cq_event_handler
+[  453.774154] send completion: 117440512
+[  453.774154] 
+[  453.774155] Left krping_cq_event_handler
+[  453.774226] Entered krping_cq_event_handler
+[  453.774227] recv completion: 0
+[  453.774227] 
+[  453.774227] Entered client_recv
+[  453.774228] Left client_recv
+[  453.774228] Left krping_cq_event_handler
+[  453.774230] Left krping_test_client
+[  453.774230] Entered krping_format_send
+[  453.774231] Entered krping_rdma_rkey
+[  453.774231] Left krping_rdma_rkey
+[  453.774232] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.774232] Left krping_format_send
+[  453.774235] Entered krping_cq_event_handler
+[  453.774236] send completion: 117440512
+[  453.774236] 
+[  453.774236] Left krping_cq_event_handler
+[  453.774285] Entered krping_cq_event_handler
+[  453.774285] recv completion: 0
+[  453.774285] 
+[  453.774286] Entered client_recv
+[  453.774286] Left client_recv
+[  453.774287] Left krping_cq_event_handler
+[  453.774288] Entered krping_format_send
+[  453.774289] Entered krping_rdma_rkey
+[  453.774289] Left krping_rdma_rkey
+[  453.774289] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.774290] Left krping_format_send
+[  453.774293] Entered krping_cq_event_handler
+[  453.774294] send completion: 117440512
+[  453.774294] 
+[  453.774294] Left krping_cq_event_handler
+[  453.774337] Entered krping_cq_event_handler
+[  453.774338] recv completion: 0
+[  453.774338] 
+[  453.774338] Entered client_recv
+[  453.774339] Left client_recv
+[  453.774339] Left krping_cq_event_handler
+[  453.774341] Left krping_test_client
+[  453.774341] Entered krping_format_send
+[  453.774342] Entered krping_rdma_rkey
+[  453.774342] Left krping_rdma_rkey
+[  453.774343] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.774343] Left krping_format_send
+[  453.774346] Entered krping_cq_event_handler
+[  453.774347] send completion: 117440512
+[  453.774347] 
+[  453.774347] Left krping_cq_event_handler
+[  453.774387] Entered krping_cq_event_handler
+[  453.774388] recv completion: 0
+[  453.774388] 
+[  453.774388] Entered client_recv
+[  453.774389] Left client_recv
+[  453.774389] Left krping_cq_event_handler
+[  453.774391] Entered krping_format_send
+[  453.774391] Entered krping_rdma_rkey
+[  453.774391] Left krping_rdma_rkey
+[  453.774392] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.774392] Left krping_format_send
+[  453.774396] Entered krping_cq_event_handler
+[  453.774396] send completion: 117440512
+[  453.774396] 
+[  453.774397] Left krping_cq_event_handler
+[  453.774439] Entered krping_cq_event_handler
+[  453.774439] recv completion: 0
+[  453.774439] 
+[  453.774440] Entered client_recv
+[  453.774440] Left client_recv
+[  453.774441] Left krping_cq_event_handler
+[  453.774442] Left krping_test_client
+[  453.774443] Entered krping_format_send
+[  453.774443] Entered krping_rdma_rkey
+[  453.774444] Left krping_rdma_rkey
+[  453.774444] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.774444] Left krping_format_send
+[  453.774448] Entered krping_cq_event_handler
+[  453.774448] send completion: 117440512
+[  453.774448] 
+[  453.774449] Left krping_cq_event_handler
+[  453.774497] Entered krping_cq_event_handler
+[  453.774498] recv completion: 0
+[  453.774498] 
+[  453.774499] Entered client_recv
+[  453.774499] Left client_recv
+[  453.774500] Left krping_cq_event_handler
+[  453.774501] Entered krping_format_send
+[  453.774502] Entered krping_rdma_rkey
+[  453.774502] Left krping_rdma_rkey
+[  453.774502] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.774503] Left krping_format_send
+[  453.774506] Entered krping_cq_event_handler
+[  453.774507] send completion: 117440512
+[  453.774507] 
+[  453.774507] Left krping_cq_event_handler
+[  453.774550] Entered krping_cq_event_handler
+[  453.774551] recv completion: 0
+[  453.774551] 
+[  453.774551] Entered client_recv
+[  453.774551] Left client_recv
+[  453.774552] Left krping_cq_event_handler
+[  453.774553] Left krping_test_client
+[  453.774554] Entered krping_format_send
+[  453.774554] Entered krping_rdma_rkey
+[  453.774555] Left krping_rdma_rkey
+[  453.774555] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.774556] Left krping_format_send
+[  453.774559] Entered krping_cq_event_handler
+[  453.774559] send completion: 117440512
+[  453.774559] 
+[  453.774560] Left krping_cq_event_handler
+[  453.774599] Entered krping_cq_event_handler
+[  453.774599] recv completion: 0
+[  453.774599] 
+[  453.774600] Entered client_recv
+[  453.774600] Left client_recv
+[  453.774601] Left krping_cq_event_handler
+[  453.774602] Entered krping_format_send
+[  453.774603] Entered krping_rdma_rkey
+[  453.774603] Left krping_rdma_rkey
+[  453.774604] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.774604] Left krping_format_send
+[  453.774607] Entered krping_cq_event_handler
+[  453.774608] send completion: 117440512
+[  453.774608] 
+[  453.774608] Left krping_cq_event_handler
+[  453.774649] Entered krping_cq_event_handler
+[  453.774650] recv completion: 0
+[  453.774650] 
+[  453.774650] Entered client_recv
+[  453.774651] Left client_recv
+[  453.774651] Left krping_cq_event_handler
+[  453.774653] Left krping_test_client
+[  453.774653] Entered krping_format_send
+[  453.774654] Entered krping_rdma_rkey
+[  453.774654] Left krping_rdma_rkey
+[  453.774655] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.774655] Left krping_format_send
+[  453.774658] Entered krping_cq_event_handler
+[  453.774659] send completion: 117440512
+[  453.774659] 
+[  453.774659] Left krping_cq_event_handler
+[  453.774698] Entered krping_cq_event_handler
+[  453.774699] recv completion: 0
+[  453.774699] 
+[  453.774700] Entered client_recv
+[  453.774700] Left client_recv
+[  453.774701] Left krping_cq_event_handler
+[  453.774702] Entered krping_format_send
+[  453.774702] Entered krping_rdma_rkey
+[  453.774703] Left krping_rdma_rkey
+[  453.774703] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.774704] Left krping_format_send
+[  453.774707] Entered krping_cq_event_handler
+[  453.774707] send completion: 117440512
+[  453.774707] 
+[  453.774708] Left krping_cq_event_handler
+[  453.774749] Entered krping_cq_event_handler
+[  453.774750] recv completion: 0
+[  453.774750] 
+[  453.774751] Entered client_recv
+[  453.774751] Left client_recv
+[  453.774752] Left krping_cq_event_handler
+[  453.774753] Left krping_test_client
+[  453.774753] Entered krping_format_send
+[  453.774754] Entered krping_rdma_rkey
+[  453.774754] Left krping_rdma_rkey
+[  453.774755] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.774755] Left krping_format_send
+[  453.774758] Entered krping_cq_event_handler
+[  453.774759] send completion: 117440512
+[  453.774759] 
+[  453.774759] Left krping_cq_event_handler
+[  453.774796] Entered krping_cq_event_handler
+[  453.774797] recv completion: 0
+[  453.774797] 
+[  453.774797] Entered client_recv
+[  453.774798] Left client_recv
+[  453.774798] Left krping_cq_event_handler
+[  453.774799] Entered krping_format_send
+[  453.774800] Entered krping_rdma_rkey
+[  453.774800] Left krping_rdma_rkey
+[  453.774801] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.774801] Left krping_format_send
+[  453.774804] Entered krping_cq_event_handler
+[  453.774805] send completion: 117440512
+[  453.774805] 
+[  453.774806] Left krping_cq_event_handler
+[  453.774848] Entered krping_cq_event_handler
+[  453.774848] recv completion: 0
+[  453.774848] 
+[  453.774849] Entered client_recv
+[  453.774849] Left client_recv
+[  453.774850] Left krping_cq_event_handler
+[  453.774851] Left krping_test_client
+[  453.774852] Entered krping_format_send
+[  453.774852] Entered krping_rdma_rkey
+[  453.774852] Left krping_rdma_rkey
+[  453.774853] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.774853] Left krping_format_send
+[  453.774857] Entered krping_cq_event_handler
+[  453.774857] send completion: 117440512
+[  453.774857] 
+[  453.774858] Left krping_cq_event_handler
+[  453.774897] Entered krping_cq_event_handler
+[  453.774897] recv completion: 0
+[  453.774897] 
+[  453.774898] Entered client_recv
+[  453.774898] Left client_recv
+[  453.774899] Left krping_cq_event_handler
+[  453.774900] Entered krping_format_send
+[  453.774900] Entered krping_rdma_rkey
+[  453.774901] Left krping_rdma_rkey
+[  453.774901] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.774902] Left krping_format_send
+[  453.774905] Entered krping_cq_event_handler
+[  453.774906] send completion: 117440512
+[  453.774906] 
+[  453.774906] Left krping_cq_event_handler
+[  453.774975] Entered krping_cq_event_handler
+[  453.774976] recv completion: 0
+[  453.774976] 
+[  453.774976] Entered client_recv
+[  453.774977] Left client_recv
+[  453.774977] Left krping_cq_event_handler
+[  453.774978] Left krping_test_client
+[  453.774979] Entered krping_format_send
+[  453.774979] Entered krping_rdma_rkey
+[  453.774980] Left krping_rdma_rkey
+[  453.774980] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.774981] Left krping_format_send
+[  453.774984] Entered krping_cq_event_handler
+[  453.774985] send completion: 117440512
+[  453.774985] 
+[  453.774985] Left krping_cq_event_handler
+[  453.775101] Entered krping_cq_event_handler
+[  453.775102] recv completion: 0
+[  453.775102] 
+[  453.775102] Entered client_recv
+[  453.775103] Left client_recv
+[  453.775103] Left krping_cq_event_handler
+[  453.775105] Entered krping_format_send
+[  453.775105] Entered krping_rdma_rkey
+[  453.775105] Left krping_rdma_rkey
+[  453.775106] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.775106] Left krping_format_send
+[  453.775110] Entered krping_cq_event_handler
+[  453.775110] send completion: 117440512
+[  453.775110] 
+[  453.775111] Left krping_cq_event_handler
+[  453.775234] Entered krping_cq_event_handler
+[  453.775235] recv completion: 0
+[  453.775235] 
+[  453.775236] Entered client_recv
+[  453.775236] Left client_recv
+[  453.775237] Left krping_cq_event_handler
+[  453.775238] Left krping_test_client
+[  453.775238] Entered krping_format_send
+[  453.775239] Entered krping_rdma_rkey
+[  453.775239] Left krping_rdma_rkey
+[  453.775240] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.775240] Left krping_format_send
+[  453.775243] Entered krping_cq_event_handler
+[  453.775244] send completion: 117440512
+[  453.775244] 
+[  453.775245] Left krping_cq_event_handler
+[  453.775348] Entered krping_cq_event_handler
+[  453.775349] recv completion: 0
+[  453.775349] 
+[  453.775349] Entered client_recv
+[  453.775350] Left client_recv
+[  453.775351] Left krping_cq_event_handler
+[  453.775352] Entered krping_format_send
+[  453.775352] Entered krping_rdma_rkey
+[  453.775353] Left krping_rdma_rkey
+[  453.775353] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.775354] Left krping_format_send
+[  453.775357] Entered krping_cq_event_handler
+[  453.775358] send completion: 117440512
+[  453.775358] 
+[  453.775358] Left krping_cq_event_handler
+[  453.775409] Entered krping_cq_event_handler
+[  453.775410] recv completion: 0
+[  453.775410] 
+[  453.775411] Entered client_recv
+[  453.775411] Left client_recv
+[  453.775412] Left krping_cq_event_handler
+[  453.775437] Left krping_test_client
+[  453.775440] Entered krping_format_send
+[  453.775443] Entered krping_rdma_rkey
+[  453.775446] Left krping_rdma_rkey
+[  453.775448] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.775448] Left krping_format_send
+[  453.775452] Entered krping_cq_event_handler
+[  453.775453] send completion: 117440512
+[  453.775453] 
+[  453.775453] Left krping_cq_event_handler
+[  453.775494] Entered krping_cq_event_handler
+[  453.775495] recv completion: 0
+[  453.775495] 
+[  453.775495] Entered client_recv
+[  453.775496] Left client_recv
+[  453.775497] Left krping_cq_event_handler
+[  453.775521] Entered krping_format_send
+[  453.775522] Entered krping_rdma_rkey
+[  453.775523] Left krping_rdma_rkey
+[  453.775524] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.775524] Left krping_format_send
+[  453.775531] Entered krping_cq_event_handler
+[  453.775532] send completion: 117440512
+[  453.775532] 
+[  453.775533] Left krping_cq_event_handler
+[  453.775573] Entered krping_cq_event_handler
+[  453.775589] recv completion: 0
+[  453.775589] 
+[  453.775590] Entered client_recv
+[  453.775590] Left client_recv
+[  453.775591] Left krping_cq_event_handler
+[  453.775632] Left krping_test_client
+[  453.775635] Entered krping_format_send
+[  453.775636] Entered krping_rdma_rkey
+[  453.775636] Left krping_rdma_rkey
+[  453.775637] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.775637] Left krping_format_send
+[  453.775642] Entered krping_cq_event_handler
+[  453.775643] send completion: 117440512
+[  453.775643] 
+[  453.775643] Left krping_cq_event_handler
+[  453.775684] Entered krping_cq_event_handler
+[  453.775685] recv completion: 0
+[  453.775685] 
+[  453.775685] Entered client_recv
+[  453.775686] Left client_recv
+[  453.775687] Left krping_cq_event_handler
+[  453.775709] Entered krping_format_send
+[  453.775710] Entered krping_rdma_rkey
+[  453.775711] Left krping_rdma_rkey
+[  453.775711] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.775712] Left krping_format_send
+[  453.775719] Entered krping_cq_event_handler
+[  453.775720] send completion: 117440512
+[  453.775720] 
+[  453.775720] Left krping_cq_event_handler
+[  453.775765] Entered krping_cq_event_handler
+[  453.775766] recv completion: 0
+[  453.775766] 
+[  453.775766] Entered client_recv
+[  453.775767] Left client_recv
+[  453.775767] Left krping_cq_event_handler
+[  453.775788] Left krping_test_client
+[  453.775790] Entered krping_format_send
+[  453.775790] Entered krping_rdma_rkey
+[  453.775791] Left krping_rdma_rkey
+[  453.775792] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.775792] Left krping_format_send
+[  453.775796] Entered krping_cq_event_handler
+[  453.775796] send completion: 117440512
+[  453.775796] 
+[  453.775797] Left krping_cq_event_handler
+[  453.775837] Entered krping_cq_event_handler
+[  453.775838] recv completion: 0
+[  453.775838] 
+[  453.775838] Entered client_recv
+[  453.775839] Left client_recv
+[  453.775839] Left krping_cq_event_handler
+[  453.775853] Entered krping_format_send
+[  453.775855] Entered krping_rdma_rkey
+[  453.775855] Left krping_rdma_rkey
+[  453.775856] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.775857] Left krping_format_send
+[  453.775860] Entered krping_cq_event_handler
+[  453.775861] send completion: 117440512
+[  453.775861] 
+[  453.775862] Left krping_cq_event_handler
+[  453.775904] Entered krping_cq_event_handler
+[  453.775905] recv completion: 0
+[  453.775905] 
+[  453.775905] Entered client_recv
+[  453.775906] Left client_recv
+[  453.775907] Left krping_cq_event_handler
+[  453.775908] Left krping_test_client
+[  453.775909] Entered krping_format_send
+[  453.775910] Entered krping_rdma_rkey
+[  453.775910] Left krping_rdma_rkey
+[  453.775911] RDMA addr 7bdc14d00 rkey 1981 len 64
+[  453.775911] Left krping_format_send
+[  453.775914] Entered krping_cq_event_handler
+[  453.775915] send completion: 117440512
+[  453.775915] 
+[  453.775916] Left krping_cq_event_handler
+[  453.775960] Entered krping_cq_event_handler
+[  453.775960] recv completion: 0
+[  453.775960] 
+[  453.775961] Entered client_recv
+[  453.775961] Left client_recv
+[  453.775962] Left krping_cq_event_handler
+[  453.775964] Entered krping_format_send
+[  453.775966] Entered krping_rdma_rkey
+[  453.775969] Left krping_rdma_rkey
+[  453.775971] RDMA addr 7bdc142c0 rkey 1981 len 64
+[  453.775974] Left krping_format_send
+[  453.775977] Entered krping_cq_event_handler
+[  453.775978] send completion: 117440512
+[  453.775978] 
+[  453.775979] Left krping_cq_event_handler
+[  453.776053] Entered krping_cq_event_handler
+[  453.776054] recv completion: 0
+[  453.776054] 
+[  453.776054] Entered client_recv
+[  453.776055] Left client_recv
+[  453.776056] Left krping_cq_event_handler
+[  453.776057] Left krping_test_client
+[  453.777544] Left krping_run_client
+[  453.777544] ERR2 krping_run_client
+[  453.777546] Entered krping_free_buffers
+[  453.777767] Left krping_free_buffers
+[  453.777767] ERR1 krping_run_client
+[  453.777768] Entered krping_free_qp
+[  453.778040] Entered krping_cq_event_handler
+[  453.778041] Left krping_cq_event_handler
+[  453.778255] Entered krping_cma_event_handler
+[  453.778256] krping: DISCONNECT EVENT...
+[  453.778257] LEFT krping_cma_event_handler
+[  453.788228] LEFT krping_free_qp
+[  453.788237] Left krping_doit
+[  453.788237] out krping_doit
+[  453.788239] Left krping_write_proc

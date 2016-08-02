@@ -1,0 +1,1 @@
+cmd_/home/kvmmaster1/Desktop/krping_compilable/rdma_krping.o := ld -m elf_x86_64   -r -o /home/kvmmaster1/Desktop/krping_compilable/rdma_krping.o /home/kvmmaster1/Desktop/krping_compilable/getopt.o /home/kvmmaster1/Desktop/krping_compilable/krping.o 
