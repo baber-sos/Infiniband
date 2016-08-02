@@ -1,1 +1,0 @@
-cmd_/home/kvmmaster1/Desktop/krping_compilable/rdma_krping.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.13.0-92-generic/scripts/module-common.lds --build-id  -o /home/kvmmaster1/Desktop/krping_compilable/rdma_krping.ko /home/kvmmaster1/Desktop/krping_compilable/rdma_krping.o /home/kvmmaster1/Desktop/krping_compilable/rdma_krping.mod.o
