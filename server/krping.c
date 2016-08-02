@@ -55,17 +55,8 @@ static const struct krping_option krping_opts[] = {
 	{"validate", OPT_NOPARAM, 'V'},
 	{"server", OPT_NOPARAM, 's'},
 	{"client", OPT_NOPARAM, 'c'},
-	{"mem_mode", OPT_STRING, 'm'},
-	{"server_inv", OPT_NOPARAM, 'I'},
- 	{"wlat", OPT_NOPARAM, 'l'},
- 	{"rlat", OPT_NOPARAM, 'L'},
- 	{"bw", OPT_NOPARAM, 'B'},
- 	{"duplex", OPT_NOPARAM, 'd'},
  	{"txdepth", OPT_INT, 'T'},
- 	{"poll", OPT_NOPARAM, 'P'},
  	{"local_dma_lkey", OPT_NOPARAM, 'Z'},
- 	{"read_inv", OPT_NOPARAM, 'R'},
- 	{"fr", OPT_NOPARAM, 'f'},
 	{NULL, 0, 0}
 };
 
@@ -160,18 +151,6 @@ struct krping_cb {
 	enum mem_type mem;
 	struct ib_mr *dma_mr;
 
-	struct ib_fast_reg_page_list *page_list;
-	int page_list_len;
-	struct ib_send_wr fastreg_wr;
-	struct ib_send_wr invalidate_wr;
-	struct ib_mr *fastreg_mr;
-	int server_invalidate;
-	int read_inv;
-	u8 key;
-
-	struct ib_mw *mw;
-	struct ib_mw_bind bind_attr;
-
 	struct ib_recv_wr rq_wr;	/* recv work request record */
 	struct ib_sge recv_sgl;		/* recv single SGE */
 	struct krping_rdma_info recv_buf;/* malloc'd buffer */
@@ -213,15 +192,10 @@ struct krping_cb {
 	int verbose;			/* verbose logging */
 	int count;			/* ping count */
 	int size;			/* ping data size */
-	int validate;			/* validate ping data */
-	int wlat;			/* run wlat test */
-	int rlat;			/* run rlat test */
-	int bw;				/* run bw test */
-	int duplex;			/* run bw full duplex test */
-	int poll;			/* poll or block for rlat test */
+
+	int validate;		/* validate ping data */
 	int txdepth;			/* SQ depth */
 	int local_dma_lkey;		/* use 0 for lkey */
-	int frtest;			/* fastreg test */
 
 	/* CM stuff */
 	struct rdma_cm_id *cm_id;	/* connection on client side,*/
@@ -230,22 +204,20 @@ struct krping_cb {
 	struct list_head list;	
 };
 
-static int krping_cma_event_handler(struct rdma_cm_id *cma_id,
-				   struct rdma_cm_event *event)
+//Nothing to be changed in this function
+static int krping_cma_event_handler(struct rdma_cm_id *cma_id, struct rdma_cm_event *event)
 {
 	int ret;
 	struct krping_cb *cb = cma_id->context;
 
-	DEBUG_LOG("cma_event type %d cma_id %p (%s)\n", event->event, cma_id,
-		  (cma_id == cb->cm_id) ? "parent" : "child");
+	DEBUG_LOG("cma_event type %d cma_id %p (%s)\n", event->event, cma_id, (cma_id == cb->cm_id) ? "parent" : "child");
 
 	switch (event->event) {
 	case RDMA_CM_EVENT_ADDR_RESOLVED:
 		cb->state = ADDR_RESOLVED;
 		ret = rdma_resolve_route(cma_id, 2000);
 		if (ret) {
-			printk(KERN_ERR PFX "rdma_resolve_route error %d\n", 
-			       ret);
+			printk(KERN_ERR PFX "rdma_resolve_route error %d\n", ret);
 			wake_up_interruptible(&cb->sem);
 		}
 		break;
@@ -275,8 +247,7 @@ static int krping_cma_event_handler(struct rdma_cm_id *cma_id,
 	case RDMA_CM_EVENT_CONNECT_ERROR:
 	case RDMA_CM_EVENT_UNREACHABLE:
 	case RDMA_CM_EVENT_REJECTED:
-		printk(KERN_ERR PFX "cma event %d, error %d\n", event->event,
-		       event->status);
+		printk(KERN_ERR PFX "cma event %d, error %d\n", event->event, event->status);
 		cb->state = ERROR;
 		wake_up_interruptible(&cb->sem);
 		break;
@@ -299,25 +270,19 @@ static int krping_cma_event_handler(struct rdma_cm_id *cma_id,
 	return 0;
 }
 
-//Done
+//Nothing to be changed in this function
 static int server_recv(struct krping_cb *cb, struct ib_wc *wc)
 {
 	printk("Entering server_recv \n\n");
 	if (wc->byte_len != sizeof(cb->recv_buf)) {
-		printk(KERN_ERR PFX "Received bogus data, size %d\n", 
-		       wc->byte_len);
+		printk(KERN_ERR PFX "Received bogus data, size %d\n", wc->byte_len);
 		return -1;
 	}
 
 	cb->remote_rkey = ntohl(cb->recv_buf.rkey);
 	cb->remote_addr = ntohll(cb->recv_buf.buf);
 	cb->remote_len  = ntohl(cb->recv_buf.size);
-	DEBUG_LOG("Received rkey %x addr %llx len %d from peer\n",
-		  cb->remote_rkey, (unsigned long long)cb->remote_addr, 
-		  cb->remote_len);
-	printk("Received rkey %x addr %llx len %d from peer\n",
-		  cb->remote_rkey, (unsigned long long)cb->remote_addr, 
-		  cb->remote_len);
+	DEBUG_LOG("Received rkey %x addr %llx len %d from peer\n", cb->remote_rkey, (unsigned long long)cb->remote_addr, cb->remote_len);
 
 	if (cb->state <= CONNECTED || cb->state == RDMA_WRITE_COMPLETE)
 		cb->state = RDMA_READ_ADV;
@@ -325,10 +290,9 @@ static int server_recv(struct krping_cb *cb, struct ib_wc *wc)
 		cb->state = RDMA_WRITE_ADV;
 	printk("Exiting server_recv \n\n");
 	return 0;
-
 }
 
-//Done
+//Nothing to be changed in this function
 static void krping_cq_event_handler(struct ib_cq *cq, void *ctx)
 {
 	printk("Entering krping_cq_event_handler\n\n");
@@ -342,12 +306,8 @@ static void krping_cq_event_handler(struct ib_cq *cq, void *ctx)
 		printk(KERN_ERR PFX "cq completion in ERROR state\n");
 		return;
 	}
-	if (cb->frtest) {
-		printk(KERN_ERR PFX "cq completion event in frtest!\n");
-		return;
-	}
-	if (!cb->wlat && !cb->rlat && !cb->bw)
-		ib_req_notify_cq(cb->cq, IB_CQ_NEXT_COMP);
+
+	ib_req_notify_cq(cb->cq, IB_CQ_NEXT_COMP);
 	while ((ret = ib_poll_cq(cb->cq, 1, &wc)) == 1) {
 		if (wc.status) {
 			if (wc.status == IB_WC_WR_FLUSH_ERR) {
@@ -427,7 +387,7 @@ error:
 	wake_up_interruptible(&cb->sem);
 }
 
-//Done
+//Nothing to be changed in this function
 static int krping_accept(struct krping_cb *cb)
 {
 	struct rdma_conn_param conn_param;
@@ -436,7 +396,7 @@ static int krping_accept(struct krping_cb *cb)
 	DEBUG_LOG("accepting client connection request\n");
 
 	memset(&conn_param, 0, sizeof conn_param);
-	conn_param.responder_resources = 1;
+	conn_param.responder_resources = 1;   // Need to check these conection parameters
 	conn_param.initiator_depth = 1;
 
 	ret = rdma_accept(cb->child_cm_id, &conn_param);
@@ -445,40 +405,24 @@ static int krping_accept(struct krping_cb *cb)
 		return ret;
 	}
 
-	if (!cb->wlat && !cb->rlat && !cb->bw) {
-		wait_event_interruptible(cb->sem, cb->state >= CONNECTED);
-		if (cb->state == ERROR) {
-			printk(KERN_ERR PFX "wait for CONNECTED state %d\n", 
-				cb->state);
-			return -1;
-		}
+	wait_event_interruptible(cb->sem, cb->state >= CONNECTED);
+	if (cb->state == ERROR) {
+		printk(KERN_ERR PFX "wait for CONNECTED state %d\n", 
+			cb->state);
+		return -1;
 	}
 	return 0;
 }
 
-//Done
+//Nothing to be changed in this function
 static void krping_setup_wr(struct krping_cb *cb)
 {
 	cb->recv_sgl.addr = cb->recv_dma_addr;
 	cb->recv_sgl.length = sizeof cb->recv_buf;
-	if (cb->local_dma_lkey)
-		cb->recv_sgl.lkey = cb->qp->device->local_dma_lkey;
-	else if (cb->mem == DMA)
-		cb->recv_sgl.lkey = cb->dma_mr->lkey;
-	else
-		cb->recv_sgl.lkey = cb->recv_mr->lkey;
-	cb->rq_wr.sg_list = &cb->recv_sgl;
-	cb->rq_wr.num_sge = 1;
-
+	cb->recv_sgl.lkey = cb->dma_mr->lkey;
 	cb->send_sgl.addr = cb->send_dma_addr;
 	cb->send_sgl.length = sizeof cb->send_buf;
-	if (cb->local_dma_lkey)
-		cb->send_sgl.lkey = cb->qp->device->local_dma_lkey;
-	else if (cb->mem == DMA)
-		cb->send_sgl.lkey = cb->dma_mr->lkey;
-	else
-		cb->send_sgl.lkey = cb->send_mr->lkey;
-
+	cb->send_sgl.lkey = cb->dma_mr->lkey;
 	cb->sq_wr.opcode = IB_WR_SEND;
 	cb->sq_wr.send_flags = IB_SEND_SIGNALED;
 	cb->sq_wr.sg_list = &cb->send_sgl;
@@ -486,8 +430,6 @@ static void krping_setup_wr(struct krping_cb *cb)
 
 	if (cb->server) {
 		cb->rdma_sgl.addr = cb->rdma_dma_addr;
-		if (cb->mem == MR)
-			cb->rdma_sgl.lkey = cb->rdma_mr->lkey;
 		cb->rdma_sq_wr.send_flags = IB_SEND_SIGNALED;
 		cb->rdma_sq_wr.sg_list = &cb->rdma_sgl;
 		cb->rdma_sq_wr.num_sge = 1;
@@ -495,32 +437,27 @@ static void krping_setup_wr(struct krping_cb *cb)
 
 }
 
-//Done
+//Nothing to be changed in this function
 static int krping_setup_buffers(struct krping_cb *cb)
 {
 	int ret;
 
 	DEBUG_LOG(PFX "krping_setup_buffers called on cb %p\n", cb);
 
-	cb->recv_dma_addr = dma_map_single(cb->pd->device->dma_device, 
-				   &cb->recv_buf, 
-				   sizeof(cb->recv_buf), DMA_BIDIRECTIONAL);
+	cb->recv_dma_addr = dma_map_single(cb->pd->device->dma_device, &cb->recv_buf, sizeof(cb->recv_buf), DMA_BIDIRECTIONAL);
 	pci_unmap_addr_set(cb, recv_mapping, cb->recv_dma_addr);
-	cb->send_dma_addr = dma_map_single(cb->pd->device->dma_device, 
-					   &cb->send_buf, sizeof(cb->send_buf),
-					   DMA_BIDIRECTIONAL);
+	
+	cb->send_dma_addr = dma_map_single(cb->pd->device->dma_device, &cb->send_buf, sizeof(cb->send_buf), DMA_BIDIRECTIONAL);
 	pci_unmap_addr_set(cb, send_mapping, cb->send_dma_addr);
 
-		cb->dma_mr = ib_get_dma_mr(cb->pd, IB_ACCESS_LOCAL_WRITE|
-					   IB_ACCESS_REMOTE_READ|
-				           IB_ACCESS_REMOTE_WRITE);
-		if (IS_ERR(cb->dma_mr)) {
-			DEBUG_LOG(PFX "reg_dmamr failed\n");
-			ret = PTR_ERR(cb->dma_mr);
-			goto bail;
-		}
-	printk("Point 3 successful\n\n");
+	cb->dma_mr = ib_get_dma_mr(cb->pd, IB_ACCESS_LOCAL_WRITE| IB_ACCESS_REMOTE_READ| IB_ACCESS_REMOTE_WRITE);
 
+	if (IS_ERR(cb->dma_mr)) {
+		DEBUG_LOG(PFX "reg_dmamr failed\n");
+		ret = PTR_ERR(cb->dma_mr);
+		goto bail;
+	}
+	printk("Point 3 successful\n\n");
 
 	cb->rdma_buf = kmalloc(cb->size, GFP_KERNEL);
 	if (!cb->rdma_buf) {
@@ -529,9 +466,7 @@ static int krping_setup_buffers(struct krping_cb *cb)
 		goto bail;
 	}
 
-	cb->rdma_dma_addr = dma_map_single(cb->pd->device->dma_device, 
-			       cb->rdma_buf, cb->size, 
-			       DMA_BIDIRECTIONAL);
+	cb->rdma_dma_addr = dma_map_single(cb->pd->device->dma_device, cb->rdma_buf, cb->size, DMA_BIDIRECTIONAL);
 	pci_unmap_addr_set(cb, rdma_mapping, cb->rdma_dma_addr);
 
 	krping_setup_wr(cb);
@@ -540,14 +475,7 @@ static int krping_setup_buffers(struct krping_cb *cb)
 
 	return 0;
 bail:
-	if (cb->fastreg_mr && !IS_ERR(cb->fastreg_mr))
-		ib_dereg_mr(cb->fastreg_mr);
-	if (cb->mw && !IS_ERR(cb->mw))
-		ib_dealloc_mw(cb->mw);
-	if (cb->rdma_mr && !IS_ERR(cb->rdma_mr))
-		ib_dereg_mr(cb->rdma_mr);
-	// if (cb->page_list && !IS_ERR(cb->page_list))
-	// 	ib_free_fast_reg_page_list(cb->page_list);
+
 	if (cb->dma_mr && !IS_ERR(cb->dma_mr))
 		ib_dereg_mr(cb->dma_mr);
 	if (cb->recv_mr && !IS_ERR(cb->recv_mr))
@@ -561,7 +489,7 @@ bail:
 	return ret;
 }
 
-//Done
+//Nothing to be changed in this function
 static void krping_free_buffers(struct krping_cb *cb)
 {
 	DEBUG_LOG("krping_free_buffers called on cb %p\n", cb);
@@ -576,30 +504,21 @@ static void krping_free_buffers(struct krping_cb *cb)
 		ib_dereg_mr(cb->rdma_mr);
 	if (cb->start_mr)
 		ib_dereg_mr(cb->start_mr);
-	if (cb->fastreg_mr)
-		ib_dereg_mr(cb->fastreg_mr);
-	if (cb->mw)
-		ib_dealloc_mw(cb->mw);
 
-	dma_unmap_single(cb->pd->device->dma_device,
-			 pci_unmap_addr(cb, recv_mapping),
-			 sizeof(cb->recv_buf), DMA_BIDIRECTIONAL);
-	dma_unmap_single(cb->pd->device->dma_device,
-			 pci_unmap_addr(cb, send_mapping),
-			 sizeof(cb->send_buf), DMA_BIDIRECTIONAL);
-	dma_unmap_single(cb->pd->device->dma_device,
-			 pci_unmap_addr(cb, rdma_mapping),
-			 cb->size, DMA_BIDIRECTIONAL);
+	dma_unmap_single(cb->pd->device->dma_device, pci_unmap_addr(cb, recv_mapping), sizeof(cb->recv_buf), DMA_BIDIRECTIONAL);
+	
+	dma_unmap_single(cb->pd->device->dma_device, pci_unmap_addr(cb, send_mapping), sizeof(cb->send_buf), DMA_BIDIRECTIONAL);
+	
+	dma_unmap_single(cb->pd->device->dma_device, pci_unmap_addr(cb, rdma_mapping), cb->size, DMA_BIDIRECTIONAL);
 	kfree(cb->rdma_buf);
+
 	if (cb->start_buf) {
-		dma_unmap_single(cb->pd->device->dma_device,
-			 pci_unmap_addr(cb, start_mapping),
-			 cb->size, DMA_BIDIRECTIONAL);
+		dma_unmap_single(cb->pd->device->dma_device, pci_unmap_addr(cb, start_mapping), cb->size, DMA_BIDIRECTIONAL);
 		kfree(cb->start_buf);
 	}
 }
 
-//Done
+//Nothing to be changed in this function
 static int krping_create_qp(struct krping_cb *cb)
 {
 	struct ib_qp_init_attr init_attr;
@@ -629,7 +548,7 @@ static int krping_create_qp(struct krping_cb *cb)
 	return ret;
 }
 
-//Done
+//Nothing to be changed in this function
 static void krping_free_qp(struct krping_cb *cb)
 {
 	ib_destroy_qp(cb->qp);
@@ -637,7 +556,7 @@ static void krping_free_qp(struct krping_cb *cb)
 	ib_dealloc_pd(cb->pd);
 }
 
-// Done
+//Nothing to be changed in this function
 static int krping_setup_qp(struct krping_cb *cb, struct rdma_cm_id *cm_id)
 {
 	int ret;
@@ -650,24 +569,21 @@ static int krping_setup_qp(struct krping_cb *cb, struct rdma_cm_id *cm_id)
 		}
 	} else
 		printk("cm_id is NULL \n\n");	
+
 	DEBUG_LOG("created pd %p\n", cb->pd);
 	printk(KERN_INFO "created pd %p\n", cb->pd);
-	cb->cq = ib_create_cq(cm_id->device, krping_cq_event_handler, NULL,
-			      cb, cb->txdepth * 2, 0);
+	cb->cq = ib_create_cq(cm_id->device, krping_cq_event_handler, NULL, cb, cb->txdepth * 2, 0);
 	if (IS_ERR(cb->cq)) {
 		printk(KERN_ERR PFX "ib_create_cq failed\n");
 		ret = PTR_ERR(cb->cq);
 		goto err1;
 	}
 	DEBUG_LOG("created cq %p\n", cb->cq);
-	printk(KERN_INFO "created cq %p\n", cb->cq);
 
-	if (!cb->wlat && !cb->rlat && !cb->bw && !cb->frtest) {
-		ret = ib_req_notify_cq(cb->cq, IB_CQ_NEXT_COMP);
-		if (ret) {
-			printk(KERN_ERR PFX "ib_create_cq failed\n");
-			goto err2;
-		}
+	ret = ib_req_notify_cq(cb->cq, IB_CQ_NEXT_COMP);
+	if (ret) {
+		printk(KERN_ERR PFX "ib_create_cq failed\n");
+		goto err2;
 	}
 
 	ret = krping_create_qp(cb);
@@ -685,7 +601,7 @@ err1:
 	return ret;
 }
 
-//Done
+//Remove the function input arguements -- TODO
 static u32 krping_rdma_rkey(struct krping_cb *cb, u64 buf, int post_inv)
 {
 	u32 rkey = 0xffffffff;
@@ -693,8 +609,7 @@ static u32 krping_rdma_rkey(struct krping_cb *cb, u64 buf, int post_inv)
 	return rkey;
 }
 
-
-//Done
+//Nothing to be changed in this function
 static void krping_test_server(struct krping_cb *cb)
 {
 	struct ib_send_wr *bad_wr;
@@ -704,13 +619,11 @@ static void krping_test_server(struct krping_cb *cb)
 		/* Wait for client's Start STAG/TO/Len */
 		wait_event_interruptible(cb->sem, cb->state >= RDMA_READ_ADV);
 		if (cb->state != RDMA_READ_ADV) {
-			printk(KERN_ERR PFX "wait for RDMA_READ_ADV state %d\n",
-				cb->state);
+			printk(KERN_ERR PFX "wait for RDMA_READ_ADV state %d\n", cb->state);
 			break;
 		}
 
 		DEBUG_LOG("server received sink adv\n");
-		printk("server received sink adv\n");
 
 		cb->rdma_sq_wr.wr.rdma.rkey = cb->remote_rkey;
 		cb->rdma_sq_wr.wr.rdma.remote_addr = cb->remote_addr;
@@ -719,13 +632,9 @@ static void krping_test_server(struct krping_cb *cb)
 		cb->rdma_sq_wr.next = NULL;
 
 		/* Issue RDMA Read. */
-		if (cb->read_inv)
-			cb->rdma_sq_wr.opcode = IB_WR_RDMA_READ_WITH_INV;
-		else {
 
-			cb->rdma_sq_wr.opcode = IB_WR_RDMA_READ;
-		}
-
+		cb->rdma_sq_wr.opcode = IB_WR_RDMA_READ;
+		
 		ret = ib_post_send(cb->qp, &cb->rdma_sq_wr, &bad_wr);
 		if (ret) {
 			printk(KERN_ERR PFX "post send error %d\n", ret);
@@ -734,69 +643,47 @@ static void krping_test_server(struct krping_cb *cb)
 		cb->rdma_sq_wr.next = NULL;
 
 		DEBUG_LOG("server posted rdma read req \n");
-		printk("server posted rdma read req \n");
 
 		/* Wait for read completion */
-		wait_event_interruptible(cb->sem, 
-					 cb->state >= RDMA_READ_COMPLETE);
+		wait_event_interruptible(cb->sem, cb->state >= RDMA_READ_COMPLETE);
 		if (cb->state != RDMA_READ_COMPLETE) {
-			printk(KERN_ERR PFX 
-			       "wait for RDMA_READ_COMPLETE state %d\n",
-			       cb->state);
+			printk(KERN_ERR PFX "wait for RDMA_READ_COMPLETE state %d\n", cb->state);
 			break;
 		}
 		DEBUG_LOG("server received read complete\n");
-		printk("server received read complete\n");
 
 		/* Display data in recv buf */
 		if (cb->verbose)
-			printk(KERN_INFO PFX "server ping data: %s\n", 
-				cb->rdma_buf);
+			printk(KERN_INFO PFX "server ping data: %s\n", cb->rdma_buf);
 
 		/* Tell client to continue */
-		if (cb->server && cb->server_invalidate) {
-			cb->sq_wr.ex.invalidate_rkey = cb->remote_rkey;
-			cb->sq_wr.opcode = IB_WR_SEND_WITH_INV;
-			DEBUG_LOG("send-w-inv rkey 0x%x\n", cb->remote_rkey);
-			printk("send-w-inv rkey 0x%x\n", cb->remote_rkey);
-		} 
 		ret = ib_post_send(cb->qp, &cb->sq_wr, &bad_wr);
 		if (ret) {
 			printk(KERN_ERR PFX "post send error %d\n", ret);
 			break;
 		}
 		DEBUG_LOG("server posted go ahead\n");
-		printk("server posted go ahead\n");
 
 		/* Wait for client's RDMA STAG/TO/Len */
 		wait_event_interruptible(cb->sem, cb->state >= RDMA_WRITE_ADV);
 		if (cb->state != RDMA_WRITE_ADV) {
-			printk(KERN_ERR PFX 
-			       "wait for RDMA_WRITE_ADV state %d\n",
-			       cb->state);
+			printk(KERN_ERR PFX "wait for RDMA_WRITE_ADV state %d\n", cb->state);
 			break;
 		}
+
 		DEBUG_LOG("server received sink adv\n");
-		printk("server received sink adv\n");
+
 		/* RDMA Write echo data */
 		cb->rdma_sq_wr.opcode = IB_WR_RDMA_WRITE;
 		cb->rdma_sq_wr.wr.rdma.rkey = cb->remote_rkey;
 		cb->rdma_sq_wr.wr.rdma.remote_addr = cb->remote_addr;
 		cb->rdma_sq_wr.sg_list->length = strlen(cb->rdma_buf) + 1;
-		if (cb->local_dma_lkey)
-			cb->rdma_sgl.lkey = cb->qp->device->local_dma_lkey;
-		else 
-			cb->rdma_sgl.lkey = krping_rdma_rkey(cb, cb->rdma_dma_addr, 0);
-			
-		DEBUG_LOG("rdma write from lkey %x laddr %llx len %d\n",
-			  cb->rdma_sq_wr.sg_list->lkey,
-			  (unsigned long long)cb->rdma_sq_wr.sg_list->addr,
-			  cb->rdma_sq_wr.sg_list->length);
-		printk("rdma write from lkey %x laddr %llx len %d\n",
-			  cb->rdma_sq_wr.sg_list->lkey,
-			  (unsigned long long)cb->rdma_sq_wr.sg_list->addr,
-			  cb->rdma_sq_wr.sg_list->length);
 
+		cb->rdma_sgl.lkey = krping_rdma_rkey(cb, cb->rdma_dma_addr, 0);
+			
+		DEBUG_LOG("rdma write from lkey %x laddr %llx len %d\n", cb->rdma_sq_wr.sg_list->lkey,
+		 (unsigned long long)cb->rdma_sq_wr.sg_list->addr, cb->rdma_sq_wr.sg_list->length);
+	
 		ret = ib_post_send(cb->qp, &cb->rdma_sq_wr, &bad_wr);
 		if (ret) {
 			printk(KERN_ERR PFX "post send error %d\n", ret);
@@ -804,33 +691,22 @@ static void krping_test_server(struct krping_cb *cb)
 		}
 
 		/* Wait for completion */
-		ret = wait_event_interruptible(cb->sem, cb->state >= 
-							 RDMA_WRITE_COMPLETE);
+		ret = wait_event_interruptible(cb->sem, cb->state >= RDMA_WRITE_COMPLETE);
 		if (cb->state != RDMA_WRITE_COMPLETE) {
-			printk(KERN_ERR PFX 
-			       "wait for RDMA_WRITE_COMPLETE state %d\n",
-			       cb->state);
+			printk(KERN_ERR PFX "wait for RDMA_WRITE_COMPLETE state %d\n", cb->state);
 			break;
 		}
 		DEBUG_LOG("server rdma write complete \n");
-		printk("server rdma write complete \n");
 
 		cb->state = CONNECTED;
 
 		/* Tell client to begin again */
-		if (cb->server && cb->server_invalidate) {
-			cb->sq_wr.ex.invalidate_rkey = cb->remote_rkey;
-			cb->sq_wr.opcode = IB_WR_SEND_WITH_INV;
-			DEBUG_LOG("send-w-inv rkey 0x%x\n", cb->remote_rkey);
-			printk("send-w-inv rkey 0x%x\n", cb->remote_rkey);
-		} 
 		ret = ib_post_send(cb->qp, &cb->sq_wr, &bad_wr);
 		if (ret) {
 			printk(KERN_ERR PFX "post send error %d\n", ret);
 			break;
 		}
 		DEBUG_LOG("server posted go ahead\n");
-		printk("server posted go ahead\n");
 	}
 }
 
@@ -852,12 +728,11 @@ static void fill_sockaddr(struct sockaddr_storage *sin, struct krping_cb *cb)
 	}
 }
 
-// Done
+//Nothing to be changed in this function
 static int krping_bind_server(struct krping_cb *cb)
 {
 	struct sockaddr_storage sin;
 	int ret;
-
 
 	fill_sockaddr(&sin, cb);
 
@@ -930,6 +805,7 @@ err0:
 	rdma_destroy_id(cb->child_cm_id);
 }
 
+// Cut down this function, hardcode values TODO
 int krping_doit(char *cmd)
 {
 	struct krping_cb *cb;
@@ -972,10 +848,6 @@ int krping_doit(char *cmd)
 			cb->port = htons(optint);
 			DEBUG_LOG("port %d\n", (int)optint);
 			break;
-		case 'P':
-			cb->poll = 1;
-			DEBUG_LOG("server\n");
-			break;
 		case 's':
 			cb->server = 1;
 			DEBUG_LOG("server\n");
@@ -1012,38 +884,6 @@ int krping_doit(char *cmd)
 			cb->validate++;
 			DEBUG_LOG("validate data\n");
 			break;
-		case 'l':
-			cb->wlat++;
-			break;
-		case 'L':
-			cb->rlat++;
-			break;
-		case 'B':
-			cb->bw++;
-			break;
-		case 'd':
-			cb->duplex++;
-			break;
-		case 'm':
-			if (!strncmp(optarg, "dma", 3))
-				cb->mem = DMA;
-			else if (!strncmp(optarg, "fastreg", 7))
-				cb->mem = FASTREG;
-			else if (!strncmp(optarg, "mw", 2))
-				cb->mem = MW;
-			else if (!strncmp(optarg, "mr", 2))
-				cb->mem = MR;
-			else {
-				printk(KERN_ERR PFX "unknown mem mode %s.  "
-					"Must be dma, fastreg, mw, or mr\n",
-					optarg);
-				ret = -EINVAL;
-				break;
-			}
-			break;
-		case 'I':
-			cb->server_invalidate = 1;
-			break;
 		case 'T':
 			cb->txdepth = optint;
 			DEBUG_LOG("txdepth %d\n", (int) cb->txdepth);
@@ -1051,14 +891,6 @@ int krping_doit(char *cmd)
 		case 'Z':
 			cb->local_dma_lkey = 1;
 			DEBUG_LOG("using local dma lkey\n");
-			break;
-		case 'R':
-			cb->read_inv = 1;
-			DEBUG_LOG("using read-with-inv\n");
-			break;
-		case 'f':
-			cb->frtest = 1;
-			DEBUG_LOG("fast-reg test!\n");
 			break;
 		default:
 			printk(KERN_ERR PFX "unknown opt %s\n", optarg);
@@ -1075,36 +907,6 @@ int krping_doit(char *cmd)
 		goto out;
 	}
 
-	if (cb->server && cb->frtest) {
-		printk(KERN_ERR PFX "must be client to run frtest\n");
-		ret = -EINVAL;
-		goto out;
-	}
-
-	if ((cb->frtest + cb->bw + cb->rlat + cb->wlat) > 1) {
-		printk(KERN_ERR PFX "Pick only one test: fr, bw, rlat, wlat\n");
-		ret = -EINVAL;
-		goto out;
-	}
-
-	if (cb->server_invalidate && cb->mem != FASTREG) {
-		printk(KERN_ERR PFX "server_invalidate only valid with fastreg mem_mode\n");
-		ret = -EINVAL;
-		goto out;
-	}
-
-	if (cb->read_inv && cb->mem != FASTREG) {
-		printk(KERN_ERR PFX "read_inv only valid with fastreg mem_mode\n");
-		ret = -EINVAL;
-		goto out;
-	}
-
-	if (cb->mem != MR && (cb->wlat || cb->rlat || cb->bw)) {
-		printk(KERN_ERR PFX "wlat, rlat, and bw tests only support mem_mode MR\n");
-		ret = -EINVAL;
-		goto out;
-	}
-
 	cb->cm_id = rdma_create_id(krping_cma_event_handler, cb, RDMA_PS_TCP, IB_QPT_RC);
 	if (IS_ERR(cb->cm_id)) {
 		ret = PTR_ERR(cb->cm_id);
@@ -1115,8 +917,6 @@ int krping_doit(char *cmd)
 
 	if (cb->server)
 		krping_run_server(cb);
-	//else
-	//	krping_run_client(cb);
 
 	DEBUG_LOG("destroy cm_id %p\n", cb->cm_id);
 	rdma_destroy_id(cb->cm_id);
