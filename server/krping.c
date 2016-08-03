@@ -176,10 +176,14 @@ struct krping_cb {
 	uint64_t remote_addr;		/* remote guys TO */
 	uint32_t remote_len;		/* remote guys LEN */
 
+
+    // This block could be eliminated
+    // *********** Block Start ****************
 	char *start_buf;		/* rdma read src */
 	u64  start_dma_addr;
 	DECLARE_PCI_UNMAP_ADDR(start_mapping)
 	struct ib_mr *start_mr;
+	// *********** Block End ****************
 
 	enum test_state state;		/* used for cond/signalling */
 	wait_queue_head_t sem;
