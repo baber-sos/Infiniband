@@ -17,7 +17,7 @@ echo "Running initialization script for server\n"
 sudo ifconfig ib0 12.12.12.1/24 up
 echo "Assigned IP 12.12.12.1 to ib0\n\n"
 
-cd ~/Downloads/server
+cd /home/xen/Desktop/krping_compilable_server
 sudo make
 echo "Recompiled the code\n"
 
@@ -28,10 +28,11 @@ else
 	sudo rmmod rdma_krping
 	echo "Removed the module\n"
 fi
-
+echo "Remeber to start opemn subnet manager (opensm)\n"
+echo "Waiting for connection\n"
 sudo insmod rdma_krping.ko
 
-echo "Loaded the module\n"
 
-echo "Starting the server\n\n"
-echo "server,addr=12.12.12.1,port=9999" >/proc/krping
+
+
+
