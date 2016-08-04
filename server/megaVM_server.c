@@ -24,17 +24,16 @@
 #include </usr/src/ofa_kernel/default/include/rdma/ib_verbs.h>
 #include </usr/src/ofa_kernel/default/include/rdma/rdma_cm.h>
 
-#include "getopt.h"
 
 #define PFX "mega-VM: "
 
-static int debug = 1;
+static int debug = 0;
 module_param(debug, int, 0);
 MODULE_PARM_DESC(debug, "Debug level (0=none, 1=all)");
 #define DEBUG_LOG if (debug) printk
 
-MODULE_AUTHOR("Steve Wise");
-MODULE_DESCRIPTION("RDMA ping server");
+MODULE_AUTHOR("MegaVM");
+MODULE_DESCRIPTION("MegaVM server");
 MODULE_LICENSE("Dual BSD/GPL");
 
 enum mem_type {
@@ -45,7 +44,7 @@ enum mem_type {
 };
 
 
-struct krping_stats {
+struct megaVM_stats {
 	unsigned long long send_bytes;
 	unsigned long long send_msgs;
 	unsigned long long recv_bytes;
@@ -72,7 +71,7 @@ enum test_state {
 	ERROR
 };
 
-struct krping_rdma_info {
+struct megaVM_rdma_info {
 	uint64_t buf;
 	uint32_t rkey;
 	uint32_t size;
@@ -98,14 +97,14 @@ struct ib_context {
 
 	struct ib_recv_wr rq_wr;	/* recv work request record */
 	struct ib_sge recv_sgl;		/* recv single SGE */
-	struct krping_rdma_info recv_buf;/* malloc'd buffer */
+	struct megaVM_rdma_info recv_buf;/* malloc'd buffer */
 	u64 recv_dma_addr;
 	DECLARE_PCI_UNMAP_ADDR(recv_mapping)
 	struct ib_mr *recv_mr;
 
 	struct ib_send_wr sq_wr;	/* send work requrest record */
 	struct ib_sge send_sgl;
-	struct krping_rdma_info send_buf;/* single send buf */
+	struct megaVM_rdma_info send_buf;/* single send buf */
 	u64 send_dma_addr;
 	DECLARE_PCI_UNMAP_ADDR(send_mapping)
 	struct ib_mr *send_mr;
@@ -121,14 +120,9 @@ struct ib_context {
 	uint64_t remote_addr;		/* remote guys TO */
 	uint32_t remote_len;		/* remote guys LEN */
 
-	char *start_buf;		/* rdma read src */
-	u64  start_dma_addr;
-	DECLARE_PCI_UNMAP_ADDR(start_mapping)
-	struct ib_mr *start_mr;
-
 	enum test_state state;		/* used for cond/signalling */
 	wait_queue_head_t sem;
-	struct krping_stats stats;
+	struct megaVM_stats stats;
 
 	uint16_t port;			/* dst port in NBO */
 	u8 addr[16];			/* dst addr in NBO */
@@ -148,7 +142,7 @@ struct ib_context {
 };
 
 
-static int krping_cma_event_handler(struct rdma_cm_id *cma_id, struct rdma_cm_event *event)
+static int megaVM_cma_event_handler(struct rdma_cm_id *cma_id, struct rdma_cm_event *event)
 {
 	int ret;
 	struct ib_context *cb = cma_id->context;
@@ -236,9 +230,9 @@ static int server_recv(struct ib_context *cb, struct ib_wc *wc)
 }
 
 //Done
-static void krping_cq_event_handler(struct ib_cq *cq, void *ctx)
+static void megaVM_cq_event_handler(struct ib_cq *cq, void *ctx)
 {
-	DEBUG_LOG("Entering krping_cq_event_handler\n\n");
+	DEBUG_LOG("Entering megaVM_cq_event_handler\n\n");
 	struct ib_context *cb = ctx;
 	struct ib_wc wc;
 	struct ib_recv_wr *bad_wr;
@@ -267,14 +261,12 @@ static void krping_cq_event_handler(struct ib_cq *cq, void *ctx)
 		switch (wc.opcode) {
 		case IB_WC_SEND:
 			DEBUG_LOG("send completion\n\n");
-			DEBUG_LOG("send completion: %d\n\n", cb->send_buf.buf);
 			cb->stats.send_bytes += cb->send_sgl.length;
 			cb->stats.send_msgs++;
 			break;
 
 		case IB_WC_RDMA_WRITE:
 			DEBUG_LOG("rdma write completion\n");
-			DEBUG_LOG("rdma write completion\n\n");
 			cb->stats.write_bytes += cb->rdma_sq_wr.sg_list->length;
 			cb->stats.write_msgs++;
 			cb->state = RDMA_WRITE_COMPLETE;
@@ -282,8 +274,8 @@ static void krping_cq_event_handler(struct ib_cq *cq, void *ctx)
 			break;
 
 		case IB_WC_RDMA_READ:
-			DEBUG_LOG("rdma read completion\n\n");
-			DEBUG_LOG("rdma write completion: %s\n\n", cb->rdma_buf);
+			DEBUG_LOG("rdma read completion\n");
+			printk("rdma read completion: %s\n\n", cb->rdma_buf);
 			cb->stats.read_bytes += cb->rdma_sq_wr.sg_list->length;
 			cb->stats.read_msgs++;
 			cb->state = RDMA_READ_COMPLETE;
@@ -322,16 +314,16 @@ static void krping_cq_event_handler(struct ib_cq *cq, void *ctx)
 		DEBUG_LOG(KERN_ERR PFX "poll error %d\n", ret);
 		goto error;
 	}
-	DEBUG_LOG("Exiting krping_cq_event_handler\n\n");
+	DEBUG_LOG("Exiting megaVM_cq_event_handler\n\n");
 	return;
 error:
-	DEBUG_LOG("Error krping_cq_event_handler\n\n");
+	DEBUG_LOG("Error megaVM_cq_event_handler\n\n");
 	cb->state = ERROR;
 	wake_up_interruptible(&cb->sem);
 }
 
 //Done
-static int krping_accept(struct ib_context *cb)
+static int accept_connections(struct ib_context *context)
 {
 	struct rdma_conn_param conn_param;
 	int ret;
@@ -342,106 +334,111 @@ static int krping_accept(struct ib_context *cb)
 	conn_param.responder_resources = 1;
 	conn_param.initiator_depth = 1;
 
-	ret = rdma_accept(cb->child_cm_id, &conn_param);
+	ret = rdma_accept(context->child_cm_id, &conn_param);
 	if (ret) {
 		DEBUG_LOG(KERN_ERR PFX "rdma_accept error: %d\n", ret);
 		return ret;
 	}
 
-	wait_event_interruptible(cb->sem, cb->state >= CONNECTED);
-	if (cb->state == ERROR) {
-		DEBUG_LOG(KERN_ERR PFX "wait for CONNECTED state %d\n", 
-			cb->state);
+	wait_event_interruptible(context->sem, context->state >= CONNECTED);
+	if (context->state == ERROR) {
+		DEBUG_LOG(KERN_ERR PFX "wait for CONNECTED state %d\n", context->state);
 		return -1;
 	}
 	return 0;
 }
 
 //Done
-static void krping_setup_wr(struct ib_context *cb)
+static void setup_wr(struct ib_context *cb)
 {
+	// For posting recv --> When done reading 
+	// ****************** Block 1 ************************
 	cb->recv_sgl.addr = cb->recv_dma_addr;
 	cb->recv_sgl.length = sizeof cb->recv_buf;
 	cb->recv_sgl.lkey = cb->dma_mr->lkey;
 
 	cb->rq_wr.sg_list = &cb->recv_sgl;
+	cb->rq_wr.num_sge = 1;				// Number of blocks
+	// **************** End Block 1 **********************
 
-	cb->rq_wr.num_sge = 1;
-
+	// For posting go ahead
+	// ****************** Block 2 ************************
 	cb->send_sgl.addr = cb->send_dma_addr;
 	cb->send_sgl.length = sizeof cb->send_buf;
 	cb->send_sgl.lkey = cb->dma_mr->lkey;
-	cb->sq_wr.opcode = IB_WR_SEND;
-	cb->sq_wr.send_flags = IB_SEND_SIGNALED;
+
+	cb->sq_wr.opcode = IB_WR_SEND;				// Send request
+	cb->sq_wr.send_flags = IB_SEND_SIGNALED;	// Notify ready to receive
 	cb->sq_wr.sg_list = &cb->send_sgl;
 	cb->sq_wr.num_sge = 1;
+	// **************** End Block 2 **********************
 
-	if (cb->server) {
-		cb->rdma_sgl.addr = cb->rdma_dma_addr;
-		cb->rdma_sq_wr.send_flags = IB_SEND_SIGNALED;
-		cb->rdma_sq_wr.sg_list = &cb->rdma_sgl;
-		cb->rdma_sq_wr.num_sge = 1;
-	}
+	// For server only -- Used for rdma read and rdma write
+	// ****************** Block 3 ************************
+	cb->rdma_sgl.addr = cb->rdma_dma_addr;
+	cb->rdma_sq_wr.send_flags = IB_SEND_SIGNALED;
 
+	cb->rdma_sq_wr.sg_list = &cb->rdma_sgl;
+	cb->rdma_sq_wr.num_sge = 1;
+	// **************** End Block 3 **********************
 }
 
 //Done
-static int krping_setup_buffers(struct ib_context *cb)
+static int setup_buffers(struct ib_context *context)
 {
 	int ret;
 
-	DEBUG_LOG(PFX "krping_setup_buffers called on cb %p\n", cb);
+	// To receive dma addr/ length / rkey
+	context->recv_dma_addr = dma_map_single(context->pd->device->dma_device, &context->recv_buf, sizeof(context->recv_buf), DMA_BIDIRECTIONAL);
+	pci_unmap_addr_set(context, recv_mapping, context->recv_dma_addr);
 
-	cb->recv_dma_addr = dma_map_single(cb->pd->device->dma_device, &cb->recv_buf, sizeof(cb->recv_buf), DMA_BIDIRECTIONAL);
-	pci_unmap_addr_set(cb, recv_mapping, cb->recv_dma_addr);
+	// To send dma addr/ length / rkey
+	context->send_dma_addr = dma_map_single(context->pd->device->dma_device, &context->send_buf, sizeof(context->send_buf), DMA_BIDIRECTIONAL);
+	pci_unmap_addr_set(context, send_mapping, context->send_dma_addr);
 
-	cb->send_dma_addr = dma_map_single(cb->pd->device->dma_device, &cb->send_buf, sizeof(cb->send_buf), DMA_BIDIRECTIONAL);
-	pci_unmap_addr_set(cb, send_mapping, cb->send_dma_addr);
-
-		cb->dma_mr = ib_get_dma_mr(cb->pd, IB_ACCESS_LOCAL_WRITE|IB_ACCESS_REMOTE_READ|IB_ACCESS_REMOTE_WRITE);
-		if (IS_ERR(cb->dma_mr)) {
-			DEBUG_LOG(PFX "reg_dmamr failed\n");
-			ret = PTR_ERR(cb->dma_mr);
-			goto bail;
-		}
-	DEBUG_LOG("Point 3 successful\n\n");
-
-
-	cb->rdma_buf = kmalloc(cb->size, GFP_KERNEL);
-	if (!cb->rdma_buf) {
-		DEBUG_LOG(PFX "rdma_buf malloc failed\n");
-		ret = -ENOMEM;
+	context->dma_mr = ib_get_dma_mr(context->pd, IB_ACCESS_LOCAL_WRITE|IB_ACCESS_REMOTE_READ|IB_ACCESS_REMOTE_WRITE);
+	if (context->dma_mr == NULL) {
+		DEBUG_LOG(PFX "reg_dmamr failed\n");
+		ret = -1;
 		goto bail;
 	}
 
-	cb->rdma_dma_addr = dma_map_single(cb->pd->device->dma_device, cb->rdma_buf, cb->size, DMA_BIDIRECTIONAL);
-	pci_unmap_addr_set(cb, rdma_mapping, cb->rdma_dma_addr);
+	// To read data into this buffer
+	context->rdma_buf = kmalloc(context->size, GFP_KERNEL);
+	if (!context->rdma_buf) {
+		DEBUG_LOG(PFX "rdma_buf malloc failed\n");
+		ret = -1;
+		goto bail;
+	}
 
-	krping_setup_wr(cb);
+	context->rdma_dma_addr = dma_map_single(context->pd->device->dma_device, context->rdma_buf, context->size, DMA_BIDIRECTIONAL);
+	pci_unmap_addr_set(context, rdma_mapping, context->rdma_dma_addr);
+
+	// setup work request
+	setup_wr(context);
 	DEBUG_LOG(PFX "allocated & registered buffers...\n");
-	DEBUG_LOG("Point 4 successful\n\n");
 
 	return 0;
 bail:
-	if (cb->rdma_mr && !IS_ERR(cb->rdma_mr))
-		ib_dereg_mr(cb->rdma_mr);
-	if (cb->dma_mr && !IS_ERR(cb->dma_mr))
-		ib_dereg_mr(cb->dma_mr);
-	if (cb->recv_mr && !IS_ERR(cb->recv_mr))
-		ib_dereg_mr(cb->recv_mr);
-	if (cb->send_mr && !IS_ERR(cb->send_mr))
-		ib_dereg_mr(cb->send_mr);
-	if (cb->rdma_buf)
-		kfree(cb->rdma_buf);
-	if (cb->start_buf)
-		kfree(cb->start_buf);
+	if (context->rdma_mr && !IS_ERR(context->rdma_mr))
+		ib_dereg_mr(context->rdma_mr);
+	if (context->dma_mr && !IS_ERR(context->dma_mr))
+		ib_dereg_mr(context->dma_mr);
+	if (context->recv_mr && !IS_ERR(context->recv_mr))
+		ib_dereg_mr(context->recv_mr);
+	if (context->send_mr && !IS_ERR(context->send_mr))
+		ib_dereg_mr(context->send_mr);
+	if (context->rdma_buf)
+		kfree(context->rdma_buf);
+	// if (context->start_buf)
+	// 	kfree(context->start_buf);
 	return ret;
 }
 
 //Done
-static void krping_free_buffers(struct ib_context *cb)
+static void megaVM_free_buffers(struct ib_context *cb)
 {
-	DEBUG_LOG("krping_free_buffers called on cb %p\n", cb);
+	DEBUG_LOG("megaVM_free_buffers called on cb %p\n", cb);
 	
 	if (cb->dma_mr)
 		ib_dereg_mr(cb->dma_mr);
@@ -451,8 +448,6 @@ static void krping_free_buffers(struct ib_context *cb)
 		ib_dereg_mr(cb->recv_mr);
 	if (cb->rdma_mr)
 		ib_dereg_mr(cb->rdma_mr);
-	if (cb->start_mr)
-		ib_dereg_mr(cb->start_mr);
 
 	dma_unmap_single(cb->pd->device->dma_device, pci_unmap_addr(cb, recv_mapping), sizeof(cb->recv_buf), DMA_BIDIRECTIONAL);
 
@@ -461,99 +456,87 @@ static void krping_free_buffers(struct ib_context *cb)
 	dma_unmap_single(cb->pd->device->dma_device, pci_unmap_addr(cb, rdma_mapping), cb->size, DMA_BIDIRECTIONAL);
 	kfree(cb->rdma_buf);
 
-	if (cb->start_buf) {
-		dma_unmap_single(cb->pd->device->dma_device, pci_unmap_addr(cb, start_mapping), cb->size, DMA_BIDIRECTIONAL);
-		kfree(cb->start_buf);
-	}
+	// if (cb->start_buf) {
+	// 	dma_unmap_single(cb->pd->device->dma_device, pci_unmap_addr(cb, start_mapping), cb->size, DMA_BIDIRECTIONAL);
+	// 	kfree(cb->start_buf);
+	// }
 }
 
 //Done
-static int krping_create_qp(struct ib_context *cb)
+static int create_qp(struct ib_context *context)
 {
 	struct ib_qp_init_attr init_attr;
 	int ret;
 	DEBUG_LOG(KERN_INFO "Inside create qp\n");
 	memset(&init_attr, 0, sizeof(init_attr));
-	init_attr.cap.max_send_wr = cb->txdepth;
+	init_attr.cap.max_send_wr = context->txdepth;
 	init_attr.cap.max_recv_wr = 2;
 	init_attr.cap.max_recv_sge = 1;
 	init_attr.cap.max_send_sge = 1;
 	init_attr.qp_type = IB_QPT_RC;
-	init_attr.send_cq = cb->cq;
-	init_attr.recv_cq = cb->cq;
+	init_attr.send_cq = context->cq;
+	init_attr.recv_cq = context->cq;
 	init_attr.sq_sig_type = IB_SIGNAL_REQ_WR;
 	DEBUG_LOG(KERN_INFO "Initialised variables for create qp\n");
-	ret = rdma_create_qp(cb->child_cm_id, cb->pd, &init_attr);
+	ret = rdma_create_qp(context->child_cm_id, context->pd, &init_attr);
 	if (!ret)
-		cb->qp = cb->child_cm_id->qp;
+		context->qp = context->child_cm_id->qp;
 	DEBUG_LOG(KERN_INFO "Create qp successfully\n");
 	
 	return ret;
 }
 
 //Done
-static void krping_free_qp(struct ib_context *cb)
+static void megaVM_free_qp(struct ib_context *cb)
 {
 	ib_destroy_qp(cb->qp);
 	ib_destroy_cq(cb->cq);
 	ib_dealloc_pd(cb->pd);
 }
 
-// Done
-static int krping_setup_qp(struct ib_context *cb, struct rdma_cm_id *cm_id)
+static int setup_pd_and_qp(struct ib_context *context, struct rdma_cm_id *cm_id)
 {
-	int ret;
-	DEBUG_LOG(KERN_INFO "Entered krping_setup_qp\n\n");
+	int ret;	
+	// Allocate a protection domain
 	if (cm_id != 0){
-		cb->pd = ib_alloc_pd(cm_id->device);
-		if (IS_ERR(cb->pd)) {
+		context->pd = ib_alloc_pd(cm_id->device);
+		if (context->pd == NULL) {
 			DEBUG_LOG(KERN_ERR PFX "ib_alloc_pd failed\n");
-			return PTR_ERR(cb->pd);
+			return -1;
 		}
-	} else
-	DEBUG_LOG("created pd %p\n", cb->pd);
-	DEBUG_LOG(KERN_INFO "created pd %p\n", cb->pd);
-	cb->cq = ib_create_cq(cm_id->device, krping_cq_event_handler, NULL, cb, cb->txdepth * 2, 0);
-	if (IS_ERR(cb->cq)) {
+	} 
+
+	// Create a completion queue -- A single queue?????
+	context->cq = ib_create_cq(cm_id->device, megaVM_cq_event_handler, NULL, context, context->txdepth * 2, 0);
+	if (context->cq == NULL) {
 		DEBUG_LOG(KERN_ERR PFX "ib_create_cq failed\n");
-		ret = PTR_ERR(cb->cq);
 		goto err1;
 	}
-	DEBUG_LOG("created cq %p\n", cb->cq);
-	DEBUG_LOG(KERN_INFO "created cq %p\n", cb->cq);
 
-	ret = ib_req_notify_cq(cb->cq, IB_CQ_NEXT_COMP);
+	// Notify at the next event on this completion queue
+	ret = ib_req_notify_cq(context->cq, IB_CQ_NEXT_COMP);
 	if (ret) {
 		DEBUG_LOG(KERN_ERR PFX "ib_create_cq failed\n");
 		goto err2;
 	}
 	
-
-	ret = krping_create_qp(cb);
+	// Set attributes for qp and create qp
+	ret = create_qp(context);
 	if (ret) {
-		DEBUG_LOG(KERN_ERR PFX "krping_create_qp failed: %d\n", ret);
+		DEBUG_LOG(KERN_ERR PFX "create_qp failed: %d\n", ret);
 		goto err2;
 	}
-	DEBUG_LOG("created qp %p\n", cb->qp);
-	DEBUG_LOG(KERN_INFO "created qp %p\n", cb->qp);
+	DEBUG_LOG("created qp %p\n", context->qp);
 	return 0;
 err2:
-	ib_destroy_cq(cb->cq);
+	ib_destroy_cq(context->cq);
 err1:
-	ib_dealloc_pd(cb->pd);
+	ib_dealloc_pd(context->pd);
 	return ret;
 }
 
 //Done
-static u32 krping_rdma_rkey(struct ib_context *cb, u64 buf, int post_inv)
-{
-	u32 rkey = 0xffffffff;
-	rkey = cb->dma_mr->rkey;
-	return rkey;
-}
-
-//Done
-static void krping_test_server(struct ib_context *cb)
+static void start_MegaVM_server(struct ib_context *cb)
 {
 	struct ib_send_wr *bad_wr;
 	int ret;
@@ -571,7 +554,7 @@ static void krping_test_server(struct ib_context *cb)
 		cb->rdma_sq_wr.wr.rdma.rkey = cb->remote_rkey;
 		cb->rdma_sq_wr.wr.rdma.remote_addr = cb->remote_addr;
 		cb->rdma_sq_wr.sg_list->length = cb->remote_len;
-		cb->rdma_sgl.lkey = krping_rdma_rkey(cb, cb->rdma_dma_addr, 1);
+		cb->rdma_sgl.lkey = cb->dma_mr->rkey;
 		cb->rdma_sq_wr.next = NULL;
 
 		/* Issue RDMA Read. */
@@ -623,7 +606,7 @@ static void krping_test_server(struct ib_context *cb)
 		cb->rdma_sq_wr.wr.rdma.remote_addr = cb->remote_addr;
 		cb->rdma_sq_wr.sg_list->length = strlen(cb->rdma_buf) + 1;
 
-		cb->rdma_sgl.lkey = krping_rdma_rkey(cb, cb->rdma_dma_addr, 0);
+		cb->rdma_sgl.lkey = cb->dma_mr->rkey;
 			
 		DEBUG_LOG("rdma write from lkey %x laddr %llx len %d\n", cb->rdma_sq_wr.sg_list->lkey,
 			  (unsigned long long)cb->rdma_sq_wr.sg_list->addr, cb->rdma_sq_wr.sg_list->length);
@@ -654,6 +637,7 @@ static void krping_test_server(struct ib_context *cb)
 }
 
 
+// Fill in the attributes into sin
 static void fill_sockaddr(struct sockaddr_storage *sin, struct ib_context *cb)
 {
 	memset(sin, 0, sizeof(*sin));
@@ -663,82 +647,92 @@ static void fill_sockaddr(struct sockaddr_storage *sin, struct ib_context *cb)
 		sin4->sin_family = AF_INET;
 		memcpy((void *)&sin4->sin_addr.s_addr, cb->addr, 4);
 		sin4->sin_port = cb->port;
-	} else if (cb->addr_type == AF_INET6) {
-		struct sockaddr_in6 *sin6 = (struct sockaddr_in6 *)sin;
-		sin6->sin6_family = AF_INET6;
-		memcpy((void *)&sin6->sin6_addr, cb->addr, 16);
-		sin6->sin6_port = cb->port;
-	}
+	} 
 }
 
-// Done
-static int krping_bind_server(struct ib_context *cb)
+// Bind the sever at IPV-4 address
+static int bind_server(struct ib_context *context)
 {
 	struct sockaddr_storage sin;
 	int ret;
 
-	fill_sockaddr(&sin, cb);
+	// Fill in the attributes in to sin
+	fill_sockaddr(&sin, context);
 
-	ret = rdma_bind_addr(cb->cm_id, (struct sockaddr *)&sin);
+	// Bind the address for the server
+	ret = rdma_bind_addr(context->cm_id, (struct sockaddr *)&sin);
 	if (ret) {
 		DEBUG_LOG(KERN_ERR PFX "rdma_bind_addr error %d\n", ret);
 		return ret;
 	}
 	DEBUG_LOG("rdma_bind_addr successful\n");
 
-	DEBUG_LOG("rdma_listen\n");
-	ret = rdma_listen(cb->cm_id, 3);
+	// Listen for connections
+	ret = rdma_listen(context->cm_id, 3);
 	if (ret) {
 		DEBUG_LOG(KERN_ERR PFX "rdma_listen failed: %d\n", ret);
 		return ret;
 	}
-	DEBUG_LOG("Point 1 successful\n\n");
-	// Huzaifa
-	wait_event_interruptible(cb->sem, cb->state >= CONNECT_REQUEST);
-	if (cb->state != CONNECT_REQUEST) {
-		DEBUG_LOG(KERN_ERR PFX "wait for CONNECT_REQUEST state %d\n", cb->state);
+
+	// Sleep until the connection state is connection request
+	// This would be woken up by cma_event_handler when it receives a connection
+	wait_event_interruptible(context->sem, context->state >= CONNECT_REQUEST);
+	if (context->state != CONNECT_REQUEST) {
+		DEBUG_LOG(KERN_ERR PFX "wait for CONNECT_REQUEST state %d\n", context->state);
 		return -1;
 	}
 
 	return 0;
 }
 
+
 static void megaVM_StartServer(struct ib_context *context)
 {
 	struct ib_recv_wr *bad_wr;
 	int ret;
 
-	ret = krping_bind_server(context);
+	// Step # 1 -- Bind the sever at IPV-4 address
+	ret = bind_server(context);
 	if (ret)
 		return;
-	ret = krping_setup_qp(context, context->child_cm_id);
+
+	// Step # 2 -- Create PD (protection domain) and cq's (Completion queues send & receive) -- QP (Queue pair)
+	ret = setup_pd_and_qp(context, context->child_cm_id);
 	if (ret) {
 		DEBUG_LOG(KERN_ERR PFX "setup_qp failed: %d\n", ret);
 		goto err0;
 	}
 
-	ret = krping_setup_buffers(context);
+	// Step # 3 -- Create work requests and buffers
+	ret = setup_buffers(context);
 	if (ret) {
-		DEBUG_LOG(KERN_ERR PFX "krping_setup_buffers failed: %d\n", ret);
+		DEBUG_LOG(KERN_ERR PFX "setup_buffers failed: %d\n", ret);
 		goto err1;
 	}
+
+	// To remove any backlog -- CAn eliminate it -- Just to be sure
 	ret = ib_post_recv(context->qp, &context->rq_wr, &bad_wr);
 	if (ret) {
 		DEBUG_LOG(KERN_ERR PFX "ib_post_recv failed: %d\n", ret);
 		goto err2;
 	}
-	ret = krping_accept(context);
+
+	// Step # 4 -- Accept incoming connections
+	ret = accept_connections(context);
 	if (ret) {
 		DEBUG_LOG(KERN_ERR PFX "connect error %d\n", ret);
 		goto err2;
 	}
+	// *************** Done with initialization ****************
 
-	krping_test_server(context);
+
+	// Step # 5 -- Start the ping server
+	start_MegaVM_server(context);
 	rdma_disconnect(context->child_cm_id);
 err2:
-	krping_free_buffers(context);
+	megaVM_free_buffers(context);
 err1:
-	krping_free_qp(context);
+	megaVM_free_qp(context);
 err0:
 	rdma_destroy_id(context->child_cm_id);
 }
@@ -750,7 +744,7 @@ int initialisation(void)
 
 	context = kzalloc(sizeof(*context), GFP_KERNEL);
 	if (!context)
-		return -ENOMEM;
+		return -1;
 
 
 	// Initialization
@@ -767,7 +761,7 @@ int initialisation(void)
 	init_waitqueue_head(&context->sem);
 
 	// ID assigned by the opensm (Open subnet Manager)
-	context->cm_id = rdma_create_id(krping_cma_event_handler, context, RDMA_PS_TCP, IB_QPT_RC);
+	context->cm_id = rdma_create_id(megaVM_cma_event_handler, context, RDMA_PS_TCP, IB_QPT_RC);
 	
 	if (context->cm_id == NULL) {
 		DEBUG_LOG(KERN_ERR PFX "rdma_create_id error \n");

@@ -3,8 +3,8 @@ KOBJ=/lib/modules/`uname -r`/build
 
 ccflags-y=-I/usr/src/ofa_kernel/default/include/
 
-obj-m += rdma_krping.o
-rdma_krping-y			:= getopt.o krping.o
+obj-m += megaVM_server.o
+#rdma_krping-y			:= getopt.o krping.o
 
 default:
 	make -C $(KSRC) M=`pwd` modules
@@ -16,6 +16,6 @@ install:
 clean:
 	rm -f *.o
 	rm -f *.ko
-	rm -f rdma_krping.mod.c
-	rm -f Module.symvers
+	rm -f megaVM_server.mod.c
+	rm -f modules.order 
 	rm -f Module.markers
