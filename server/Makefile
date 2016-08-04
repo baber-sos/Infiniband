@@ -4,7 +4,6 @@ KOBJ=/lib/modules/`uname -r`/build
 ccflags-y=-I/usr/src/ofa_kernel/default/include/
 
 obj-m += megaVM_server.o
-#rdma_krping-y			:= getopt.o krping.o
 
 default:
 	make -C $(KSRC) M=`pwd` modules

@@ -3,7 +3,7 @@ reset
 sudo dmesg -C
 
 checkModule() {
-  MODULE="rdma_krping"
+  MODULE="megaVM_client"
   if lsmod | grep "$MODULE" &> /dev/null ; then
     echo "$MODULE is loaded!"
     return 0
@@ -17,21 +17,18 @@ echo "Running initialization script for client\n"
 sudo ifconfig ib0 12.12.12.2/24 up
 echo "Assigned IP 12.12.12.2 to ib0\n\n"
 
+cp /usr/src/ofa_kernel/default/Module.symvers /home/xen/Downloads/client/
+
 cd ~/Downloads/client
 sudo make
 echo "Recompiled the code\n"
 
-checkModule
-if $?; then
-	echo "Didnt remove the module\n"
-else
-	sudo rmmod rdma_krping
+
+if checkModule; then
+	sudo rmmod megaVM_client.ko
 	echo "Removed the module\n"
 fi
 
-sudo insmod rdma_krping.ko
-
 echo "Loaded the module\n"
+sudo insmod megaVM_client.ko
 
-echo "Starting the client\n\n"
-echo "client,addr=12.12.12.1,port=9999,count=100" >/proc/krping
