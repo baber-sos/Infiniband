@@ -1,1 +1,0 @@
-cmd_/home/xen/Downloads/server/megaVM_server.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/xen/Downloads/server/megaVM_server.ko /home/xen/Downloads/server/megaVM_server.o /home/xen/Downloads/server/megaVM_server.mod.o
