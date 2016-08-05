@@ -1,1 +1,0 @@
-cmd_/home/xen/Downloads/client/megaVM_client.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/xen/Downloads/client/megaVM_client.ko /home/xen/Downloads/client/megaVM_client.o /home/xen/Downloads/client/megaVM_client.mod.o

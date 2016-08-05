@@ -1,1 +1,0 @@
-cmd_/home/xen/Downloads/client/rdma_krping.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/xen/Downloads/client/rdma_krping.ko /home/xen/Downloads/client/rdma_krping.o /home/xen/Downloads/client/rdma_krping.mod.o
