@@ -553,79 +553,116 @@ static void fill_sockaddr(struct sockaddr_storage *sin, struct ib_context *conte
 }
 
 // 7th -- done
+// static void megaVM_test_client(struct ib_context *context)
+// {
+// 	int ping, start, cc, i, ret;
+// 	struct ib_send_wr *bad_wr;
+// 	unsigned char c;
+
+// 	start = 65;
+// 	for (ping = 0; !context->count || ping < context->count; ping++) {
+// 		context->state = RDMA_READ_ADV;
+
+// 		/* Put some ascii text in the buffer. */
+// 		cc = sprintf(context->start_buf, "rdma-ping-%d: ", ping);
+// 		for (i = cc, c = start; i < context->size; i++) {
+// 			context->start_buf[i] = c;
+// 			c++;
+// 			if (c > 122)
+// 				c = 65;
+// 		}
+// 		start++;
+// 		if (start > 122)
+// 			start = 65;
+// 		context->start_buf[context->size - 1] = 0;
+
+// 		megaVM_format_send(context, context->start_dma_addr);
+// 		if (context->state == ERROR) {
+// 			printk(KERN_ERR PFX "megaVM_format_send failed\n");
+// 			break;
+// 		}
+// 		ret = ib_post_send(context->qp, &context->sq_wr, &bad_wr);
+// 		if (ret) {
+// 			printk(KERN_ERR PFX "post send error %d\n", ret);
+// 			break;
+// 		}
+
+// 		/* Wait for server to ACK */
+// 		wait_event_interruptible(context->sem, context->state >= RDMA_WRITE_ADV);
+// 		if (context->state != RDMA_WRITE_ADV) {
+// 			printk(KERN_ERR PFX 
+// 			       "wait for RDMA_WRITE_ADV state %d\n",
+// 			       context->state);
+// 			break;
+// 		}
+
+// 		megaVM_format_send(context, context->rdma_dma_addr);
+// 		ret = ib_post_send(context->qp, &context->sq_wr, &bad_wr);
+// 		if (ret) {
+// 			printk(KERN_ERR PFX "post send error %d\n", ret);
+// 			break;
+// 		}
+
+// 		/* Wait for the server to say the RDMA Write is complete. */
+// 		wait_event_interruptible(context->sem, 
+// 					 context->state >= RDMA_WRITE_COMPLETE);
+// 		printk("Data comparison\ncontext->start_buf: %s\ncontext->rdma_buf: %s\n",context->start_buf,context->rdma_buf);
+// 		if (context->state != RDMA_WRITE_COMPLETE) {
+// 			printk(KERN_ERR PFX 
+// 			       "wait for RDMA_WRITE_COMPLETE state %d\n",
+// 			       context->state);
+// 			break;
+// 		}
+
+// 		if (context->validate)
+// 			if (memcmp(context->start_buf, context->rdma_buf, context->size)) {
+// 				printk(KERN_ERR PFX "data mismatch!\n");
+// 				break;
+// 			}
+
+
+// 		if (context->verbose)
+// 			printk(KERN_INFO PFX "ping data: %s\n", context->rdma_buf);
+// 		#ifdef SLOW_megaVM
+// 			wait_event_interruptible_timeout(context->sem, context->state == ERROR, HZ);
+// 		#endif
+// 	}
+// }
+
+//**************** EXPERIMENT ****************************
 static void megaVM_test_client(struct ib_context *context)
 {
+	context->state = RDMA_READ_ADV;	
 	int ping, start, cc, i, ret;
 	struct ib_send_wr *bad_wr;
 	unsigned char c;
 
 	start = 65;
-	for (ping = 0; !context->count || ping < context->count; ping++) {
-		context->state = RDMA_READ_ADV;
-
-		/* Put some ascii text in the buffer. */
-		cc = sprintf(context->start_buf, "rdma-ping-%d: ", ping);
-		for (i = cc, c = start; i < context->size; i++) {
-			context->start_buf[i] = c;
-			c++;
-			if (c > 122)
-				c = 65;
-		}
-		start++;
-		if (start > 122)
-			start = 65;
-		context->start_buf[context->size - 1] = 0;
-
-		megaVM_format_send(context, context->start_dma_addr);
-		if (context->state == ERROR) {
-			printk(KERN_ERR PFX "megaVM_format_send failed\n");
-			break;
-		}
-		ret = ib_post_send(context->qp, &context->sq_wr, &bad_wr);
-		if (ret) {
-			printk(KERN_ERR PFX "post send error %d\n", ret);
-			break;
-		}
-
-		/* Wait for server to ACK */
-		wait_event_interruptible(context->sem, context->state >= RDMA_WRITE_ADV);
-		if (context->state != RDMA_WRITE_ADV) {
-			printk(KERN_ERR PFX 
-			       "wait for RDMA_WRITE_ADV state %d\n",
-			       context->state);
-			break;
-		}
-
-		megaVM_format_send(context, context->rdma_dma_addr);
-		ret = ib_post_send(context->qp, &context->sq_wr, &bad_wr);
-		if (ret) {
-			printk(KERN_ERR PFX "post send error %d\n", ret);
-			break;
-		}
-
-		/* Wait for the server to say the RDMA Write is complete. */
-		wait_event_interruptible(context->sem, 
-					 context->state >= RDMA_WRITE_COMPLETE);
-		if (context->state != RDMA_WRITE_COMPLETE) {
-			printk(KERN_ERR PFX 
-			       "wait for RDMA_WRITE_COMPLETE state %d\n",
-			       context->state);
-			break;
-		}
-
-		if (context->validate)
-			if (memcmp(context->start_buf, context->rdma_buf, context->size)) {
-				printk(KERN_ERR PFX "data mismatch!\n");
-				break;
-			}
-
-		if (context->verbose)
-			printk(KERN_INFO PFX "ping data: %s\n", context->rdma_buf);
-#ifdef SLOW_megaVM
-		wait_event_interruptible_timeout(context->sem, context->state == ERROR, HZ);
-#endif
+		cc = sprintf(context->start_buf, "rdma-ping-1: ");
+	for (i = cc, c = start; i < context->size; i++) {
+		context->start_buf[i] = c;
+		c++;
+		if (c > 122)
+			c = 65;
 	}
+	start++;
+	if (start > 122)
+		start = 65;
+	context->start_buf[context->size - 1] = 0;
+
+	megaVM_format_send(context, context->start_dma_addr);
+	if (context->state == ERROR) {
+		printk(KERN_ERR PFX "megaVM_format_send failed\n");
+	}
+	
+	ret = ib_post_send(context->qp, &context->sq_wr, &bad_wr);
+	if (ret) {
+		printk(KERN_ERR PFX "post send error %d\n", ret);
+	}
+	wait_event_interruptible(context->sem, context->state >= RDMA_WRITE_ADV);
+
 }
+// ******************* END *******************************
 
 //6th -- done
 static int megaVM_connect_client(struct ib_context *context)
@@ -738,7 +775,7 @@ int megaVM_doit(void)
 	in4_pton(context->addr_str, -1, context->addr, -1, NULL);
 	context->addr_type = AF_INET;
 	context->port = htons(9999);
-	context->count = 100;
+	context->count = 1;
 
 
 	context->cm_id = rdma_create_id(megaVM_cma_event_handler, context, RDMA_PS_TCP, IB_QPT_RC);

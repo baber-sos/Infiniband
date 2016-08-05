@@ -430,8 +430,6 @@ bail:
 		ib_dereg_mr(context->send_mr);
 	if (context->rdma_buf)
 		kfree(context->rdma_buf);
-	// if (context->start_buf)
-	// 	kfree(context->start_buf);
 	return ret;
 }
 
@@ -456,10 +454,7 @@ static void megaVM_free_buffers(struct ib_context *cb)
 	dma_unmap_single(cb->pd->device->dma_device, pci_unmap_addr(cb, rdma_mapping), cb->size, DMA_BIDIRECTIONAL);
 	kfree(cb->rdma_buf);
 
-	// if (cb->start_buf) {
-	// 	dma_unmap_single(cb->pd->device->dma_device, pci_unmap_addr(cb, start_mapping), cb->size, DMA_BIDIRECTIONAL);
-	// 	kfree(cb->start_buf);
-	// }
+
 }
 
 //Done
@@ -536,106 +531,194 @@ err1:
 }
 
 //Done
+// static void start_MegaVM_server(struct ib_context *cb)
+// {
+// 	struct ib_send_wr *bad_wr;
+// 	int ret;
+
+// 	while (1) {
+// 		/* Wait for client's Start STAG/TO/Len */
+// 		wait_event_interruptible(cb->sem, cb->state >= RDMA_READ_ADV);
+// 		if (cb->state != RDMA_READ_ADV) {
+// 			DEBUG_LOG(KERN_ERR PFX "wait for RDMA_READ_ADV state %d\n", cb->state);
+// 			break;
+// 		}
+
+// 		DEBUG_LOG("server received sink adv\n");
+
+// 		cb->rdma_sq_wr.wr.rdma.rkey = cb->remote_rkey;
+// 		cb->rdma_sq_wr.wr.rdma.remote_addr = cb->remote_addr;
+// 		cb->rdma_sq_wr.sg_list->length = cb->remote_len;
+// 		cb->rdma_sgl.lkey = cb->dma_mr->rkey;
+// 		cb->rdma_sq_wr.next = NULL;
+
+// 		/* Issue RDMA Read. */
+	
+// 		cb->rdma_sq_wr.opcode = IB_WR_RDMA_READ;
+
+// 		ret = ib_post_send(cb->qp, &cb->rdma_sq_wr, &bad_wr);
+// 		if (ret) {
+// 			DEBUG_LOG(KERN_ERR PFX "post send error %d\n", ret);
+// 			break;
+// 		}
+// 		cb->rdma_sq_wr.next = NULL;
+
+// 		DEBUG_LOG("server posted rdma read req \n");
+
+// 		/* Wait for read completion */
+// 		wait_event_interruptible(cb->sem, 
+// 					 cb->state >= RDMA_READ_COMPLETE);
+// 		if (cb->state != RDMA_READ_COMPLETE) {
+// 			DEBUG_LOG(KERN_ERR PFX 
+// 			       "wait for RDMA_READ_COMPLETE state %d\n",
+// 			       cb->state);
+// 			break;
+// 		}
+// 		DEBUG_LOG("server received read complete\n");
+
+// 		/* Display data in recv buf */
+// 		if (cb->verbose)
+// 			DEBUG_LOG(KERN_INFO PFX "server ping data: %s\n", cb->rdma_buf);
+
+	
+// 		ret = ib_post_send(cb->qp, &cb->sq_wr, &bad_wr);
+// 		if (ret) {
+// 			DEBUG_LOG(KERN_ERR PFX "post send error %d\n", ret);
+// 			break;
+// 		}
+// 		DEBUG_LOG("server posted go ahead\n");
+
+// 		/* Wait for client's RDMA STAG/TO/Len */
+// 		wait_event_interruptible(cb->sem, cb->state >= RDMA_WRITE_ADV);
+// 		if (cb->state != RDMA_WRITE_ADV) {
+// 			DEBUG_LOG(KERN_ERR PFX "wait for RDMA_WRITE_ADV state %d\n", cb->state);
+// 			break;
+// 		}
+// 		DEBUG_LOG("server received sink adv\n");
+// 		/* RDMA Write echo data */
+// 		cb->rdma_sq_wr.opcode = IB_WR_RDMA_WRITE;
+// 		cb->rdma_sq_wr.wr.rdma.rkey = cb->remote_rkey;
+// 		cb->rdma_sq_wr.wr.rdma.remote_addr = cb->remote_addr;
+// 		cb->rdma_sq_wr.sg_list->length = strlen(cb->rdma_buf) + 1;
+
+// 		cb->rdma_sgl.lkey = cb->dma_mr->rkey;
+			
+// 		DEBUG_LOG("rdma write from lkey %x laddr %llx len %d\n", cb->rdma_sq_wr.sg_list->lkey,
+// 			  (unsigned long long)cb->rdma_sq_wr.sg_list->addr, cb->rdma_sq_wr.sg_list->length);
+
+// 		ret = ib_post_send(cb->qp, &cb->rdma_sq_wr, &bad_wr);
+// 		if (ret) {
+// 			DEBUG_LOG(KERN_ERR PFX "post send error %d\n", ret);
+// 			break;
+// 		}
+
+// 		/* Wait for completion */
+// 		ret = wait_event_interruptible(cb->sem, cb->state >= RDMA_WRITE_COMPLETE);
+// 		if (cb->state != RDMA_WRITE_COMPLETE) {
+// 			DEBUG_LOG(KERN_ERR PFX "wait for RDMA_WRITE_COMPLETE state %d\n", cb->state);
+// 			break;
+// 		}
+// 		DEBUG_LOG("server rdma write complete \n");
+
+// 		cb->state = CONNECTED;
+
+// 		ret = ib_post_send(cb->qp, &cb->sq_wr, &bad_wr);
+// 		if (ret) {
+// 			DEBUG_LOG(KERN_ERR PFX "post send error %d\n", ret);
+// 			break;
+// 		}
+// 		DEBUG_LOG("server posted go ahead\n");
+// 	}
+// }
+
+// Call this funtion after setting:
+// 1) cb->remote_add ==> location from where you want to read at
+// 2) cb->remote_len ==> We can eith fix it to 4096 (a page) or could set it as required
+// 3) Not cb->remote_rkey because it will remain the same
+
+static void megaVM_rdma_read(struct ib_context *cb) {
+	struct ib_send_wr *bad_wr;
+	int ret;	
+	cb->rdma_sq_wr.wr.rdma.rkey = cb->remote_rkey;
+	cb->rdma_sq_wr.wr.rdma.remote_addr = cb->remote_addr;
+	cb->rdma_sq_wr.sg_list->length = cb->remote_len;
+	cb->rdma_sgl.lkey = cb->dma_mr->rkey;
+	cb->rdma_sq_wr.next = NULL;
+
+	/* Issue RDMA Read. */
+
+	cb->rdma_sq_wr.opcode = IB_WR_RDMA_READ;
+
+	
+	ret = ib_post_send(cb->qp, &cb->rdma_sq_wr, &bad_wr);
+	if (ret) {
+		DEBUG_LOG(KERN_ERR PFX "post send error %d\n", ret);
+	}
+	cb->rdma_sq_wr.next = NULL;
+
+	DEBUG_LOG("server posted rdma read req \n");
+
+	/* Wait for read completion */
+	wait_event_interruptible(cb->sem, 
+				 cb->state >= RDMA_READ_COMPLETE);
+	if (cb->state != RDMA_READ_COMPLETE) {
+		DEBUG_LOG(KERN_ERR PFX 
+		       "wait for RDMA_READ_COMPLETE state %d\n",
+		       cb->state);
+	}
+	DEBUG_LOG("server received read complete\n");
+}
+
+// Call this funtion after setting:
+// 1) cb->remote_add ==> location from where you want to read at
+// 2) cb->remote_len ==> We can eith fix it to 4096 (a page) or could set it as required
+// 3) Not cb->remote_rkey because it will remain the same
+static void megaVM_rdma_write(struct ib_context *cb) {
+	struct ib_send_wr *bad_wr;
+	int ret;
+	cb->rdma_sq_wr.opcode = IB_WR_RDMA_WRITE;
+	cb->rdma_sq_wr.wr.rdma.rkey = cb->remote_rkey;
+	cb->rdma_sq_wr.wr.rdma.remote_addr = cb->remote_addr;
+	cb->rdma_sq_wr.sg_list->length = strlen(cb->rdma_buf) + 1;
+
+	cb->rdma_sgl.lkey = cb->dma_mr->rkey;
+		
+	DEBUG_LOG("rdma write from lkey %x laddr %llx len %d\n", cb->rdma_sq_wr.sg_list->lkey,
+		  (unsigned long long)cb->rdma_sq_wr.sg_list->addr, cb->rdma_sq_wr.sg_list->length);
+
+	ret = ib_post_send(cb->qp, &cb->rdma_sq_wr, &bad_wr);
+	if (ret) {
+		DEBUG_LOG(KERN_ERR PFX "post send error %d\n", ret);
+	}
+
+	/* Wait for completion */
+	ret = wait_event_interruptible(cb->sem, cb->state >= RDMA_WRITE_COMPLETE);
+	if (cb->state != RDMA_WRITE_COMPLETE) {
+		DEBUG_LOG(KERN_ERR PFX "wait for RDMA_WRITE_COMPLETE state %d\n", cb->state);
+	}
+	DEBUG_LOG("server rdma write complete \n");
+}
+
 static void start_MegaVM_server(struct ib_context *cb)
 {
 	struct ib_send_wr *bad_wr;
 	int ret;
-
-	while (1) {
-		/* Wait for client's Start STAG/TO/Len */
-		wait_event_interruptible(cb->sem, cb->state >= RDMA_READ_ADV);
+	int i = 0;
+	wait_event_interruptible(cb->sem, cb->state >= RDMA_READ_ADV);
 		if (cb->state != RDMA_READ_ADV) {
-			DEBUG_LOG(KERN_ERR PFX "wait for RDMA_READ_ADV state %d\n", cb->state);
-			break;
-		}
-
-		DEBUG_LOG("server received sink adv\n");
-
-		cb->rdma_sq_wr.wr.rdma.rkey = cb->remote_rkey;
-		cb->rdma_sq_wr.wr.rdma.remote_addr = cb->remote_addr;
-		cb->rdma_sq_wr.sg_list->length = cb->remote_len;
-		cb->rdma_sgl.lkey = cb->dma_mr->rkey;
-		cb->rdma_sq_wr.next = NULL;
-
-		/* Issue RDMA Read. */
-	
-		cb->rdma_sq_wr.opcode = IB_WR_RDMA_READ;
-
-		ret = ib_post_send(cb->qp, &cb->rdma_sq_wr, &bad_wr);
-		if (ret) {
-			DEBUG_LOG(KERN_ERR PFX "post send error %d\n", ret);
-			break;
-		}
-		cb->rdma_sq_wr.next = NULL;
-
-		DEBUG_LOG("server posted rdma read req \n");
-
-		/* Wait for read completion */
-		wait_event_interruptible(cb->sem, 
-					 cb->state >= RDMA_READ_COMPLETE);
-		if (cb->state != RDMA_READ_COMPLETE) {
-			DEBUG_LOG(KERN_ERR PFX 
-			       "wait for RDMA_READ_COMPLETE state %d\n",
-			       cb->state);
-			break;
-		}
-		DEBUG_LOG("server received read complete\n");
-
-		/* Display data in recv buf */
-		if (cb->verbose)
-			DEBUG_LOG(KERN_INFO PFX "server ping data: %s\n", cb->rdma_buf);
-
-	
-		ret = ib_post_send(cb->qp, &cb->sq_wr, &bad_wr);
-		if (ret) {
-			DEBUG_LOG(KERN_ERR PFX "post send error %d\n", ret);
-			break;
-		}
-		DEBUG_LOG("server posted go ahead\n");
-
-		/* Wait for client's RDMA STAG/TO/Len */
-		wait_event_interruptible(cb->sem, cb->state >= RDMA_WRITE_ADV);
-		if (cb->state != RDMA_WRITE_ADV) {
-			DEBUG_LOG(KERN_ERR PFX "wait for RDMA_WRITE_ADV state %d\n", cb->state);
-			break;
-		}
-		DEBUG_LOG("server received sink adv\n");
-		/* RDMA Write echo data */
-		cb->rdma_sq_wr.opcode = IB_WR_RDMA_WRITE;
-		cb->rdma_sq_wr.wr.rdma.rkey = cb->remote_rkey;
-		cb->rdma_sq_wr.wr.rdma.remote_addr = cb->remote_addr;
-		cb->rdma_sq_wr.sg_list->length = strlen(cb->rdma_buf) + 1;
-
-		cb->rdma_sgl.lkey = cb->dma_mr->rkey;
-			
-		DEBUG_LOG("rdma write from lkey %x laddr %llx len %d\n", cb->rdma_sq_wr.sg_list->lkey,
-			  (unsigned long long)cb->rdma_sq_wr.sg_list->addr, cb->rdma_sq_wr.sg_list->length);
-
-		ret = ib_post_send(cb->qp, &cb->rdma_sq_wr, &bad_wr);
-		if (ret) {
-			DEBUG_LOG(KERN_ERR PFX "post send error %d\n", ret);
-			break;
-		}
-
-		/* Wait for completion */
-		ret = wait_event_interruptible(cb->sem, cb->state >= RDMA_WRITE_COMPLETE);
-		if (cb->state != RDMA_WRITE_COMPLETE) {
-			DEBUG_LOG(KERN_ERR PFX "wait for RDMA_WRITE_COMPLETE state %d\n", cb->state);
-			break;
-		}
-		DEBUG_LOG("server rdma write complete \n");
-
-		cb->state = CONNECTED;
-
-		ret = ib_post_send(cb->qp, &cb->sq_wr, &bad_wr);
-		if (ret) {
-			DEBUG_LOG(KERN_ERR PFX "post send error %d\n", ret);
-			break;
-		}
-		DEBUG_LOG("server posted go ahead\n");
+		DEBUG_LOG(KERN_ERR PFX "wait for RDMA_READ_ADV state %d\n", cb->state);
 	}
+	for (i = 0; i < 10; i++){
+		DEBUG_LOG("server received sink adv\n");
+		megaVM_rdma_read(cb);
+		megaVM_rdma_write(cb);
+	}
+	ret = ib_post_send(cb->qp, &cb->sq_wr, &bad_wr);
+	if (ret) {
+		DEBUG_LOG(KERN_ERR PFX "post send error %d\n", ret);
+	}
+	DEBUG_LOG("server posted go ahead\n");
 }
-
 
 // Fill in the attributes into sin
 static void fill_sockaddr(struct sockaddr_storage *sin, struct ib_context *cb)
