@@ -1,0 +1,1 @@
+cmd_/home/huzaifa/Desktop/SharedPageExperiment/pteExp.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/huzaifa/Desktop/SharedPageExperiment/pteExp.ko /home/huzaifa/Desktop/SharedPageExperiment/pteExp.o /home/huzaifa/Desktop/SharedPageExperiment/pteExp.mod.o
